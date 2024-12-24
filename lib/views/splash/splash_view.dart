@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:lady_driver/components/app_text_style.dart';
+import 'package:lady_driver/components/text_manager.dart';
 import 'package:lady_driver/views/onboarding/onboarding_view.dart';
 
 class SplashView extends StatefulWidget {
@@ -46,14 +46,14 @@ class _SplashViewState extends State<SplashView> {
             ),
             const Text(
               'LadyDriver',
-              style: AppTextStyle.text64,
+              style: TextManager.kTextStyle64,
             ),
             const SizedBox(
               height: 16,
             ),
             const Text(
               'Your Comfort Zone',
-              style: AppTextStyle.text32,
+              style: TextManager.kTextStyle32,
             ),
           ],
         ),
