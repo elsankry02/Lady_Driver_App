@@ -68,11 +68,24 @@ flutter:
     - family: Judson-Bold
       fonts:
         - asset: assets/fonts/Judson-Bold.ttf
-    - family: Judson-Italic
       fonts:
         - asset: assets/fonts/Judson-Italic.ttf
-    - family: Judson-Regular
       fonts:
         - asset: assets/fonts/Judson-Regular.ttf
+    - family: Tajawal
+      fonts:
+        - asset: assets/fonts/Tajawal-Black.ttf
+      fonts:
+        - asset: assets/fonts/Tajawal-Bold.ttf
+      fonts:
+        - asset: assets/fonts/Tajawal-ExtraBold.ttf
+      fonts:
+        - asset: assets/fonts/Tajawal-ExtraLight.ttf
+      fonts:
+        - asset: assets/fonts/Tajawal-Light.ttf
+      fonts:
+        - asset: assets/fonts/Tajawal-Medium.ttf
+      fonts:
+        - asset: assets/fonts/Tajawal-Regular.ttf          
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
