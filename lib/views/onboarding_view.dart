@@ -32,7 +32,10 @@ class _OnboardingViewState extends State<OnboardingView> {
                     ),
                     const SizedBox(height: 74),
                     Image.asset(
-                        height: 285, width: 285, listOnBoarding[index].image),
+                      height: 285,
+                      width: 285,
+                      listOnBoarding[index].image,
+                    ),
                     const SizedBox(height: 96),
                     Text(
                       listOnBoarding[index].body,

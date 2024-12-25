@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:lady_driver/core/constant/const_manager.dart';
 import 'package:lady_driver/views/onboarding_view.dart';
 
 class SplashView extends StatefulWidget {
@@ -17,13 +18,16 @@ class _SplashViewState extends State<SplashView> {
   }
 
   splashToOnbording() {
-    Future.delayed(const Duration(seconds: 2), () {
-      Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (context) => const OnboardingView(),
-        ),
-      );
-    });
+    Future.delayed(
+      const Duration(seconds: 2),
+      () {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => const OnboardingView(),
+          ),
+        );
+      },
+    );
   }
 
   @override
@@ -41,8 +45,9 @@ class _SplashViewState extends State<SplashView> {
             Text(
               'LadyDriver',
               style: textTheme.displayLarge!.copyWith(
-                fontFamily: 'Judson',
+                fontFamily: kJudson,
                 fontWeight: FontWeight.w700,
+                color: kPrimaryColor,
               ),
             ),
             const SizedBox(
@@ -51,8 +56,9 @@ class _SplashViewState extends State<SplashView> {
             Text(
               'Your Comfort Zone',
               style: textTheme.headlineLarge!.copyWith(
-                fontFamily: 'Judson',
+                fontFamily: kJudson,
                 fontWeight: FontWeight.w400,
+                color: kPrimaryColor,
               ),
             ),
           ],

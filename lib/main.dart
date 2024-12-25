@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lady_driver/core/constant/const_manager.dart';
 import 'package:lady_driver/views/splash_view.dart';
 
 void main() {
@@ -11,7 +12,9 @@ class LadyDriver extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(fontFamily: 'Tajawal'),
+      theme: ThemeData(
+        fontFamily: kTajawal,
+      ),
       debugShowCheckedModeBanner: false,
       home: const SplashView(),
     );

@@ -65,27 +65,19 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Judson-Bold
+    - family: Judson
       fonts:
         - asset: assets/fonts/Judson-Bold.ttf
-      fonts:
         - asset: assets/fonts/Judson-Italic.ttf
-      fonts:
         - asset: assets/fonts/Judson-Regular.ttf
     - family: Tajawal
       fonts:
         - asset: assets/fonts/Tajawal-Black.ttf
-      fonts:
         - asset: assets/fonts/Tajawal-Bold.ttf
-      fonts:
         - asset: assets/fonts/Tajawal-ExtraBold.ttf
-      fonts:
         - asset: assets/fonts/Tajawal-ExtraLight.ttf
-      fonts:
         - asset: assets/fonts/Tajawal-Light.ttf
-      fonts:
         - asset: assets/fonts/Tajawal-Medium.ttf
-      fonts:
-        - asset: assets/fonts/Tajawal-Regular.ttf          
+        - asset: assets/fonts/Tajawal-Regular.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
