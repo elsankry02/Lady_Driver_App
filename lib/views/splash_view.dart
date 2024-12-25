@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:lady_driver/components/text_manager.dart';
-import 'package:lady_driver/views/onboarding/onboarding_view.dart';
+import 'package:lady_driver/views/onboarding_view.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -28,13 +27,8 @@ class _SplashViewState extends State<SplashView> {
   }
 
   @override
-  void dispose() {
-    splashToOnbording();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return Scaffold(
       body: Center(
         child: Column(
@@ -44,16 +38,22 @@ class _SplashViewState extends State<SplashView> {
             const SizedBox(
               height: 16,
             ),
-            const Text(
+            Text(
               'LadyDriver',
-              style: TextManager.kTextStyle64,
+              style: textTheme.displayLarge!.copyWith(
+                fontFamily: 'Judson',
+                fontWeight: FontWeight.w700,
+              ),
             ),
             const SizedBox(
               height: 16,
             ),
-            const Text(
+            Text(
               'Your Comfort Zone',
-              style: TextManager.kTextStyle32,
+              style: textTheme.headlineLarge!.copyWith(
+                fontFamily: 'Judson',
+                fontWeight: FontWeight.w400,
+              ),
             ),
           ],
         ),
