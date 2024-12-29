@@ -5,12 +5,14 @@ class CustomBotton extends StatelessWidget {
     super.key,
     required this.text,
     required this.color,
-    required this.colorTextTheme,
+    required this.textThemeColor,
+    required this.borderColor,
   });
 
   final String text;
   final Color color;
-  final Color colorTextTheme;
+  final Color textThemeColor;
+  final Color borderColor;
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +21,10 @@ class CustomBotton extends StatelessWidget {
       height: 48,
       width: double.infinity,
       decoration: BoxDecoration(
+        border: Border.all(
+          width: 1.5,
+          color: borderColor,
+        ),
         borderRadius: BorderRadius.circular(28),
         color: color,
       ),
@@ -26,7 +32,7 @@ class CustomBotton extends StatelessWidget {
         child: Text(
           text,
           style: textTheme.titleMedium!
-              .copyWith(color: colorTextTheme, fontWeight: FontWeight.w700),
+              .copyWith(color: textThemeColor, fontWeight: FontWeight.w700),
         ),
       ),
     );

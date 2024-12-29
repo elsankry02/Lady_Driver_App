@@ -38,7 +38,8 @@ class Onboarding3 extends StatelessWidget {
             ),
             //! Log-in
             const CustomBotton(
-              colorTextTheme: kWhite,
+              borderColor: kPrimaryColor,
+              textThemeColor: kWhite,
               text: 'تسجيل الدخول كعميل',
               color: kPrimaryColor,
             ),
@@ -46,12 +47,27 @@ class Onboarding3 extends StatelessWidget {
               height: 24,
             ),
             //! Join
-
-            const CustomBotton(
-              colorTextTheme: kWhite,
-              text: 'إنضمي كسائقة',
-              color: kPrimaryColor,
-            ),
+            Container(
+              height: 48,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                border: Border.all(
+                  width: 1.5,
+                  color: kPrimaryColor,
+                ),
+                borderRadius: BorderRadius.circular(28),
+                color: kWhite,
+              ),
+              child: Center(
+                child: Text(
+                  'إنضمي كسائقة',
+                  style: textTheme.titleMedium!.copyWith(
+                    color: kPrimaryColor,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),
