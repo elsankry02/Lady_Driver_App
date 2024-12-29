@@ -38,10 +38,12 @@ class _SplashViewState extends State<SplashView> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            //! image
             SvgPicture.asset('assets/svg/logo.svg'),
             const SizedBox(
               height: 16,
             ),
+            //! text
             Text(
               'LadyDriver',
               style: textTheme.displayLarge!.copyWith(
@@ -53,6 +55,7 @@ class _SplashViewState extends State<SplashView> {
             const SizedBox(
               height: 16,
             ),
+            //! lableText
             Text(
               'Your Comfort Zone',
               style: textTheme.headlineLarge!.copyWith(

@@ -1,10 +1,10 @@
 class OnboardingModel {
   final String? skip;
   final String image;
-  final String lable;
-  final String body;
+  final String lableText;
+  final String text;
 
-  OnboardingModel(this.image, this.body, this.lable, {this.skip});
+  OnboardingModel(this.image, this.text, this.lableText, {this.skip});
 }
 
 List<OnboardingModel> listOnBoarding = [
