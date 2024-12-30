@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lady_driver/core/components/custom_botton.dart';
-import 'package:lady_driver/core/components/custom_textfiled.dart';
-import 'package:lady_driver/core/components/custom_textfiled_password.dart';
+import 'package:lady_driver/core/components/custom_textformfield.dart';
+import 'package:lady_driver/core/components/custom_textformfield_password.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/constant/svg_manger.dart';
 import 'package:lady_driver/views/create_an_account.dart';
@@ -26,13 +26,13 @@ class LoginView extends StatelessWidget {
           const SizedBox(height: 35),
 
           //! البريد الالكترونى
-          const CustomTextFiled(
+          const CustomTextFormField(
             suffixIcon: SvgManger.kMail,
             hintText: 'البريد الالكترونى',
           ),
           const SizedBox(height: 27),
           //! كلمة المرور
-          const CustomTextfiledPassword(
+          const CustomTextFormFiledPassword(
             suffixIcon: SvgManger.kLock,
             labelText: 'كلمة المرور',
           ),

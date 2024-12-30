@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 
-class CustomTextFiled extends StatelessWidget {
-  const CustomTextFiled(
+class CustomTextFormField extends StatelessWidget {
+  const CustomTextFormField(
       {super.key, required this.suffixIcon, required this.hintText});
   final String suffixIcon;
   final String hintText;
@@ -12,16 +12,12 @@ class CustomTextFiled extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
     return TextFormField(
       decoration: InputDecoration(
-        prefixIcon: UnconstrainedBox(
-          child: SvgPicture.asset(suffixIcon),
-        ),
         hintText: hintText,
-        hintStyle: textTheme.bodyMedium!.copyWith(
-          fontWeight: FontWeight.w400,
-        ),
-        focusedBorder: outlineInputBorder(ColorManger.kBorderColor),
-        enabledBorder: outlineInputBorder(ColorManger.kBorderColor),
+        hintStyle: textTheme.bodyMedium!.copyWith(fontWeight: FontWeight.w400),
+        prefixIcon: UnconstrainedBox(child: SvgPicture.asset(suffixIcon)),
         border: outlineInputBorder(ColorManger.kBorderColor),
+        enabledBorder: outlineInputBorder(ColorManger.kBorderColor),
+        focusedBorder: outlineInputBorder(ColorManger.kBorderColor),
       ),
     );
   }

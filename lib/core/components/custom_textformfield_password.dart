@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
+import 'package:lady_driver/core/constant/svg_manger.dart';
 
-class CustomTextfiledPassword extends StatefulWidget {
-  const CustomTextfiledPassword(
+class CustomTextFormFiledPassword extends StatefulWidget {
+  const CustomTextFormFiledPassword(
       {super.key, required this.labelText, required this.suffixIcon});
   final String labelText;
   final String suffixIcon;
 
   @override
-  State<CustomTextfiledPassword> createState() =>
-      _CustomTextfiledPasswordState();
+  State<CustomTextFormFiledPassword> createState() =>
+      _CustomTextFormFiledPasswordState();
 }
 
-class _CustomTextfiledPasswordState extends State<CustomTextfiledPassword> {
+class _CustomTextFormFiledPasswordState
+    extends State<CustomTextFormFiledPassword> {
   bool isSelcted = true;
   @override
   Widget build(BuildContext context) {
@@ -26,26 +28,24 @@ class _CustomTextfiledPasswordState extends State<CustomTextfiledPassword> {
         prefixIcon: UnconstrainedBox(
           child: SvgPicture.asset(widget.suffixIcon),
         ),
-        //! isSelctedIcon
+        //! isSelcted
         suffixIcon: GestureDetector(
           onTap: () {
             setState(() {
               isSelcted = !isSelcted;
             });
           },
+          //! EyeOff & Eye
           child: UnconstrainedBox(
             child: SvgPicture.asset(
-              isSelcted ? 'assets/svg/eye-off.svg' : 'assets/svg/eye.svg',
-            ),
+                isSelcted ? SvgManger.kEyeoff : SvgManger.kEye),
           ),
         ),
         hintText: widget.labelText,
-        hintStyle: textTheme.titleSmall!.copyWith(
-          fontWeight: FontWeight.w400,
-        ),
-        focusedBorder: outlineInputBorder(ColorManger.kBorderColor),
-        enabledBorder: outlineInputBorder(ColorManger.kBorderColor),
+        hintStyle: textTheme.titleSmall!.copyWith(fontWeight: FontWeight.w400),
         border: outlineInputBorder(ColorManger.kBorderColor),
+        enabledBorder: outlineInputBorder(ColorManger.kBorderColor),
+        focusedBorder: outlineInputBorder(ColorManger.kBorderColor),
       ),
     );
   }
@@ -55,7 +55,6 @@ class _CustomTextfiledPasswordState extends State<CustomTextfiledPassword> {
       borderRadius: BorderRadius.circular(8),
       borderSide: BorderSide(
         width: 1.5,
-        // ignore: use_full_hex_values_for_flutter_colors
         color: borderColor,
       ),
     );
