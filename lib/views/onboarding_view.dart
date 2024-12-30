@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:lady_driver/core/components/custom_botton.dart';
 import 'package:lady_driver/core/constant/const_manager.dart';
 import 'package:lady_driver/models/onboarding_model.dart';
-import 'package:lady_driver/views/onboarding_3.dart';
+import 'package:lady_driver/views/onboarding3_view.dart';
 import 'package:lady_driver/widgets/onboarding/dot.dart';
 
 class OnboardingView extends StatefulWidget {
@@ -53,7 +53,7 @@ class _OnboardingViewState extends State<OnboardingView> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(builder: (context) {
-                              return const Onboarding3();
+                              return const Onboarding3View();
                             }),
                           );
                         },
@@ -109,7 +109,7 @@ class _OnboardingViewState extends State<OnboardingView> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) {
-                        return const Onboarding3();
+                        return const Onboarding3View();
                       }),
                     );
                   }

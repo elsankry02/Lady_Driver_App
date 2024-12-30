@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:lady_driver/core/components/custom_botton.dart';
 import 'package:lady_driver/core/constant/const_manager.dart';
+import 'package:lady_driver/views/create_an_account.dart';
 
-class Onboarding3 extends StatelessWidget {
-  const Onboarding3({super.key});
+class Onboarding3View extends StatelessWidget {
+  const Onboarding3View({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,27 +47,23 @@ class Onboarding3 extends StatelessWidget {
             const SizedBox(
               height: 24,
             ),
-            //! Join
-            Container(
-              height: 48,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  width: 1.5,
-                  color: kPrimaryColor,
-                ),
-                borderRadius: BorderRadius.circular(28),
-                color: kWhite,
-              ),
-              child: Center(
-                child: Text(
-                  'إنضمي كسائقة',
-                  style: textTheme.titleMedium!.copyWith(
-                    color: kPrimaryColor,
-                    fontWeight: FontWeight.w700,
+            //! Create an account
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const CreateAnAccount();
+                    },
                   ),
-                ),
-              ),
+                );
+              },
+              child: const CustomBotton(
+                  text: 'إنضمي كسائقة',
+                  color: kWhite,
+                  textThemeColor: kPrimaryColor,
+                  borderColor: kPrimaryColor),
             )
           ],
         ),
