@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lady_driver/core/components/custom_botton.dart';
-import 'package:lady_driver/core/constant/const_manager.dart';
+import 'package:lady_driver/core/constant/color_manger.dart';
+import 'package:lady_driver/core/constant/image_manger.dart';
 import 'package:lady_driver/views/create_an_account.dart';
+import 'package:lady_driver/views/login_view.dart';
 
 class Onboarding3View extends StatelessWidget {
   const Onboarding3View({super.key});
@@ -23,7 +25,7 @@ class Onboarding3View extends StatelessWidget {
               child: Image.asset(
                 width: 285,
                 height: 285,
-                'assets/image/car_6.png',
+                ImageManger.kOndoarding3,
               ),
             ),
             const SizedBox(
@@ -37,17 +39,29 @@ class Onboarding3View extends StatelessWidget {
             const SizedBox(
               height: 16,
             ),
-            //! Log-in
-            const CustomBotton(
-              borderColor: kPrimaryColor,
-              textThemeColor: kWhite,
-              text: 'تسجيل الدخول كعميل',
-              color: kPrimaryColor,
+            //! تسجيل الدخول كعميل
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const LoginView();
+                    },
+                  ),
+                );
+              },
+              child: const CustomBotton(
+                borderColor: ColorManger.kPrimaryColor,
+                textThemeColor: ColorManger.kWhite,
+                text: 'تسجيل الدخول كعميل',
+                color: ColorManger.kPrimaryColor,
+              ),
             ),
             const SizedBox(
               height: 24,
             ),
-            //! Create an account
+            //! إنضمي كسائقة
             GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -61,9 +75,9 @@ class Onboarding3View extends StatelessWidget {
               },
               child: const CustomBotton(
                   text: 'إنضمي كسائقة',
-                  color: kWhite,
-                  textThemeColor: kPrimaryColor,
-                  borderColor: kPrimaryColor),
+                  color: ColorManger.kWhite,
+                  textThemeColor: ColorManger.kPrimaryColor,
+                  borderColor: ColorManger.kPrimaryColor),
             )
           ],
         ),

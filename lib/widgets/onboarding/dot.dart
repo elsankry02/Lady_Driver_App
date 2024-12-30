@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lady_driver/core/constant/const_manager.dart';
+import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/models/onboarding_model.dart';
 
 class Dot extends StatelessWidget {
@@ -17,7 +17,7 @@ class Dot extends StatelessWidget {
             height: 7,
             width: currentindex == index ? 20 : 7,
             decoration: BoxDecoration(
-              color: kPrimaryColor,
+              color: ColorManger.kPrimaryColor,
               borderRadius: BorderRadius.circular(50),
             ),
           ),

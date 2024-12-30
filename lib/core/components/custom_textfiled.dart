@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:lady_driver/core/constant/color_manger.dart';
 
 class CustomTextFiled extends StatelessWidget {
   const CustomTextFiled(
@@ -9,29 +10,28 @@ class CustomTextFiled extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
-    return TextField(
+    return TextFormField(
       decoration: InputDecoration(
-        suffixIcon: UnconstrainedBox(
+        prefixIcon: UnconstrainedBox(
           child: SvgPicture.asset(suffixIcon),
         ),
         hintText: hintText,
-        hintStyle: textTheme.titleSmall!.copyWith(
+        hintStyle: textTheme.bodyMedium!.copyWith(
           fontWeight: FontWeight.w400,
         ),
-        focusedBorder: outlineInputBorder(),
-        enabledBorder: outlineInputBorder(),
-        border: outlineInputBorder(),
+        focusedBorder: outlineInputBorder(ColorManger.kBorderColor),
+        enabledBorder: outlineInputBorder(ColorManger.kBorderColor),
+        border: outlineInputBorder(ColorManger.kBorderColor),
       ),
     );
   }
 
-  outlineInputBorder() {
+  outlineInputBorder(Color borderColor) {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
-      borderSide: const BorderSide(
+      borderSide: BorderSide(
         width: 1.5,
-        // ignore: use_full_hex_values_for_flutter_colors
-        color: Color(0xff4d4d4d1a),
+        color: borderColor,
       ),
     );
   }

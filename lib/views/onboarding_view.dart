@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:lady_driver/core/components/custom_botton.dart';
-import 'package:lady_driver/core/constant/const_manager.dart';
+import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/models/onboarding_model.dart';
 import 'package:lady_driver/views/onboarding3_view.dart';
 import 'package:lady_driver/widgets/onboarding/dot.dart';
@@ -120,9 +120,9 @@ class _OnboardingViewState extends State<OnboardingView> {
                   );
                 },
                 child: const CustomBotton(
-                  borderColor: kPrimaryColor,
-                  textThemeColor: kWhite,
-                  color: kPrimaryColor,
+                  borderColor: ColorManger.kPrimaryColor,
+                  textThemeColor: ColorManger.kWhite,
+                  color: ColorManger.kPrimaryColor,
                   text: 'التالي',
                 ),
               ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:lady_driver/core/constant/const_manager.dart';
+import 'package:lady_driver/core/constant/color_manger.dart';
+import 'package:lady_driver/core/constant/string_manager.dart';
+import 'package:lady_driver/core/constant/svg_manger.dart';
 import 'package:lady_driver/views/onboarding_view.dart';
 
 class SplashView extends StatefulWidget {
@@ -31,6 +33,12 @@ class _SplashViewState extends State<SplashView> {
   }
 
   @override
+  void dispose() {
+    splashToOnbording();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return Scaffold(
@@ -39,7 +47,7 @@ class _SplashViewState extends State<SplashView> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             //! image
-            SvgPicture.asset('assets/svg/logo.svg'),
+            SvgPicture.asset(SvgManger.kLogo),
             const SizedBox(
               height: 16,
             ),
@@ -49,7 +57,7 @@ class _SplashViewState extends State<SplashView> {
               style: textTheme.displayLarge!.copyWith(
                 fontFamily: kJudson,
                 fontWeight: FontWeight.w700,
-                color: kPrimaryColor,
+                color: ColorManger.kPrimaryColor,
               ),
             ),
             const SizedBox(
@@ -61,7 +69,7 @@ class _SplashViewState extends State<SplashView> {
               style: textTheme.headlineLarge!.copyWith(
                 fontFamily: kJudson,
                 fontWeight: FontWeight.w400,
-                color: kPrimaryColor,
+                color: ColorManger.kPrimaryColor,
               ),
             ),
           ],

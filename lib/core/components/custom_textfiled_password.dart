@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:lady_driver/core/constant/color_manger.dart';
 
 class CustomTextfiledPassword extends StatefulWidget {
   const CustomTextfiledPassword(
@@ -17,16 +18,16 @@ class _CustomTextfiledPasswordState extends State<CustomTextfiledPassword> {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
-    return TextField(
+    return TextFormField(
       keyboardType: TextInputType.number,
       style: textTheme.titleSmall!.copyWith(fontWeight: FontWeight.w400),
       obscureText: isSelcted ? true : false,
       decoration: InputDecoration(
-        suffixIcon: UnconstrainedBox(
+        prefixIcon: UnconstrainedBox(
           child: SvgPicture.asset(widget.suffixIcon),
         ),
         //! isSelctedIcon
-        prefixIcon: GestureDetector(
+        suffixIcon: GestureDetector(
           onTap: () {
             setState(() {
               isSelcted = !isSelcted;
@@ -42,20 +43,20 @@ class _CustomTextfiledPasswordState extends State<CustomTextfiledPassword> {
         hintStyle: textTheme.titleSmall!.copyWith(
           fontWeight: FontWeight.w400,
         ),
-        focusedBorder: outlineInputBorder(),
-        enabledBorder: outlineInputBorder(),
-        border: outlineInputBorder(),
+        focusedBorder: outlineInputBorder(ColorManger.kBorderColor),
+        enabledBorder: outlineInputBorder(ColorManger.kBorderColor),
+        border: outlineInputBorder(ColorManger.kBorderColor),
       ),
     );
   }
 
-  outlineInputBorder() {
+  outlineInputBorder(Color borderColor) {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
-      borderSide: const BorderSide(
+      borderSide: BorderSide(
         width: 1.5,
         // ignore: use_full_hex_values_for_flutter_colors
-        color: Color(0xff4d4d4d1a),
+        color: borderColor,
       ),
     );
   }
