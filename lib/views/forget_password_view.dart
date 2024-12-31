@@ -14,6 +14,11 @@ class ForgetPasswordView extends StatefulWidget {
 
 class _ForgetPasswordViewState extends State<ForgetPasswordView> {
   final emailController = TextEditingController();
+  @override
+  void dispose() {
+    emailController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {

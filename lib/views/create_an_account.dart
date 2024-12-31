@@ -17,6 +17,13 @@ class _CreateAnAccountState extends State<CreateAnAccount> {
   final userController = TextEditingController();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
+  @override
+  void dispose() {
+    userController.dispose();
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {

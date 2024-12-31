@@ -18,6 +18,7 @@ class _SplashViewState extends State<SplashView> {
     splashToOnbording();
     super.initState();
   }
+  
 
   splashToOnbording() {
     Future.delayed(

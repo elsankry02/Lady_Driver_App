@@ -19,6 +19,13 @@ class _LoginViewState extends State<LoginView> {
   final passWordController = TextEditingController();
   final emailController = TextEditingController();
   @override
+  void dispose() {
+    passWordController.dispose();
+    emailController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return Scaffold(
@@ -34,8 +41,8 @@ class _LoginViewState extends State<LoginView> {
           const SizedBox(height: 35),
 
           //! البريد الالكترونى
-           CustomTextFormField(
-            controller: emailController ,
+          CustomTextFormField(
+            controller: emailController,
             suffixIcon: SvgManger.kMail,
             hintText: 'البريد الالكترونى',
           ),
