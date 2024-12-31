@@ -6,6 +6,7 @@ import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/constant/svg_manger.dart';
 import 'package:lady_driver/views/create_an_account.dart';
 import 'package:lady_driver/views/forget_password_view.dart';
+import 'package:lady_driver/widgets/rich_text/rich_text_widget.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -56,18 +57,8 @@ class LoginView extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 25),
-          //! سياسه الخصوصيه
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Text(
-                'عند تسجيل الدخول انت توافق علي سياسة الخصوصية \nوالاستخدام',
-                textAlign: TextAlign.end,
-                style: textTheme.labelMedium!
-                    .copyWith(fontWeight: FontWeight.w300),
-              ),
-            ],
-          ),
+          //! (Text icRh) سياسه الخصوصيه
+          const RichTextWidget(),
           const SizedBox(height: 16),
           //! تسجيل الدخول
           const CustomBotton(
