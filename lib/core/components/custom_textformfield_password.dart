@@ -5,9 +5,13 @@ import 'package:lady_driver/core/constant/svg_manger.dart';
 
 class CustomTextFormFiledPassword extends StatefulWidget {
   const CustomTextFormFiledPassword(
-      {super.key, required this.labelText, required this.suffixIcon});
+      {super.key,
+      required this.labelText,
+      required this.suffixIcon,
+      required this.controller});
   final String labelText;
   final String suffixIcon;
+  final TextEditingController controller;
 
   @override
   State<CustomTextFormFiledPassword> createState() =>
@@ -21,6 +25,7 @@ class _CustomTextFormFiledPasswordState
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return TextFormField(
+      controller: widget.controller,
       keyboardType: TextInputType.number,
       style: textTheme.titleSmall!.copyWith(fontWeight: FontWeight.w400),
       obscureText: isSelcted ? true : false,

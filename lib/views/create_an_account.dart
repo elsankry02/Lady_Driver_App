@@ -6,8 +6,17 @@ import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/constant/svg_manger.dart';
 import 'package:lady_driver/views/login_view.dart';
 
-class CreateAnAccount extends StatelessWidget {
+class CreateAnAccount extends StatefulWidget {
   const CreateAnAccount({super.key});
+
+  @override
+  State<CreateAnAccount> createState() => _CreateAnAccountState();
+}
+
+class _CreateAnAccountState extends State<CreateAnAccount> {
+  final userController = TextEditingController();
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -25,21 +34,24 @@ class CreateAnAccount extends StatelessWidget {
           ),
           const SizedBox(height: 32),
           //! الاسم
-          const CustomTextFormField(
+          CustomTextFormField(
+            controller: userController,
             suffixIcon: SvgManger.kUser,
             hintText: 'الاسم',
           ),
           const SizedBox(height: 27),
           //! البريد الالكترونى
-          const CustomTextFormField(
+          CustomTextFormField(
+            controller: emailController,
             suffixIcon: SvgManger.kMail,
             hintText: 'البريد الالكترونى',
           ),
           const SizedBox(height: 27),
           //! كلمة المرور
-          const CustomTextFormFiledPassword(
+          CustomTextFormFiledPassword(
             suffixIcon: SvgManger.kLock,
             labelText: 'كلمة المرور',
+            controller: passwordController,
           ),
           const SizedBox(height: 52),
           //! إنشاء الحساب

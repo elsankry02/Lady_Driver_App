@@ -8,9 +8,16 @@ import 'package:lady_driver/views/create_an_account.dart';
 import 'package:lady_driver/views/forget_password_view.dart';
 import 'package:lady_driver/widgets/rich_text/rich_text_widget.dart';
 
-class LoginView extends StatelessWidget {
+class LoginView extends StatefulWidget {
   const LoginView({super.key});
 
+  @override
+  State<LoginView> createState() => _LoginViewState();
+}
+
+class _LoginViewState extends State<LoginView> {
+  final passWordController = TextEditingController();
+  final emailController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -27,13 +34,15 @@ class LoginView extends StatelessWidget {
           const SizedBox(height: 35),
 
           //! البريد الالكترونى
-          const CustomTextFormField(
+           CustomTextFormField(
+            controller: emailController ,
             suffixIcon: SvgManger.kMail,
             hintText: 'البريد الالكترونى',
           ),
           const SizedBox(height: 27),
           //! كلمة المرور
-          const CustomTextFormFiledPassword(
+          CustomTextFormFiledPassword(
+            controller: passWordController,
             suffixIcon: SvgManger.kLock,
             labelText: 'كلمة المرور',
           ),

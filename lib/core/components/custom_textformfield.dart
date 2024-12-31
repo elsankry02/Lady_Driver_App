@@ -4,13 +4,18 @@ import 'package:lady_driver/core/constant/color_manger.dart';
 
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField(
-      {super.key, required this.suffixIcon, required this.hintText});
+      {super.key,
+      required this.suffixIcon,
+      required this.hintText,
+      required this.controller});
   final String suffixIcon;
   final String hintText;
+  final TextEditingController controller;
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return TextFormField(
+      controller: controller,
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: textTheme.bodyMedium!.copyWith(fontWeight: FontWeight.w400),

@@ -5,8 +5,15 @@ import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/constant/image_manger.dart';
 import 'package:lady_driver/core/constant/svg_manger.dart';
 
-class ForgetPasswordView extends StatelessWidget {
+class ForgetPasswordView extends StatefulWidget {
   const ForgetPasswordView({super.key});
+
+  @override
+  State<ForgetPasswordView> createState() => _ForgetPasswordViewState();
+}
+
+class _ForgetPasswordViewState extends State<ForgetPasswordView> {
+  final emailController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +45,8 @@ class ForgetPasswordView extends StatelessWidget {
           ),
           const SizedBox(height: 30),
 
-          const CustomTextFormField(
+          CustomTextFormField(
+            controller: emailController,
             suffixIcon: SvgManger.kMail,
             hintText: 'البريد الالكترونى',
           ),
