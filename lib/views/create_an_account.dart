@@ -14,6 +14,7 @@ class CreateAnAccount extends StatefulWidget {
 }
 
 class _CreateAnAccountState extends State<CreateAnAccount> {
+  final GlobalKey<FormState> keyform = GlobalKey();
   final userController = TextEditingController();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
@@ -30,76 +31,106 @@ class _CreateAnAccountState extends State<CreateAnAccount> {
     final textTheme = Theme.of(context).textTheme;
 
     return Scaffold(
-      body: ListView(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        children: [
-          const SizedBox(height: 65),
-          Text(
-            'إنشاء حساب في ليدي درايفر',
-            textAlign: TextAlign.end,
-            style: textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w700),
-          ),
-          const SizedBox(height: 32),
-          //! الاسم
-          CustomTextFormField(
-            controller: userController,
-            suffixIcon: SvgManger.kUser,
-            hintText: 'الاسم',
-          ),
-          const SizedBox(height: 27),
-          //! البريد الالكترونى
-          CustomTextFormField(
-            controller: emailController,
-            suffixIcon: SvgManger.kMail,
-            hintText: 'البريد الالكترونى',
-          ),
-          const SizedBox(height: 27),
-          //! كلمة المرور
-          CustomTextFormFiledPassword(
-            suffixIcon: SvgManger.kLock,
-            labelText: 'كلمة المرور',
-            controller: passwordController,
-          ),
-          const SizedBox(height: 52),
-          //! إنشاء الحساب
-          const CustomBotton(
-              text: 'إنشاء الحساب',
-              color: ColorManger.kPrimaryColor,
-              textThemeColor: ColorManger.kWhite,
-              borderColor: ColorManger.kPrimaryColor),
-          const SizedBox(height: 61),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              //! تسجيل الدخول
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return const LoginView();
-                      },
+      body: Form(
+        key: keyform,
+        child: ListView(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          children: [
+            const SizedBox(height: 65),
+            Text(
+              'إنشاء حساب في ليدي درايفر',
+              textAlign: TextAlign.end,
+              style:
+                  textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w700),
+            ),
+            const SizedBox(height: 32),
+            //! الاسم
+            CustomTextFormField(
+              validator: (value) {
+                if (value!.isNotEmpty) {
+                  return 'valid';
+                } else {
+                  return 'Please enter a valid your name';
+                }
+              },
+              controller: userController,
+              suffixIcon: SvgManger.kUser,
+              hintText: 'الاسم',
+            ),
+            const SizedBox(height: 27),
+            //! البريد الالكترونى
+            CustomTextFormField(
+              validator: (value) {
+                if (value!.isNotEmpty) {
+                  return 'valid';
+                } else {
+                  return 'Please enter a valid email address';
+                }
+              },
+              controller: emailController,
+              suffixIcon: SvgManger.kMail,
+              hintText: 'البريد الالكترونى',
+            ),
+            const SizedBox(height: 27),
+            //! كلمة المرور
+            CustomTextFormFiledPassword(
+              validator: (value) {
+                if (value!.length < 6) {
+                  return 'Please enter a valid password';
+                } else {
+                  return 'valid';
+                }
+              },
+              controller: passwordController,
+              suffixIcon: SvgManger.kLock,
+              labelText: 'كلمة المرور',
+            ),
+            const SizedBox(height: 52),
+            //! إنشاء الحساب
+            GestureDetector(
+              onTap: () {
+                keyform.currentState!.validate();
+              },
+              child: const CustomBotton(
+                  text: 'إنشاء الحساب',
+                  color: ColorManger.kPrimaryColor,
+                  textThemeColor: ColorManger.kWhite,
+                  borderColor: ColorManger.kPrimaryColor),
+            ),
+            const SizedBox(height: 61),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                //! تسجيل الدخول
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return const LoginView();
+                        },
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'تسجيل الدخول',
+                    style: textTheme.titleSmall!.copyWith(
+                      fontWeight: FontWeight.w400,
+                      color: ColorManger.kPrimaryColor,
                     ),
-                  );
-                },
-                child: Text(
-                  'تسجيل الدخول',
-                  style: textTheme.titleSmall!.copyWith(
-                    fontWeight: FontWeight.w400,
-                    color: ColorManger.kPrimaryColor,
                   ),
                 ),
-              ),
-              //! لديك حساب بالفعل ؟
-              Text(
-                ' لديك حساب بالفعل ؟',
-                style:
-                    textTheme.titleSmall!.copyWith(fontWeight: FontWeight.w400),
-              ),
-            ],
-          )
-        ],
+                //! لديك حساب بالفعل ؟
+                Text(
+                  ' لديك حساب بالفعل ؟',
+                  style: textTheme.titleSmall!
+                      .copyWith(fontWeight: FontWeight.w400),
+                ),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
