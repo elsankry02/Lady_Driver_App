@@ -50,7 +50,7 @@ class _LoginViewState extends State<LoginView> {
                 if (value!.isNotEmpty) {
                   return 'valid';
                 } else {
-                  return 'Please enter a valid email address ';
+                  return 'this field cannot be empty';
                 }
               },
               controller: emailController,
@@ -62,9 +62,9 @@ class _LoginViewState extends State<LoginView> {
             CustomTextFormFiledPassword(
               validator: (value) {
                 if (value!.length < 6) {
-                  return 'valid';
+                  return 'this field cannot be empty';
                 } else {
-                  return 'Please enter a valid password';
+                  return 'valid';
                 }
               },
               controller: passWordController,
@@ -85,9 +85,12 @@ class _LoginViewState extends State<LoginView> {
                 );
               },
               child: Text(
-                ' هل نسيت كلمة المرور؟',
-                style:
-                    textTheme.titleSmall!.copyWith(fontWeight: FontWeight.w400),
+                'هل نسيت كلمة المرور؟',
+                style: textTheme.titleSmall!.copyWith(
+                  fontWeight: FontWeight.w400,
+                  decoration: TextDecoration.underline,
+                  decorationThickness: 1.5,
+                ),
               ),
             ),
             const SizedBox(height: 25),

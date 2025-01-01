@@ -50,7 +50,7 @@ class _CreateAnAccountState extends State<CreateAnAccount> {
                 if (value!.isNotEmpty) {
                   return 'valid';
                 } else {
-                  return 'Please enter a valid your name';
+                  return 'this field cannot be empty';
                 }
               },
               controller: userController,
@@ -64,7 +64,7 @@ class _CreateAnAccountState extends State<CreateAnAccount> {
                 if (value!.isNotEmpty) {
                   return 'valid';
                 } else {
-                  return 'Please enter a valid email address';
+                  return 'this field cannot be empty';
                 }
               },
               controller: emailController,
@@ -76,7 +76,7 @@ class _CreateAnAccountState extends State<CreateAnAccount> {
             CustomTextFormFiledPassword(
               validator: (value) {
                 if (value!.length < 6) {
-                  return 'Please enter a valid password';
+                  return 'this field cannot be empty';
                 } else {
                   return 'valid';
                 }
@@ -99,7 +99,7 @@ class _CreateAnAccountState extends State<CreateAnAccount> {
             ),
             const SizedBox(height: 61),
             Row(
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 //! تسجيل الدخول
                 GestureDetector(

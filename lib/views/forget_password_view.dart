@@ -53,13 +53,12 @@ class _ForgetPasswordViewState extends State<ForgetPasswordView> {
                   textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w700),
             ),
             const SizedBox(height: 30),
-
             CustomTextFormField(
               validator: (value) {
                 if (value!.isNotEmpty) {
                   return 'Valid';
                 } else {
-                  return 'Please enter a valid email address ';
+                  return 'this field cannot be empty';
                 }
               },
               controller: emailController,
