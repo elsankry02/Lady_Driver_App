@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lady_driver/core/components/custom_botton.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
-import 'package:lady_driver/models/onboarding_model.dart';
+import 'package:lady_driver/core/models/onboarding_model.dart';
 import 'package:lady_driver/pages/onboarding3_page.dart';
 import 'package:lady_driver/widgets/onboarding/dot.dart';
 
