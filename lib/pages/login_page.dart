@@ -4,7 +4,7 @@ import 'package:lady_driver/core/components/custom_textformfield.dart';
 import 'package:lady_driver/core/components/custom_textformfield_password.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/constant/svg_manger.dart';
-import 'package:lady_driver/pages/forget_password_page.dart';
+import 'package:lady_driver/pages/verification_code_page.dart';
 import 'package:lady_driver/widgets/rich_text/rich_text_login_widget.dart';
 import 'package:lady_driver/widgets/rich_text/rich_text_privacy_policy_widget.dart';
 
@@ -79,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return const ForgetPasswordPage();
+                      return const VerificationCodePage();
                     },
                   ),
                 );
@@ -94,7 +94,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             const SizedBox(height: 25),
-            //! (Text icRh) سياسه الخصوصيه
+            //!   CheckBox & سياسه الخصوصيه
             const RichTextPrivacyPolicyWidget(),
             const SizedBox(height: 16),
             //! تسجيل الدخول
@@ -109,7 +109,7 @@ class _LoginPageState extends State<LoginPage> {
                   borderColor: ColorManger.kPrimaryColor),
             ),
             const SizedBox(height: 40),
-
+            //!RichTextLoginWidget
             RichTextLoginWidget(textTheme: textTheme),
           ],
         ),

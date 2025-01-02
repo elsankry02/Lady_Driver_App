@@ -29,7 +29,7 @@ class _CustomTextFormFiledPasswordState
     return TextFormField(
       validator: widget.validator,
       controller: widget.controller,
-      keyboardType: TextInputType.number,
+      keyboardType: TextInputType.emailAddress,
       style: textTheme.titleSmall!.copyWith(fontWeight: FontWeight.w400),
       obscureText: isSelcted ? true : false,
       decoration: InputDecoration(

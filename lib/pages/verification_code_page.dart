@@ -8,10 +8,19 @@ class VerificationCodePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(
+          'رمز التحقق',
+          style: textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.w500),
+        ),
+      ),
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         children: [
+          const SizedBox(
+            height: 24,
+          ),
           Text(
               textAlign: TextAlign.center,
               'ادخل الرمز الذي تم إرساله إلي عنولن البريد \nالالكترونى',

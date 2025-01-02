@@ -17,6 +17,7 @@ class CustomTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return TextFormField(
+      keyboardType: TextInputType.emailAddress,
       validator: validator,
       controller: controller,
       decoration: InputDecoration(
