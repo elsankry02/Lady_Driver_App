@@ -3,22 +3,21 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/constant/string_manager.dart';
 import 'package:lady_driver/core/constant/svg_manger.dart';
-import 'package:lady_driver/views/onboarding_view.dart';
+import 'package:lady_driver/pages/onboarding_page.dart';
 
-class SplashView extends StatefulWidget {
-  const SplashView({super.key});
+class SplashPage extends StatefulWidget {
+  const SplashPage({super.key});
 
   @override
-  State<SplashView> createState() => _SplashViewState();
+  State<SplashPage> createState() => _SplashPageState();
 }
 
-class _SplashViewState extends State<SplashView> {
+class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     splashToOnbording();
     super.initState();
   }
-  
 
   splashToOnbording() {
     Future.delayed(
@@ -26,7 +25,7 @@ class _SplashViewState extends State<SplashView> {
       () {
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => const OnboardingView(),
+            builder: (context) => const OnboardingPage(),
           ),
         );
       },

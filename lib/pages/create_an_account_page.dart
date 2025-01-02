@@ -4,16 +4,16 @@ import 'package:lady_driver/core/components/custom_textformfield.dart';
 import 'package:lady_driver/core/components/custom_textformfield_password.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/constant/svg_manger.dart';
-import 'package:lady_driver/views/login_view.dart';
+import 'package:lady_driver/widgets/rich_text/rich_text_create_an_account_widget.dart';
 
-class CreateAnAccount extends StatefulWidget {
-  const CreateAnAccount({super.key});
+class CreateAnAccountPage extends StatefulWidget {
+  const CreateAnAccountPage({super.key});
 
   @override
-  State<CreateAnAccount> createState() => _CreateAnAccountState();
+  State<CreateAnAccountPage> createState() => _CreateAnAccountPageState();
 }
 
-class _CreateAnAccountState extends State<CreateAnAccount> {
+class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
   final GlobalKey<FormState> keyform = GlobalKey();
   final userController = TextEditingController();
   final emailController = TextEditingController();
@@ -97,38 +97,8 @@ class _CreateAnAccountState extends State<CreateAnAccount> {
                   textThemeColor: ColorManger.kWhite,
                   borderColor: ColorManger.kPrimaryColor),
             ),
-            const SizedBox(height: 61),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                //! تسجيل الدخول
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return const LoginView();
-                        },
-                      ),
-                    );
-                  },
-                  child: Text(
-                    'تسجيل الدخول',
-                    style: textTheme.titleSmall!.copyWith(
-                      fontWeight: FontWeight.w400,
-                      color: ColorManger.kPrimaryColor,
-                    ),
-                  ),
-                ),
-                //! لديك حساب بالفعل ؟
-                Text(
-                  ' لديك حساب بالفعل ؟',
-                  style: textTheme.titleSmall!
-                      .copyWith(fontWeight: FontWeight.w400),
-                ),
-              ],
-            )
+            const SizedBox(height: 48),
+            RichTextCreateAnAccountWidget(textTheme: textTheme),
           ],
         ),
       ),

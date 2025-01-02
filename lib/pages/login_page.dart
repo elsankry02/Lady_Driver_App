@@ -4,18 +4,18 @@ import 'package:lady_driver/core/components/custom_textformfield.dart';
 import 'package:lady_driver/core/components/custom_textformfield_password.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/constant/svg_manger.dart';
-import 'package:lady_driver/views/create_an_account.dart';
-import 'package:lady_driver/views/forget_password_view.dart';
-import 'package:lady_driver/widgets/rich_text/rich_text_widget.dart';
+import 'package:lady_driver/pages/forget_password_page.dart';
+import 'package:lady_driver/widgets/rich_text/rich_text_login_widget.dart';
+import 'package:lady_driver/widgets/rich_text/rich_text_privacy_policy_widget.dart';
 
-class LoginView extends StatefulWidget {
-  const LoginView({super.key});
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
 
   @override
-  State<LoginView> createState() => _LoginViewState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _LoginViewState extends State<LoginView> {
+class _LoginPageState extends State<LoginPage> {
   final GlobalKey<FormState> formkey = GlobalKey();
   final passWordController = TextEditingController();
   final emailController = TextEditingController();
@@ -79,7 +79,7 @@ class _LoginViewState extends State<LoginView> {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return const ForgetPasswordView();
+                      return const ForgetPasswordPage();
                     },
                   ),
                 );
@@ -95,7 +95,7 @@ class _LoginViewState extends State<LoginView> {
             ),
             const SizedBox(height: 25),
             //! (Text icRh) سياسه الخصوصيه
-            const RichTextWidget(),
+            const RichTextPrivacyPolicyWidget(),
             const SizedBox(height: 16),
             //! تسجيل الدخول
             GestureDetector(
@@ -108,38 +108,9 @@ class _LoginViewState extends State<LoginView> {
                   textThemeColor: ColorManger.kWhite,
                   borderColor: ColorManger.kPrimaryColor),
             ),
-            const SizedBox(height: 25),
+            const SizedBox(height: 40),
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                //! انشاء حساب
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return const CreateAnAccount();
-                        },
-                      ),
-                    );
-                  },
-                  child: Text(
-                    'إنشاء حساب',
-                    style: textTheme.titleSmall!.copyWith(
-                        fontWeight: FontWeight.w400,
-                        color: ColorManger.kPrimaryColor),
-                  ),
-                ),
-                //! ليس لديك حساب ؟
-                Text(
-                  ' ليس لديك حساب ؟',
-                  style: textTheme.titleSmall!
-                      .copyWith(fontWeight: FontWeight.w400),
-                ),
-              ],
-            ),
+            RichTextLoginWidget(textTheme: textTheme),
           ],
         ),
       ),

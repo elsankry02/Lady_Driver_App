@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lady_driver/core/constant/string_manager.dart';
-import 'package:lady_driver/views/splash_view.dart';
+import 'package:lady_driver/pages/splash_page.dart';
 
 void main() {
   runApp(const LadyDriver());
@@ -16,7 +16,7 @@ class LadyDriver extends StatelessWidget {
         fontFamily: kTajawal,
       ),
       debugShowCheckedModeBanner: false,
-      home: const SplashView(),
+      home: const SplashPage(),
     );
   }
 }

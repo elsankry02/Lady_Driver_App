@@ -1,20 +1,18 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:lady_driver/core/components/custom_botton.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/models/onboarding_model.dart';
-import 'package:lady_driver/views/onboarding3_view.dart';
+import 'package:lady_driver/pages/onboarding3_page.dart';
 import 'package:lady_driver/widgets/onboarding/dot.dart';
 
-class OnboardingView extends StatefulWidget {
-  const OnboardingView({super.key});
+class OnboardingPage extends StatefulWidget {
+  const OnboardingPage({super.key});
 
   @override
-  State<OnboardingView> createState() => _OnboardingViewState();
+  State<OnboardingPage> createState() => _OnboardingPageState();
 }
 
-class _OnboardingViewState extends State<OnboardingView> {
+class _OnboardingPageState extends State<OnboardingPage> {
   int currentindex = 0;
   final _controller = PageController(initialPage: 0);
 
@@ -38,10 +36,11 @@ class _OnboardingViewState extends State<OnboardingView> {
                 child: PageView.builder(
                   controller: _controller,
                   onPageChanged: (value) {
-                    setState(() {
-                      log(value.toString());
-                      currentindex = value;
-                    });
+                    setState(
+                      () {
+                        currentindex = value;
+                      },
+                    );
                   },
                   itemCount: listOnBoarding.length,
                   itemBuilder: (context, index) => Column(
@@ -53,7 +52,7 @@ class _OnboardingViewState extends State<OnboardingView> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(builder: (context) {
-                              return const Onboarding3View();
+                              return const Onboarding3Page();
                             }),
                           );
                         },
@@ -109,7 +108,7 @@ class _OnboardingViewState extends State<OnboardingView> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) {
-                        return const Onboarding3View();
+                        return const Onboarding3Page();
                       }),
                     );
                   }

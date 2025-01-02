@@ -4,15 +4,16 @@ import 'package:lady_driver/core/components/custom_textformfield.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/constant/image_manger.dart';
 import 'package:lady_driver/core/constant/svg_manger.dart';
+import 'package:lady_driver/pages/verification_code_page.dart';
 
-class ForgetPasswordView extends StatefulWidget {
-  const ForgetPasswordView({super.key});
+class ForgetPasswordPage extends StatefulWidget {
+  const ForgetPasswordPage({super.key});
 
   @override
-  State<ForgetPasswordView> createState() => _ForgetPasswordViewState();
+  State<ForgetPasswordPage> createState() => _ForgetPasswordPageState();
 }
 
-class _ForgetPasswordViewState extends State<ForgetPasswordView> {
+class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
   final GlobalKey<FormState> formkey = GlobalKey();
   final emailController = TextEditingController();
   @override
@@ -27,6 +28,7 @@ class _ForgetPasswordViewState extends State<ForgetPasswordView> {
 
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         //! نسيت كلمة المرور
         title: Text(
           'نسيت كلمة المرور',
@@ -55,11 +57,16 @@ class _ForgetPasswordViewState extends State<ForgetPasswordView> {
             const SizedBox(height: 30),
             CustomTextFormField(
               validator: (value) {
-                if (value!.isNotEmpty) {
-                  return 'Valid';
+                if (value!.contains(value = '@gmail.com')) {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) {
+                      return const VerificationCodePage();
+                    },
+                  ));
                 } else {
                   return 'this field cannot be empty';
                 }
+                return null;
               },
               controller: emailController,
               suffixIcon: SvgManger.kMail,

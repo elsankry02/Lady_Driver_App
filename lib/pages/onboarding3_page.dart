@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:lady_driver/core/components/custom_botton.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/constant/image_manger.dart';
-import 'package:lady_driver/views/create_an_account.dart';
-import 'package:lady_driver/views/login_view.dart';
+import 'package:lady_driver/pages/create_an_account_page.dart';
+import 'package:lady_driver/pages/login_page.dart';
 
-class Onboarding3View extends StatelessWidget {
-  const Onboarding3View({super.key});
+class Onboarding3Page extends StatelessWidget {
+  const Onboarding3Page({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +46,7 @@ class Onboarding3View extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return const LoginView();
+                      return const LoginPage();
                     },
                   ),
                 );
@@ -68,7 +68,7 @@ class Onboarding3View extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return const CreateAnAccount();
+                      return const CreateAnAccountPage();
                     },
                   ),
                 );
