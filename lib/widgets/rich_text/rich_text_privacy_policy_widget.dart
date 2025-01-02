@@ -2,15 +2,17 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 
-class RichTextWidget extends StatefulWidget {
-  const RichTextWidget({super.key});
+class RichTextPrivacyPolicyWidget extends StatefulWidget {
+  const RichTextPrivacyPolicyWidget({super.key});
 
   @override
-  State<RichTextWidget> createState() => _RichTextWidgetState();
+  State<RichTextPrivacyPolicyWidget> createState() =>
+      _RichTextPrivacyPolicyWidgetState();
 }
 
-class _RichTextWidgetState extends State<RichTextWidget> {
-  bool currentindex = false;
+class _RichTextPrivacyPolicyWidgetState
+    extends State<RichTextPrivacyPolicyWidget> {
+  bool isSelected = false;
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -54,11 +56,11 @@ class _RichTextWidgetState extends State<RichTextWidget> {
           width: 15,
           child: Checkbox(
             activeColor: ColorManger.kPrimaryColor,
-            value: currentindex,
+            value: isSelected,
             onChanged: (value) {
               setState(
                 () {
-                  currentindex = value!;
+                  isSelected = value!;
                 },
               );
             },
