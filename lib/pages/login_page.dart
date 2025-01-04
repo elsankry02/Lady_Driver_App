@@ -69,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
               },
               controller: passWordController,
               suffixIcon: SvgManger.kLock,
-              labelText: 'كلمة المرور',
+              hintText: 'كلمة المرور',
             ),
             const SizedBox(height: 27),
             //! هل نسيت كلمة المرور؟

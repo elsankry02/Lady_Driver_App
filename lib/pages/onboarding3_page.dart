@@ -39,7 +39,7 @@ class Onboarding3Page extends StatelessWidget {
             const SizedBox(
               height: 16,
             ),
-            //! تسجيل الدخول كعميل
+            //! تسجيل الدخول
             GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -54,14 +54,14 @@ class Onboarding3Page extends StatelessWidget {
               child: const CustomBotton(
                 borderColor: ColorManger.kPrimaryColor,
                 textThemeColor: ColorManger.kWhite,
-                text: 'تسجيل الدخول كعميل',
+                text: 'تسجيل الدخول ',
                 color: ColorManger.kPrimaryColor,
               ),
             ),
             const SizedBox(
               height: 24,
             ),
-            //! إنضمي كسائقة
+            //!  انشاء حساب
             GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -74,7 +74,7 @@ class Onboarding3Page extends StatelessWidget {
                 );
               },
               child: const CustomBotton(
-                  text: 'إنضمي كسائقة',
+                  text: 'انشاء حساب',
                   color: ColorManger.kWhite,
                   textThemeColor: ColorManger.kPrimaryColor,
                   borderColor: ColorManger.kPrimaryColor),

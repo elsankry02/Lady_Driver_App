@@ -4,16 +4,19 @@ import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/constant/svg_manger.dart';
 
 class CustomTextFormFiledPassword extends StatefulWidget {
-  const CustomTextFormFiledPassword(
-      {super.key,
-      required this.labelText,
-      required this.suffixIcon,
-      required this.controller,
-      this.validator});
-  final String labelText;
+  const CustomTextFormFiledPassword({
+    super.key,
+    required this.hintText,
+    required this.suffixIcon,
+    required this.controller,
+    this.validator,
+    this.keyboardType,
+  });
+  final String hintText;
   final String suffixIcon;
   final TextEditingController controller;
   final String? Function(String?)? validator;
+  final TextInputType? keyboardType;
 
   @override
   State<CustomTextFormFiledPassword> createState() =>
@@ -29,7 +32,7 @@ class _CustomTextFormFiledPasswordState
     return TextFormField(
       validator: widget.validator,
       controller: widget.controller,
-      keyboardType: TextInputType.emailAddress,
+      keyboardType: widget.keyboardType,
       style: textTheme.titleSmall!.copyWith(fontWeight: FontWeight.w400),
       obscureText: isSelcted ? true : false,
       decoration: InputDecoration(
@@ -49,11 +52,11 @@ class _CustomTextFormFiledPasswordState
                 isSelcted ? SvgManger.kEyeoff : SvgManger.kEye),
           ),
         ),
-        hintText: widget.labelText,
+        hintText: widget.hintText,
         hintStyle: textTheme.titleSmall!.copyWith(fontWeight: FontWeight.w400),
         border: outlineInputBorder(ColorManger.kBorderColor),
         enabledBorder: outlineInputBorder(ColorManger.kBorderColor),
-        focusedBorder: outlineInputBorder(ColorManger.kBorderColor),
+        focusedBorder: outlineInputBorder(ColorManger.kPrimaryColor),
       ),
     );
   }
@@ -62,7 +65,7 @@ class _CustomTextFormFiledPasswordState
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
       borderSide: BorderSide(
-        width: 1.5,
+        width: 1,
         color: borderColor,
       ),
     );

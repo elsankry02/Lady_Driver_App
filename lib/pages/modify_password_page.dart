@@ -46,7 +46,7 @@ class _ModifyPasswordPageState extends State<ModifyPasswordPage> {
             const SizedBox(height: 8),
             //!  كلمه المرور
             CustomTextFormFiledPassword(
-              labelText: 'كلمة المرور',
+              hintText: 'كلمة المرور',
               suffixIcon: SvgManger.kLock,
               controller: passWordController,
               validator: (value) {
@@ -60,7 +60,7 @@ class _ModifyPasswordPageState extends State<ModifyPasswordPage> {
             const SizedBox(height: 44),
             //! تاكيد كلمه المرور
             CustomTextFormFiledPassword(
-              labelText: 'تأكيد كلمة المرور',
+              hintText: 'تأكيد كلمة المرور',
               suffixIcon: SvgManger.kLock,
               controller: confirmPassWordController,
               validator: (value) {
