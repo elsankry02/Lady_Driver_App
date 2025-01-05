@@ -102,7 +102,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
             const Text('تسجيل الدخول ک'),
             const SizedBox(height: 10),
             //! Create Account Enum Widget
-            CreateAccountEnumWidget(),
+            const CreateAccountEnumWidget(),
             sizedbox,
             //! كلمة المرور
             CustomTextFormFiledPassword(
