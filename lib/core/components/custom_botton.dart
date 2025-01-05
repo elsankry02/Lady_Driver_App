@@ -4,13 +4,13 @@ class CustomBotton extends StatelessWidget {
   const CustomBotton({
     super.key,
     required this.text,
-    required this.color,
+    this.color,
     required this.textThemeColor,
     required this.borderColor,
   });
 
   final String text;
-  final Color color;
+  final Color? color;
   final Color textThemeColor;
   final Color borderColor;
 

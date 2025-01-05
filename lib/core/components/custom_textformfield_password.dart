@@ -15,7 +15,7 @@ class CustomTextFormFiledPassword extends StatefulWidget {
   final String hintText;
   final String suffixIcon;
   final TextEditingController controller;
-  final String? Function(String?)? validator;
+  final String? Function(String? value)? validator;
   final TextInputType? keyboardType;
 
   @override

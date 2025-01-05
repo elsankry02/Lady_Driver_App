@@ -74,10 +74,10 @@ class Onboarding3Page extends StatelessWidget {
                 );
               },
               child: const CustomBotton(
-                  text: 'انشاء حساب',
-                  color: ColorManger.kWhite,
-                  textThemeColor: ColorManger.kPrimaryColor,
-                  borderColor: ColorManger.kPrimaryColor),
+                text: 'انشاء حساب',
+                textThemeColor: ColorManger.kPrimaryColor,
+                borderColor: ColorManger.kPrimaryColor,
+              ),
             )
           ],
         ),
