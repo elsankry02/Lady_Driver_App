@@ -4,7 +4,8 @@ import 'package:lady_driver/core/components/custom_textformfield.dart';
 import 'package:lady_driver/core/components/custom_textformfield_password.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/constant/svg_manger.dart';
-import 'package:lady_driver/widgets/botton/create_account_enum_widget.dart';
+import 'package:lady_driver/widgets/create_an_account/circler_image.dart';
+import 'package:lady_driver/widgets/create_an_account/create_account_enum_widget.dart';
 import 'package:lady_driver/widgets/rich_text/rich_text_create_an_account_widget.dart';
 import 'package:lady_driver/widgets/rich_text/rich_text_privacy_policy_widget.dart';
 
@@ -16,6 +17,7 @@ class CreateAnAccountPage extends StatefulWidget {
 }
 
 class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
+  bool isSelected = false;
   final GlobalKey<FormState> keyform = GlobalKey();
   final userController = TextEditingController();
   final emailController = TextEditingController();
@@ -50,20 +52,8 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                   textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w700),
             ),
             const SizedBox(height: 32),
-
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 130),
-              height: 120,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(130),
-                image: const DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/image/medo.png'),
-                ),
-                color: ColorManger.kBorderColor,
-              ),
-            ),
+            //! الصورة
+            const CirclerImage(),
             sizedbox,
             //! الاسم
             CustomTextFormField(
@@ -108,10 +98,11 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
               controller: phoneController,
             ),
             const SizedBox(height: 10),
+            //! تسجيل الدخول ک
             const Text('تسجيل الدخول ک'),
             const SizedBox(height: 10),
             //! Create Account Enum Widget
-            CreateAccountEnumWidget(textTheme: textTheme),
+            CreateAccountEnumWidget(),
             sizedbox,
             //! كلمة المرور
             CustomTextFormFiledPassword(
@@ -126,7 +117,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
               suffixIcon: SvgManger.kLock,
               controller: passwordController,
             ),
-            sizedbox, //! كلمة المرور
+            sizedbox, //! تاكيد كلمه المرور
             CustomTextFormFiledPassword(
               validator: (value) {
                 if (value!.length < 6) {
@@ -154,19 +145,32 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
               controller: inviteCodeController,
             ),
             sizedbox,
-            //!   CheckBox & سياسه الخصوصيه
-            const RichTextPrivacyPolicyWidget(),
+            //! CheckBox & سياسه الخصوصيه
+            RichTextPrivacyWidget(
+              value: isSelected,
+              onChanged: (value) {
+                setState(() {
+                  isSelected = value!;
+                });
+              },
+            ),
             const SizedBox(height: 16),
             //! إنشاء الحساب
             GestureDetector(
-              onTap: () {
-                keyform.currentState!.validate();
-              },
-              child: const CustomBotton(
+              onTap: isSelected
+                  ? () {
+                      keyform.currentState!.validate();
+                    }
+                  : null,
+              child: CustomBotton(
                   text: 'إنشاء الحساب',
-                  color: ColorManger.kPrimaryColor,
+                  color: isSelected
+                      ? ColorManger.kPrimaryColor
+                      : ColorManger.kBorderColor,
                   textThemeColor: ColorManger.kWhite,
-                  borderColor: ColorManger.kPrimaryColor),
+                  borderColor: isSelected
+                      ? ColorManger.kPrimaryColor
+                      : ColorManger.kBorderColor),
             ),
             const SizedBox(height: 30),
             RichTextCreateAnAccountWidget(textTheme: textTheme),
