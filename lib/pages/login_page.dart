@@ -16,6 +16,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  bool isSelected = false;
+
   final GlobalKey<FormState> formkey = GlobalKey();
   final passWordController = TextEditingController();
   final emailController = TextEditingController();
@@ -95,18 +97,31 @@ class _LoginPageState extends State<LoginPage> {
             ),
             const SizedBox(height: 25),
             //!   CheckBox & سياسه الخصوصيه
-            const RichTextPrivacyPolicyWidget(),
+            RichTextPrivacyWidget(
+              value: isSelected,
+              onChanged: (value) {
+                setState(() {
+                  isSelected = value!;
+                });
+              },
+            ),
             const SizedBox(height: 16),
             //! تسجيل الدخول
             GestureDetector(
-              onTap: () {
-                formkey.currentState!.validate();
-              },
-              child: const CustomBotton(
+              onTap: isSelected
+                  ? () {
+                      formkey.currentState!.validate();
+                    }
+                  : null,
+              child: CustomBotton(
                   text: 'تسجيل الدخول',
-                  color: ColorManger.kPrimaryColor,
+                  color: isSelected
+                      ? ColorManger.kPrimaryColor
+                      : ColorManger.kBorderColor,
                   textThemeColor: ColorManger.kWhite,
-                  borderColor: ColorManger.kPrimaryColor),
+                  borderColor: isSelected
+                      ? ColorManger.kPrimaryColor
+                      : ColorManger.kBorderColor),
             ),
             const SizedBox(height: 40),
             //!RichTextLoginWidget
