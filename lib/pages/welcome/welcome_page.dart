@@ -1,12 +1,13 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:lady_driver/core/components/custom_botton.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/constant/image_manger.dart';
-import 'package:lady_driver/pages/create_an_account_page.dart';
-import 'package:lady_driver/pages/login_page.dart';
+import 'package:lady_driver/core/router/router.dart';
 
-class Onboarding3Page extends StatelessWidget {
-  const Onboarding3Page({super.key});
+@RoutePage()
+class WelcomePage extends StatelessWidget {
+  const WelcomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,16 +42,7 @@ class Onboarding3Page extends StatelessWidget {
             ),
             //! تسجيل الدخول
             GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return const LoginPage();
-                    },
-                  ),
-                );
-              },
+              onTap: () => context.router.replaceAll([const LoginRoute()]),
               child: const CustomBotton(
                 borderColor: ColorManger.kPrimaryColor,
                 textThemeColor: ColorManger.kWhite,
@@ -63,16 +55,8 @@ class Onboarding3Page extends StatelessWidget {
             ),
             //!  انشاء حساب
             GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return const CreateAnAccountPage();
-                    },
-                  ),
-                );
-              },
+              onTap: () =>
+                  context.router.replaceAll([const CreateAnAccountRoute()]),
               child: const CustomBotton(
                 text: 'انشاء حساب',
                 textThemeColor: ColorManger.kPrimaryColor,

@@ -2,15 +2,15 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 
-class RichTextPrivacyWidget extends StatefulWidget {
-  const RichTextPrivacyWidget({super.key, this.onChanged, this.value});
+class RichTextPrivacyPolicy extends StatefulWidget {
+  const RichTextPrivacyPolicy({super.key, this.onChanged, this.value});
   final bool? value;
   final void Function(bool? value)? onChanged;
   @override
-  State<RichTextPrivacyWidget> createState() => _RichTextPrivacyWidgetState();
+  State<RichTextPrivacyPolicy> createState() => _RichTextPrivacyPolicyState();
 }
 
-class _RichTextPrivacyWidgetState extends State<RichTextPrivacyWidget> {
+class _RichTextPrivacyPolicyState extends State<RichTextPrivacyPolicy> {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -53,9 +53,10 @@ class _RichTextPrivacyWidgetState extends State<RichTextPrivacyWidget> {
           height: 15,
           width: 15,
           child: Checkbox(
-              activeColor: ColorManger.kPrimaryColor,
-              value: widget.value,
-              onChanged: widget.onChanged),
+            activeColor: ColorManger.kPrimaryColor,
+            value: widget.value,
+            onChanged: widget.onChanged,
+          ),
         ),
       ],
     );

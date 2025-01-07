@@ -1,7 +1,8 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
-import 'package:lady_driver/pages/login_page.dart';
+import 'package:lady_driver/core/router/router.dart';
 
 class RichTextCreateAnAccountWidget extends StatelessWidget {
   const RichTextCreateAnAccountWidget({super.key, required this.textTheme});
@@ -20,21 +21,12 @@ class RichTextCreateAnAccountWidget extends StatelessWidget {
           ),
           //! تسجيل الدخول
           TextSpan(
-            text: 'تسجيل الدخول',
-            style: textTheme.titleSmall!.copyWith(
-                fontWeight: FontWeight.w400, color: ColorManger.kPrimaryColor),
-            recognizer: TapGestureRecognizer()
-              ..onTap = () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return const LoginPage();
-                    },
-                  ),
-                );
-              },
-          ),
+              text: 'تسجيل الدخول',
+              style: textTheme.titleSmall!.copyWith(
+                  fontWeight: FontWeight.w400,
+                  color: ColorManger.kPrimaryColor),
+              recognizer: TapGestureRecognizer()
+                ..onTap = () => context.router.replace(const LoginRoute())),
         ],
       ),
     );

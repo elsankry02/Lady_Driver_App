@@ -1,13 +1,15 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:lady_driver/core/components/custom_botton.dart';
 import 'package:lady_driver/core/components/custom_textformfield.dart';
 import 'package:lady_driver/core/components/custom_textformfield_password.dart';
+import 'package:lady_driver/core/components/rich_text_privacy_policy.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/constant/svg_manger.dart';
-import 'package:lady_driver/pages/verification_code_page.dart';
-import 'package:lady_driver/widgets/rich_text/rich_text_login_widget.dart';
-import 'package:lady_driver/widgets/rich_text/rich_text_privacy_policy_widget.dart';
+import 'package:lady_driver/core/router/router.dart';
+import 'package:lady_driver/pages/login/widget/rich_text_login_widget.dart';
 
+@RoutePage()
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -76,16 +78,7 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(height: 27),
             //! هل نسيت كلمة المرور؟
             GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return const VerificationCodePage();
-                    },
-                  ),
-                );
-              },
+              onTap: () => context.router.push(const ForgetPasswordRoute()),
               child: Text(
                 'هل نسيت كلمة المرور؟',
                 style: textTheme.titleSmall!.copyWith(
@@ -97,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             const SizedBox(height: 25),
             //!   CheckBox & سياسه الخصوصيه
-            RichTextPrivacyWidget(
+            RichTextPrivacyPolicy(
               value: isSelected,
               onChanged: (value) {
                 setState(() {

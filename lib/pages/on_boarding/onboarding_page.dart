@@ -1,10 +1,13 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:lady_driver/core/components/custom_botton.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/models/onboarding_model.dart';
-import 'package:lady_driver/pages/onboarding3_page.dart';
-import 'package:lady_driver/widgets/onboarding/dot.dart';
+import 'package:lady_driver/core/router/router.dart';
+import 'package:lady_driver/pages/on_boarding/widget/dot.dart';
+import 'package:lady_driver/pages/welcome/welcome_page.dart';
 
+@RoutePage()
 class OnboardingPage extends StatefulWidget {
   const OnboardingPage({super.key});
 
@@ -52,7 +55,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(builder: (context) {
-                              return const Onboarding3Page();
+                              return const WelcomePage();
                             }),
                           );
                         },
@@ -105,12 +108,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
               GestureDetector(
                 onTap: () {
                   if (currentindex == listOnBoarding.length - 1) {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) {
-                        return const Onboarding3Page();
-                      }),
-                    );
+                    context.router.replaceAll([const WelcomeRoute()]);
                   }
                   _controller.animateToPage(
                     1,

@@ -1,14 +1,16 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:lady_driver/core/components/custom_botton.dart';
 import 'package:lady_driver/core/components/custom_textformfield.dart';
 import 'package:lady_driver/core/components/custom_textformfield_password.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/constant/svg_manger.dart';
-import 'package:lady_driver/widgets/create_an_account/circler_image.dart';
-import 'package:lady_driver/widgets/create_an_account/create_account_enum_widget.dart';
-import 'package:lady_driver/widgets/rich_text/rich_text_create_an_account_widget.dart';
-import 'package:lady_driver/widgets/rich_text/rich_text_privacy_policy_widget.dart';
+import 'package:lady_driver/pages/create_an_account/widget/circler_image.dart';
+import 'package:lady_driver/pages/create_an_account/widget/create_account_enum_widget.dart';
+import 'package:lady_driver/pages/create_an_account/widget/rich_text_create_an_account_widget.dart';
+import 'package:lady_driver/core/components/rich_text_privacy_policy.dart';
 
+@RoutePage()
 class CreateAnAccountPage extends StatefulWidget {
   const CreateAnAccountPage({super.key});
 
@@ -146,7 +148,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
             ),
             sizedbox,
             //! CheckBox & سياسه الخصوصيه
-            RichTextPrivacyWidget(
+            RichTextPrivacyPolicy(
               value: isSelected,
               onChanged: (value) {
                 setState(() {

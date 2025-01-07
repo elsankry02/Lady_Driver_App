@@ -1,10 +1,12 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/constant/string_manager.dart';
 import 'package:lady_driver/core/constant/svg_manger.dart';
-import 'package:lady_driver/pages/onboarding_page.dart';
+import 'package:lady_driver/core/router/router.dart';
 
+@RoutePage()
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
 
@@ -23,11 +25,7 @@ class _SplashPageState extends State<SplashPage> {
     Future.delayed(
       const Duration(seconds: 2),
       () {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => const OnboardingPage(),
-          ),
-        );
+        context.router.push(const OnboardingRoute());
       },
     );
   }
