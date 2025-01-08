@@ -46,9 +46,7 @@ class _SplashPageState extends State<SplashPage> {
           children: [
             //! image
             SvgPicture.asset(SvgManger.kLogo),
-            const SizedBox(
-              height: 16,
-            ),
+            const SizedBox(height: 16),
             //! text
             Text(
               'LadyDriver',
@@ -58,9 +56,7 @@ class _SplashPageState extends State<SplashPage> {
                 color: ColorManger.kPrimaryColor,
               ),
             ),
-            const SizedBox(
-              height: 16,
-            ),
+            const SizedBox(height: 16),
             //! lableText
             Text(
               'Your Comfort Zone',
