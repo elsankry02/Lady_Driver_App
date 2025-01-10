@@ -1,11 +1,11 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:lady_driver/core/cached/cached_helper.dart';
 import 'package:lady_driver/core/components/custom_botton.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/models/onboarding_model.dart';
 import 'package:lady_driver/core/router/router.dart';
-import 'package:lady_driver/pages/on_boarding/widget/dot.dart';
-import 'package:lady_driver/pages/welcome/welcome_page.dart';
+import 'package:lady_driver/home/pages/on_boarding/widget/dot.dart';
 
 @RoutePage()
 class OnboardingPage extends StatefulWidget {
@@ -52,12 +52,9 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       //! Skip
                       GestureDetector(
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) {
-                              return const WelcomePage();
-                            }),
-                          );
+                          CachedHelper.setBool(key: 'SavedData', value: true);
+
+                          context.router.replace(const WelcomeRoute());
                         },
                         child: SizedBox(
                           width: double.infinity,
@@ -107,8 +104,13 @@ class _OnboardingPageState extends State<OnboardingPage> {
               //! CustomBottonNavigator
               GestureDetector(
                 onTap: () {
+                  CachedHelper.setBool(key: 'SavedData', value: true);
                   if (currentindex == listOnBoarding.length - 1) {
-                    context.router.replaceAll([const WelcomeRoute()]);
+                    context.router.replaceAll(
+                      [
+                        const WelcomeRoute(),
+                      ],
+                    );
                   }
                   _controller.animateToPage(
                     1,

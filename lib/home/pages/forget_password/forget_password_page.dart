@@ -5,7 +5,7 @@ import 'package:lady_driver/core/components/custom_textformfield.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/constant/image_manger.dart';
 import 'package:lady_driver/core/constant/svg_manger.dart';
-import 'package:lady_driver/pages/verification_code/verification_code_page.dart';
+import 'package:lady_driver/home/pages/verification_code/verification_code_page.dart';
 
 @RoutePage()
 class ForgetPasswordPage extends StatefulWidget {

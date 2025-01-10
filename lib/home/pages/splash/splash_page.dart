@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:lady_driver/core/cached/cached_helper.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/constant/string_manager.dart';
 import 'package:lady_driver/core/constant/svg_manger.dart';
@@ -25,7 +26,12 @@ class _SplashPageState extends State<SplashPage> {
     Future.delayed(
       const Duration(seconds: 2),
       () {
-        context.router.push(const OnboardingRoute());
+        final isSaved = CachedHelper.getBool(key: 'SavedData') ?? false;
+        if (isSaved) {
+          context.router.replace(const WelcomeRoute());
+        } else {
+          context.router.replace(const OnboardingRoute());
+        }
       },
     );
   }

@@ -1,12 +1,12 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:lady_driver/pages/create_an_account/create_an_account_page.dart';
-import 'package:lady_driver/pages/forget_password/forget_password_page.dart';
-import 'package:lady_driver/pages/login/login_page.dart';
-import 'package:lady_driver/pages/modify_password/modify_password_page.dart';
-import 'package:lady_driver/pages/on_boarding/onboarding_page.dart';
-import 'package:lady_driver/pages/splash/splash_page.dart';
-import 'package:lady_driver/pages/verification_code/verification_code_page.dart';
-import 'package:lady_driver/pages/welcome/welcome_page.dart';
+import 'package:lady_driver/home/pages/create_an_account/create_an_account_page.dart';
+import 'package:lady_driver/home/pages/forget_password/forget_password_page.dart';
+import 'package:lady_driver/home/pages/login/login_page.dart';
+import 'package:lady_driver/home/pages/modify_password/modify_password_page.dart';
+import 'package:lady_driver/home/pages/on_boarding/onboarding_page.dart';
+import 'package:lady_driver/home/pages/splash/splash_page.dart';
+import 'package:lady_driver/home/pages/verification_code/verification_code_page.dart';
+import 'package:lady_driver/home/pages/welcome/welcome_page.dart';
 
 part 'router.gr.dart';
 

@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:lady_driver/core/cached/cached_helper.dart';
 import 'package:lady_driver/core/constant/string_manager.dart';
 import 'package:lady_driver/core/router/router.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await CachedHelper.getInstance();
   runApp(const LadyDriver());
 }
 

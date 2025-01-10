@@ -7,7 +7,7 @@ import 'package:lady_driver/core/components/rich_text_privacy_policy.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/constant/svg_manger.dart';
 import 'package:lady_driver/core/router/router.dart';
-import 'package:lady_driver/pages/login/widget/rich_text_login_widget.dart';
+import 'package:lady_driver/home/pages/login/widget/rich_text_login_widget.dart';
 
 @RoutePage()
 class LoginPage extends StatefulWidget {
