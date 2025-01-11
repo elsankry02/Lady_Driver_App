@@ -59,7 +59,7 @@ class _ModifyPasswordPageState extends State<ModifyPasswordPage> {
                 }
               },
             ),
-            const SizedBox(height: 44),
+            const SizedBox(height: 30),
             //! تاكيد كلمه المرور
             CustomTextFormFiledPassword(
               hintText: 'تأكيد كلمة المرور',

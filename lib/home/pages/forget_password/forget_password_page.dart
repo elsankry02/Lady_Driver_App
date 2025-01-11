@@ -5,7 +5,7 @@ import 'package:lady_driver/core/components/custom_textformfield.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/constant/image_manger.dart';
 import 'package:lady_driver/core/constant/svg_manger.dart';
-import 'package:lady_driver/home/pages/verification_code/verification_code_page.dart';
+import 'package:lady_driver/core/router/router.dart';
 
 @RoutePage()
 class ForgetPasswordPage extends StatefulWidget {
@@ -59,14 +59,10 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
             const SizedBox(height: 30),
             CustomTextFormField(
               validator: (value) {
-                if (value!.contains(value = '@gmail.com')) {
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (context) {
-                      return const VerificationCodePage();
-                    },
-                  ));
-                } else {
+                if (value!.length < 5) {
                   return 'this field cannot be empty';
+                } else {
+                  context.router.push(const VerificationCodeRoute());
                 }
                 return null;
               },

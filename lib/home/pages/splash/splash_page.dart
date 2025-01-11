@@ -28,8 +28,10 @@ class _SplashPageState extends State<SplashPage> {
       () {
         final isSaved = CachedHelper.getBool(key: 'SavedData') ?? false;
         if (isSaved) {
+          //!  True في حاله ال
           context.router.replace(const WelcomeRoute());
         } else {
+          //!  False في حاله ال
           context.router.replace(const OnboardingRoute());
         }
       },

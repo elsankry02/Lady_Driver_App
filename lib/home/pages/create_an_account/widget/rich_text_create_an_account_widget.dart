@@ -21,12 +21,12 @@ class RichTextCreateAnAccountWidget extends StatelessWidget {
           ),
           //! تسجيل الدخول
           TextSpan(
-              text: 'تسجيل الدخول',
-              style: textTheme.titleSmall!.copyWith(
-                  fontWeight: FontWeight.w400,
-                  color: ColorManger.kPrimaryColor),
-              recognizer: TapGestureRecognizer()
-                ..onTap = () => context.router.replace(const LoginRoute())),
+            text: 'تسجيل الدخول',
+            style: textTheme.titleSmall!.copyWith(
+                fontWeight: FontWeight.w400, color: ColorManger.kPrimaryColor),
+            recognizer: TapGestureRecognizer()
+              ..onTap = () => context.router.replace(const LoginRoute()),
+          ),
         ],
       ),
     );
