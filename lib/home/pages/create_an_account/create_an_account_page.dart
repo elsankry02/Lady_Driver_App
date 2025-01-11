@@ -6,7 +6,7 @@ import 'package:lady_driver/core/components/custom_textformfield_password.dart';
 import 'package:lady_driver/core/components/rich_text_privacy_policy.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/constant/svg_manger.dart';
-import 'package:lady_driver/home/pages/create_an_account/widget/circler_image.dart';
+import 'package:lady_driver/home/pages/create_an_account/widget/circler_image_picker.dart';
 import 'package:lady_driver/home/pages/create_an_account/widget/create_account_enum_widget.dart';
 import 'package:lady_driver/home/pages/create_an_account/widget/rich_text_create_an_account_widget.dart';
 
@@ -55,7 +55,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
             ),
             const SizedBox(height: 32),
             //! الصورة
-            const CirclerImage(),
+            const CirclerImagePicker(),
             sizedbox,
             //! الاسم
             CustomTextFormField(

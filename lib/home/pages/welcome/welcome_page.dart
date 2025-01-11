@@ -42,7 +42,7 @@ class WelcomePage extends StatelessWidget {
             ),
             //! تسجيل الدخول
             GestureDetector(
-              onTap: () => context.router.replaceAll([const LoginRoute()]),
+              onTap: () => context.router.push(const LoginRoute()),
               child: const CustomBotton(
                 borderColor: ColorManger.kPrimaryColor,
                 textThemeColor: ColorManger.kWhite,
@@ -55,8 +55,7 @@ class WelcomePage extends StatelessWidget {
             ),
             //!  انشاء حساب
             GestureDetector(
-              onTap: () =>
-                  context.router.replaceAll([const CreateAnAccountRoute()]),
+              onTap: () => context.router.push(const CreateAnAccountRoute()),
               child: const CustomBotton(
                 text: 'انشاء حساب',
                 textThemeColor: ColorManger.kPrimaryColor,

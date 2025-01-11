@@ -7,16 +7,6 @@ class CachedHelper {
     sharedPreferences = await SharedPreferences.getInstance();
   }
 
-  //! Bool
-  static Future<void> setBool(
-      {required String key, required bool value}) async {
-    await sharedPreferences.setBool(key, value);
-  }
-
-  static bool? getBool({required String key}) {
-    return sharedPreferences.getBool(key);
-  }
-
   //! String
   static Future<void> setString(
       {required String key, required String value}) async {
@@ -34,6 +24,16 @@ class CachedHelper {
 
   static int? getInt({required String key}) {
     return sharedPreferences.getInt(key);
+  }
+
+  //! Bool
+  static Future<void> setBool(
+      {required String key, required bool value}) async {
+    await sharedPreferences.setBool(key, value);
+  }
+
+  static bool? getBool({required String key}) {
+    return sharedPreferences.getBool(key);
   }
 
   //! Double
