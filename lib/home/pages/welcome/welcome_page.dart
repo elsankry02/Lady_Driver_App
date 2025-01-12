@@ -42,7 +42,7 @@ class WelcomePage extends StatelessWidget {
             ),
             //! تسجيل الدخول
             GestureDetector(
-              onTap: () => context.router.push(const LoginRoute()),
+              onTap: () => context.router.replace(const LoginRoute()),
               child: const CustomBotton(
                 borderColor: ColorManger.kPrimaryColor,
                 textThemeColor: ColorManger.kWhite,

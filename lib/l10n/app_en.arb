@@ -1,0 +1,9 @@
+{
+"@@locale": "en",
+"helloMassage" : " Hello {userName}",
+"@helloMassage" : {
+    "placeholders": {
+        "userName": {}
+    }
+}
+}

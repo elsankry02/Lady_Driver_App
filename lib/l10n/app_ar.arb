@@ -1,0 +1,9 @@
+{
+    "@@locale": "ar",
+    "helloMassage" : "مرحبا {userName}",
+    "@helloMassage" : {
+        "placeholders": {
+            "userName": {}
+        }
+    }
+    }
