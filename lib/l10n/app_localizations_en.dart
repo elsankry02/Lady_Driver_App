@@ -41,4 +41,40 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get dontHaveAnAccount => 'Don\'t have an account? ';
+
+  @override
+  String get alreadyHaveAnAccount => 'Already have an account? ';
+
+  @override
+  String get createAnAccountInLadyDriver => 'Create an account in LadyDriver ';
+
+  @override
+  String get name => 'Name';
+
+  @override
+  String get phoneNumber => 'Phone Number';
+
+  @override
+  String get ladyDriverYourComfortComesFirst => 'LadyDriver: Your comfort comes first';
+
+  @override
+  String get skip => 'Skip';
+
+  @override
+  String get next => 'Next';
+
+  @override
+  String get invitationCode => 'Invitation Code';
+
+  @override
+  String get confirmPassword => 'Confirm Password';
+
+  @override
+  String get client => 'Client';
+
+  @override
+  String get femaleDriver => 'Female Driver';
+
+  @override
+  String get registerAs => 'Register as';
 }

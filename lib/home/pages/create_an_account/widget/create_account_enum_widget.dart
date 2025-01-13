@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
+import 'package:lady_driver/l10n/app_localizations.dart';
 
 enum IsSelected { client, femaleDriver }
 
@@ -40,9 +41,12 @@ class _CreateAccountEnumWidgetState extends State<CreateAccountEnumWidget> {
               child: Center(
                 //! سائقة
                 child: Text(
-                  'سائقة',
-                  style: textTheme.titleSmall!
-                      .copyWith(fontWeight: FontWeight.w400),
+                  AppLocalizations.of(context)!.femaleDriver,
+                  style: textTheme.titleSmall!.copyWith(
+                      fontWeight: FontWeight.w400,
+                      color: isSelected == IsSelected.femaleDriver
+                          ? ColorManger.kPrimaryColor
+                          : Colors.black),
                 ),
               ),
             ),
@@ -69,9 +73,12 @@ class _CreateAccountEnumWidgetState extends State<CreateAccountEnumWidget> {
               child: Center(
                 //! عميل
                 child: Text(
-                  'عميل',
-                  style: textTheme.titleSmall!
-                      .copyWith(fontWeight: FontWeight.w400),
+                  AppLocalizations.of(context)!.client,
+                  style: textTheme.titleSmall!.copyWith(
+                      color: isSelected == IsSelected.client
+                          ? ColorManger.kPrimaryColor
+                          : Colors.black,
+                      fontWeight: FontWeight.w400),
                 ),
               ),
             ),

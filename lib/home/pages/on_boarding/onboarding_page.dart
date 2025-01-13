@@ -6,6 +6,7 @@ import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/models/onboarding_model.dart';
 import 'package:lady_driver/core/router/router.dart';
 import 'package:lady_driver/home/pages/on_boarding/widget/dot.dart';
+import 'package:lady_driver/l10n/app_localizations.dart';
 
 @RoutePage()
 class OnboardingPage extends StatefulWidget {
@@ -59,8 +60,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         child: SizedBox(
                           width: double.infinity,
                           child: Text(
-                            textAlign: TextAlign.start,
-                            listOnBoarding[index].skip ?? '',
+                            AppLocalizations.of(context)!.skip,
                             style: textTheme.titleMedium!.copyWith(
                               fontWeight: FontWeight.w500,
                             ),
@@ -118,11 +118,11 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     curve: Curves.ease,
                   );
                 },
-                child: const CustomBotton(
+                child: CustomBotton(
                   borderColor: ColorManger.kPrimaryColor,
                   textThemeColor: ColorManger.kWhite,
                   color: ColorManger.kPrimaryColor,
-                  text: 'التالي',
+                  text: AppLocalizations.of(context)!.next,
                 ),
               ),
               const SizedBox(height: 64),

@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/router/router.dart';
+import 'package:lady_driver/l10n/app_localizations.dart';
 
 class RichTextCreateAnAccountWidget extends StatelessWidget {
   const RichTextCreateAnAccountWidget({super.key, required this.textTheme});
@@ -16,12 +17,12 @@ class RichTextCreateAnAccountWidget extends StatelessWidget {
         children: [
           //! لديك حساب بالفعل ؟
           TextSpan(
-            text: 'لديك حساب بالفعل؟ ',
+            text: AppLocalizations.of(context)!.alreadyHaveAnAccount,
             style: textTheme.titleSmall!.copyWith(fontWeight: FontWeight.w400),
           ),
           //! تسجيل الدخول
           TextSpan(
-            text: 'تسجيل الدخول',
+            text: AppLocalizations.of(context)!.logIN,
             style: textTheme.titleSmall!.copyWith(
                 fontWeight: FontWeight.w400, color: ColorManger.kPrimaryColor),
             recognizer: TapGestureRecognizer()

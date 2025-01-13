@@ -11,5 +11,21 @@
 "privacyPolicy" : "Privacy Policy ",
 "and": "and ",
 "termsOfUse" : "Terms\n Of Use",
-"dontHaveAnAccount" : "Don't have an account? "
+"dontHaveAnAccount" : "Don't have an account? ",
+"alreadyHaveAnAccount" : "Already have an account? ",
+"createAnAccountInLadyDriver":"Create an account in LadyDriver ",
+"name" : "Name",
+"phoneNumber" : "Phone Number",
+"ladyDriverYourComfortComesFirst": "LadyDriver: Your comfort comes first",
+"skip" : "Skip",
+"next" : "Next",
+"invitationCode" :"Invitation Code",
+"confirmPassword":"Confirm Password",
+"client":"Client",
+"femaleDriver":"Female Driver",
+"registerAs" : "Register as"
+
+
+
+
 }

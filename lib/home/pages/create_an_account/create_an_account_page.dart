@@ -9,6 +9,7 @@ import 'package:lady_driver/core/constant/svg_manger.dart';
 import 'package:lady_driver/home/pages/create_an_account/widget/circler_image_picker.dart';
 import 'package:lady_driver/home/pages/create_an_account/widget/create_account_enum_widget.dart';
 import 'package:lady_driver/home/pages/create_an_account/widget/rich_text_create_an_account_widget.dart';
+import 'package:lady_driver/l10n/app_localizations.dart';
 
 @RoutePage()
 class CreateAnAccountPage extends StatefulWidget {
@@ -47,9 +48,9 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           children: [
             const SizedBox(height: 65),
+            //! إنشاء حساب في ليدي درايفر
             Text(
-              'إنشاء حساب في ليدي درايفر',
-              textAlign: TextAlign.end,
+              AppLocalizations.of(context)!.createAnAccountInLadyDriver,
               style:
                   textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w700),
             ),
@@ -66,7 +67,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                   return 'this field cannot be empty';
                 }
               },
-              hintText: 'الاسم',
+              hintText: AppLocalizations.of(context)!.name,
               suffixIcon: SvgManger.kUser,
               controller: userController,
             ),
@@ -80,7 +81,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                   return 'this field cannot be empty';
                 }
               },
-              hintText: 'البريد الالكترونى',
+              hintText: AppLocalizations.of(context)!.email,
               suffixIcon: SvgManger.kMail,
               controller: emailController,
             ),
@@ -94,14 +95,16 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                   return 'this field cannot be empty';
                 }
               },
-              hintText: 'رقم الهاتف',
+              hintText: AppLocalizations.of(context)!.phoneNumber,
               suffixIcon: SvgManger.kPhone,
               keyboardType: TextInputType.phone,
               controller: phoneController,
             ),
             const SizedBox(height: 10),
             //! تسجيل الدخول ک
-            const Text('تسجيل الدخول ک'),
+            Text(
+              AppLocalizations.of(context)!.registerAs,
+            ),
             const SizedBox(height: 10),
             //! Create Account Enum Widget
             const CreateAccountEnumWidget(),
@@ -115,7 +118,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                   return 'valid';
                 }
               },
-              hintText: 'كلمة المرور',
+              hintText: AppLocalizations.of(context)!.password,
               suffixIcon: SvgManger.kLock,
               controller: passwordController,
             ),
@@ -128,7 +131,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                   return 'valid';
                 }
               },
-              hintText: 'تاكيد كلمه المرور',
+              hintText: AppLocalizations.of(context)!.confirmPassword,
               suffixIcon: SvgManger.kLock,
               controller: passwordController,
             ),
@@ -142,7 +145,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                   return 'this field cannot be empty';
                 }
               },
-              hintText: 'كود الدعوة',
+              hintText: AppLocalizations.of(context)!.invitationCode,
               suffixIcon: SvgManger.kShare2,
               controller: inviteCodeController,
             ),
@@ -165,7 +168,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                     }
                   : null,
               child: CustomBotton(
-                  text: 'إنشاء الحساب',
+                  text: AppLocalizations.of(context)!.createAccount,
                   color: isSelected
                       ? ColorManger.kPrimaryColor
                       : ColorManger.kBorderColor,
@@ -175,6 +178,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                       : ColorManger.kBorderColor),
             ),
             const SizedBox(height: 30),
+            //! Rich Text
             RichTextCreateAnAccountWidget(textTheme: textTheme),
             sizedbox,
           ],

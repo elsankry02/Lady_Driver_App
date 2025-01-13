@@ -166,6 +166,78 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Don\'t have an account? '**
   String get dontHaveAnAccount;
+
+  /// No description provided for @alreadyHaveAnAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Already have an account? '**
+  String get alreadyHaveAnAccount;
+
+  /// No description provided for @createAnAccountInLadyDriver.
+  ///
+  /// In en, this message translates to:
+  /// **'Create an account in LadyDriver '**
+  String get createAnAccountInLadyDriver;
+
+  /// No description provided for @name.
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get name;
+
+  /// No description provided for @phoneNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone Number'**
+  String get phoneNumber;
+
+  /// No description provided for @ladyDriverYourComfortComesFirst.
+  ///
+  /// In en, this message translates to:
+  /// **'LadyDriver: Your comfort comes first'**
+  String get ladyDriverYourComfortComesFirst;
+
+  /// No description provided for @skip.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip'**
+  String get skip;
+
+  /// No description provided for @next.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get next;
+
+  /// No description provided for @invitationCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Invitation Code'**
+  String get invitationCode;
+
+  /// No description provided for @confirmPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm Password'**
+  String get confirmPassword;
+
+  /// No description provided for @client.
+  ///
+  /// In en, this message translates to:
+  /// **'Client'**
+  String get client;
+
+  /// No description provided for @femaleDriver.
+  ///
+  /// In en, this message translates to:
+  /// **'Female Driver'**
+  String get femaleDriver;
+
+  /// No description provided for @registerAs.
+  ///
+  /// In en, this message translates to:
+  /// **'Register as'**
+  String get registerAs;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

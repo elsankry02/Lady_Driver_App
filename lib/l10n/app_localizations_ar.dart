@@ -41,4 +41,40 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get dontHaveAnAccount => ' ليس لديك حساب؟';
+
+  @override
+  String get alreadyHaveAnAccount => 'لديك حساب بالفعل؟ ';
+
+  @override
+  String get createAnAccountInLadyDriver => 'إنشاء حساب في ليدي درايفر';
+
+  @override
+  String get name => 'الاسم';
+
+  @override
+  String get phoneNumber => 'Phone Number';
+
+  @override
+  String get ladyDriverYourComfortComesFirst => '.ليديدرايفر: راحتكِ أولاً';
+
+  @override
+  String get skip => 'تخطي';
+
+  @override
+  String get next => 'التالي';
+
+  @override
+  String get invitationCode => 'كود الدعوة';
+
+  @override
+  String get confirmPassword => 'تأكيد كلمة المرور';
+
+  @override
+  String get client => 'عميل';
+
+  @override
+  String get femaleDriver => 'سائقة';
+
+  @override
+  String get registerAs => 'تسجيل الدخول ک';
 }
