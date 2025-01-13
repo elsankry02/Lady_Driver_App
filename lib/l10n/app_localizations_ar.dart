@@ -40,7 +40,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get termsOfUse => 'شروط الاستخدام';
 
   @override
-  String get dontHaveAnAccount => ' ليس لديك حساب؟';
+  String get dontHaveAnAccount => 'ليس لديك حساب؟ ';
 
   @override
   String get alreadyHaveAnAccount => 'لديك حساب بالفعل؟ ';
