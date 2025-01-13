@@ -7,7 +7,14 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String helloMassage(Object userName) {
-    return ' Hello $userName';
-  }
+  String get loginToLadyDriver => 'Login To LadyDriver';
+
+  @override
+  String get heyYou => 'Hello 👋';
+
+  @override
+  String get logIN => 'Login';
+
+  @override
+  String get createAccount => 'Create Account';
 }

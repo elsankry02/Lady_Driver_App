@@ -48,25 +48,6 @@ class ForgetPasswordRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [LearnPage]
-class LearnRoute extends PageRouteInfo<void> {
-  const LearnRoute({List<PageRouteInfo>? children})
-      : super(
-          LearnRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'LearnRoute';
-
-  static PageInfo page = PageInfo(
-    name,
-    builder: (data) {
-      return const LearnPage();
-    },
-  );
-}
-
-/// generated route for
 /// [LoginPage]
 class LoginRoute extends PageRouteInfo<void> {
   const LoginRoute({List<PageRouteInfo>? children})

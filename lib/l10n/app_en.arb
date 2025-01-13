@@ -1,9 +1,7 @@
 {
-"@@locale": "en",
-"helloMassage" : " Hello {userName}",
-"@helloMassage" : {
-    "placeholders": {
-        "userName": {}
-    }
-}
+"@@locale" : "en",
+"loginToLadyDriver" : "Login To LadyDriver",
+"heyYou" : "Hello 👋",
+"logIN" : "Login",
+"createAccount":"Create Account"
 }

@@ -4,6 +4,7 @@ import 'package:lady_driver/core/components/custom_botton.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/constant/image_manger.dart';
 import 'package:lady_driver/core/router/router.dart';
+import 'package:lady_driver/l10n/app_localizations.dart';
 
 @RoutePage()
 class WelcomePage extends StatelessWidget {
@@ -16,7 +17,7 @@ class WelcomePage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(
               height: 150,
@@ -33,7 +34,8 @@ class WelcomePage extends StatelessWidget {
               height: 121,
             ),
             Text(
-              '👋 أهلا بك',
+              textAlign: TextAlign.end,
+              AppLocalizations.of(context)!.heyYou,
               style: textTheme.headlineLarge!
                   .copyWith(fontWeight: FontWeight.w700),
             ),
@@ -43,10 +45,10 @@ class WelcomePage extends StatelessWidget {
             //! تسجيل الدخول
             GestureDetector(
               onTap: () => context.router.replace(const LoginRoute()),
-              child: const CustomBotton(
+              child: CustomBotton(
                 borderColor: ColorManger.kPrimaryColor,
                 textThemeColor: ColorManger.kWhite,
-                text: 'تسجيل الدخول ',
+                text: AppLocalizations.of(context)!.logIN,
                 color: ColorManger.kPrimaryColor,
               ),
             ),
@@ -56,8 +58,8 @@ class WelcomePage extends StatelessWidget {
             //!  انشاء حساب
             GestureDetector(
               onTap: () => context.router.push(const CreateAnAccountRoute()),
-              child: const CustomBotton(
-                text: 'انشاء حساب',
+              child: CustomBotton(
+                text: AppLocalizations.of(context)!.createAccount,
                 textThemeColor: ColorManger.kPrimaryColor,
                 borderColor: ColorManger.kPrimaryColor,
               ),

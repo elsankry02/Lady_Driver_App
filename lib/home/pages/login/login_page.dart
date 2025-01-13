@@ -8,6 +8,7 @@ import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/constant/svg_manger.dart';
 import 'package:lady_driver/core/router/router.dart';
 import 'package:lady_driver/home/pages/login/widget/rich_text_login_widget.dart';
+import 'package:lady_driver/l10n/app_localizations.dart';
 
 @RoutePage()
 class LoginPage extends StatefulWidget {
@@ -41,8 +42,7 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             const SizedBox(height: 65),
             Text(
-              'تسجيل الدخول إلي ليديدرايفر',
-              textAlign: TextAlign.end,
+              AppLocalizations.of(context)!.loginToLadyDriver,
               style:
                   textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w700),
             ),
@@ -80,6 +80,7 @@ class _LoginPageState extends State<LoginPage> {
             GestureDetector(
               onTap: () => context.router.push(const ForgetPasswordRoute()),
               child: Text(
+                textAlign: TextAlign.end,
                 'هل نسيت كلمة المرور؟',
                 style: textTheme.titleSmall!.copyWith(
                   fontWeight: FontWeight.w400,
@@ -107,7 +108,7 @@ class _LoginPageState extends State<LoginPage> {
                     }
                   : null,
               child: CustomBotton(
-                  text: 'تسجيل الدخول',
+                  text: AppLocalizations.of(context)!.logIN,
                   color: isSelected
                       ? ColorManger.kPrimaryColor
                       : ColorManger.kBorderColor,

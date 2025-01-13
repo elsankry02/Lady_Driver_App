@@ -16,10 +16,19 @@ class _RichTextPrivacyPolicyState extends State<RichTextPrivacyPolicy> {
     final textTheme = Theme.of(context).textTheme;
 
     return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
       children: [
+        //! checkBox
+        SizedBox(
+          height: 15,
+          width: 15,
+          child: Checkbox(
+            activeColor: ColorManger.kPrimaryColor,
+            value: widget.value,
+            onChanged: widget.onChanged,
+          ),
+        ),
+        const SizedBox(width: 10),
         RichText(
-          textAlign: TextAlign.end,
           text: TextSpan(
             children: [
               TextSpan(
@@ -45,17 +54,6 @@ class _RichTextPrivacyPolicyState extends State<RichTextPrivacyPolicy> {
                 recognizer: TapGestureRecognizer()..onTap = () {},
               ),
             ],
-          ),
-        ),
-        const SizedBox(width: 10),
-        //! checkBox
-        SizedBox(
-          height: 15,
-          width: 15,
-          child: Checkbox(
-            activeColor: ColorManger.kPrimaryColor,
-            value: widget.value,
-            onChanged: widget.onChanged,
           ),
         ),
       ],

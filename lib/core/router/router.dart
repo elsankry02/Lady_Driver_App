@@ -7,7 +7,6 @@ import 'package:lady_driver/home/pages/on_boarding/onboarding_page.dart';
 import 'package:lady_driver/home/pages/splash/splash_page.dart';
 import 'package:lady_driver/home/pages/verification_code/verification_code_page.dart';
 import 'package:lady_driver/home/pages/welcome/welcome_page.dart';
-import 'package:lady_driver/learn_page.dart';
 
 part 'router.gr.dart';
 
@@ -17,7 +16,6 @@ final router = AppRouter();
 class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
-        AutoRoute(page: LearnRoute.page),
         AutoRoute(page: SplashRoute.page, initial: true),
         AutoRoute(page: CreateAnAccountRoute.page),
         AutoRoute(page: ForgetPasswordRoute.page),

@@ -95,11 +95,29 @@ abstract class AppLocalizations {
     Locale('en')
   ];
 
-  /// No description provided for @helloMassage.
+  /// No description provided for @loginToLadyDriver.
   ///
   /// In en, this message translates to:
-  /// **' Hello {userName}'**
-  String helloMassage(Object userName);
+  /// **'Login To LadyDriver'**
+  String get loginToLadyDriver;
+
+  /// No description provided for @heyYou.
+  ///
+  /// In en, this message translates to:
+  /// **'Hello 👋'**
+  String get heyYou;
+
+  /// No description provided for @logIN.
+  ///
+  /// In en, this message translates to:
+  /// **'Login'**
+  String get logIN;
+
+  /// No description provided for @createAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Create Account'**
+  String get createAccount;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

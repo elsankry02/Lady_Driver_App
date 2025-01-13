@@ -1,9 +1,7 @@
 {
-    "@@locale": "ar",
-    "helloMassage" : "مرحبا {userName}",
-    "@helloMassage" : {
-        "placeholders": {
-            "userName": {}
-        }
-    }
+ "@@locale" : "ar",
+ "loginToLadyDriver":"تسجيل الدخول إلي ليديدرايفر",
+ "heyYou":"أهلا بك 👋",
+ "logIN":"تسجيل الدخول",
+ "createAccount":"انشاء حساب"
     }
