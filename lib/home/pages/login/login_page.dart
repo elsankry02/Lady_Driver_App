@@ -59,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
               },
               controller: emailController,
               suffixIcon: SvgManger.kMail,
-              hintText: 'البريد الالكترونى',
+              hintText: AppLocalizations.of(context)!.email,
             ),
             const SizedBox(height: 27),
             //! كلمة المرور
@@ -73,7 +73,7 @@ class _LoginPageState extends State<LoginPage> {
               },
               controller: passWordController,
               suffixIcon: SvgManger.kLock,
-              hintText: 'كلمة المرور',
+              hintText: AppLocalizations.of(context)!.password,
             ),
             const SizedBox(height: 27),
             //! هل نسيت كلمة المرور؟
@@ -81,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
               onTap: () => context.router.push(const ForgetPasswordRoute()),
               child: Text(
                 textAlign: TextAlign.end,
-                'هل نسيت كلمة المرور؟',
+                AppLocalizations.of(context)!.forgotYourPassword,
                 style: textTheme.titleSmall!.copyWith(
                   fontWeight: FontWeight.w400,
                   decoration: TextDecoration.underline,

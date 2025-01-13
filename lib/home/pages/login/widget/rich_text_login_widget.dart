@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
 import 'package:lady_driver/core/router/router.dart';
+import 'package:lady_driver/l10n/app_localizations.dart';
 
 class RichTextLoginWidget extends StatelessWidget {
   const RichTextLoginWidget({
@@ -20,10 +21,12 @@ class RichTextLoginWidget extends StatelessWidget {
         style: textTheme.titleSmall!.copyWith(fontWeight: FontWeight.w400),
         children: [
           //! ليس لديك حساب ؟
-          const TextSpan(text: ' ليس لديك حساب؟'),
+          TextSpan(
+            text: AppLocalizations.of(context)!.dontHaveAnAccount,
+          ),
           //! انشاء حساب
           TextSpan(
-            text: ' إنشاء حساب',
+            text: AppLocalizations.of(context)!.createAccount,
             style: textTheme.titleSmall!
                 .copyWith(color: ColorManger.kPrimaryColor),
             recognizer: TapGestureRecognizer()

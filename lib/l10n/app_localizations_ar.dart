@@ -17,4 +17,28 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get createAccount => 'انشاء حساب';
+
+  @override
+  String get email => 'البريد الالكترونى او رقم الهاتف';
+
+  @override
+  String get password => 'كلمة المرور';
+
+  @override
+  String get forgotYourPassword => 'هل نسيت كلمة المرور؟';
+
+  @override
+  String get whenYouLogInYouAgreeTo => 'عند تسجيل الدخول انت توافق علي ';
+
+  @override
+  String get privacyPolicy => 'سياسه\n الخصوصيه ';
+
+  @override
+  String get and => 'و ';
+
+  @override
+  String get termsOfUse => 'شروط الاستخدام';
+
+  @override
+  String get dontHaveAnAccount => ' ليس لديك حساب؟';
 }

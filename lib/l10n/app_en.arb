@@ -3,5 +3,13 @@
 "loginToLadyDriver" : "Login To LadyDriver",
 "heyYou" : "Hello 👋",
 "logIN" : "Login",
-"createAccount":"Create Account"
+"createAccount":"Create Account",
+"email" : "Email or Phone",
+"password":"Password",
+"forgotYourPassword" : "Forgot your password?",
+"whenYouLogInYouAgreeTo" : "By logging in. you agree to ",
+"privacyPolicy" : "Privacy Policy ",
+"and": "and ",
+"termsOfUse" : "Terms\n Of Use",
+"dontHaveAnAccount" : "Don't have an account? "
 }

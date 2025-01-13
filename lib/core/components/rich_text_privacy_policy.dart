@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:lady_driver/core/constant/color_manger.dart';
+import 'package:lady_driver/l10n/app_localizations.dart';
 
 class RichTextPrivacyPolicy extends StatefulWidget {
   const RichTextPrivacyPolicy({super.key, this.onChanged, this.value});
@@ -32,23 +33,23 @@ class _RichTextPrivacyPolicyState extends State<RichTextPrivacyPolicy> {
           text: TextSpan(
             children: [
               TextSpan(
-                text: 'عند تسجيل الدخول انت توافق علي ',
+                text: AppLocalizations.of(context)!.whenYouLogInYouAgreeTo,
                 style: textTheme.labelMedium!
                     .copyWith(fontWeight: FontWeight.w300),
               ),
               //! Click
               TextSpan(
-                text: 'سياسه\n الخصوصيه ',
+                text: AppLocalizations.of(context)!.privacyPolicy,
                 style: textTheme.labelMedium!
                     .copyWith(color: ColorManger.kPrimaryColor),
                 recognizer: TapGestureRecognizer()..onTap = () {},
               ),
               TextSpan(
-                  text: 'و ',
+                  text: AppLocalizations.of(context)!.and,
                   style: textTheme.labelMedium!
                       .copyWith(fontWeight: FontWeight.w300)),
               TextSpan(
-                text: 'شروط الاستخدام',
+                text: AppLocalizations.of(context)!.termsOfUse,
                 style: textTheme.labelMedium!
                     .copyWith(color: ColorManger.kPrimaryColor),
                 recognizer: TapGestureRecognizer()..onTap = () {},
