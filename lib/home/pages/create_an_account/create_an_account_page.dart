@@ -7,7 +7,7 @@ import '../../../core/components/rich_text_privacy_policy.dart';
 import '../../../core/constant/color_manger.dart';
 import '../../../core/constant/svg_manger.dart';
 import 'widget/circler_image_picker.dart';
-import 'widget/create_account_enum_widget.dart';
+import 'widget/enum_create_account_widget.dart';
 import 'widget/rich_text_create_an_account_widget.dart';
 import '../../../l10n/app_localizations.dart';
 
@@ -107,7 +107,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
             ),
             const SizedBox(height: 10),
             //! Create Account Enum Widget
-            const CreateAccountEnumWidget(),
+            const EnumsCreateAccountWidget(),
             sizedbox,
             //! كلمة المرور
             CustomTextFormFiledPassword(

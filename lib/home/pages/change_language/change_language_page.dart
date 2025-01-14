@@ -1,11 +1,12 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:lady_driver/core/constant/color_manger.dart';
+
 import '../../../core/cached/cached_helper.dart';
-import '../../../core/constant/color_manger.dart';
 import '../../../core/models/enums_local_language.dart';
-import '../../data/manger/app_language/app_language_cubit.dart';
 import '../../../l10n/app_localizations.dart';
+import '../../data/manger/app_language/app_language_cubit.dart';
 
 @RoutePage()
 class ChangeLanguagePage extends StatefulWidget {
@@ -16,12 +17,28 @@ class ChangeLanguagePage extends StatefulWidget {
 }
 
 class _ChangeLanguagePageState extends State<ChangeLanguagePage> {
+  static const WidgetStateProperty<Icon> thumbIcon =
+      WidgetStateProperty<Icon>.fromMap(
+    <WidgetStatesConstraint, Icon>{
+      WidgetState.selected: Icon(
+        Icons.check,
+        color: ColorManger.kPrimaryColor,
+      ),
+      WidgetState.any: Icon(
+        Icons.check,
+        color: ColorManger.kPrimaryColor,
+      ),
+    },
+  );
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: Text(AppLocalizations.of(context)!.changeLanguage),
+        title: Text(
+          AppLocalizations.of(context)!.changeLanguage,
+          style: textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w700),
+        ),
         centerTitle: true,
       ),
       body: SafeArea(
@@ -29,39 +46,47 @@ class _ChangeLanguagePageState extends State<ChangeLanguagePage> {
           padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text(
-                    'العربية 🇪🇬',
-                  ),
-                  Switch(
-                    activeColor: Colors.black,
-                    activeTrackColor: ColorManger.kBorderColor,
-                    inactiveThumbColor: Colors.white,
-                    inactiveTrackColor: Colors.blue,
-                    value: CachedHelper.getBool(key: 'isSelected') ?? false,
-                    onChanged: (value) async {
-                      await CachedHelper.setBool(
-                          key: 'isSelected', value: value);
-                      if (value == true) {
-                        setState(() {
-                          context.read<AppLanguageCubit>().appLangFunc(
-                              EnumChangeLocalLanguage.englishLanguage);
-                        });
-                      } else {
-                        setState(() {
-                          context.read<AppLanguageCubit>().appLangFunc(
-                              EnumChangeLocalLanguage.arabicLanguage);
-                        });
-                      }
-                      return;
-                    },
-                  ),
-                  const Text(
-                    'English 🇺🇸',
-                  ),
-                ],
+              Directionality(
+                textDirection: TextDirection.rtl,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'العربية  🇪🇬',
+                      style: textTheme.titleMedium!
+                          .copyWith(fontWeight: FontWeight.w700),
+                    ),
+                    Switch(
+                      thumbIcon: thumbIcon,
+                      activeColor: Colors.white,
+                      activeTrackColor: const Color(0xff78767b),
+                      inactiveThumbColor: Colors.white,
+                      inactiveTrackColor: const Color(0xff78767b),
+                      value: CachedHelper.getBool(key: 'isSelected') ?? false,
+                      onChanged: (value) async {
+                        await CachedHelper.setBool(
+                            key: 'isSelected', value: value);
+                        if (value == true) {
+                          setState(() {
+                            context.read<AppLanguageCubit>().appLangFunc(
+                                EnumChangeLocalLanguage.englishLanguage);
+                          });
+                        } else {
+                          setState(() {
+                            context.read<AppLanguageCubit>().appLangFunc(
+                                EnumChangeLocalLanguage.arabicLanguage);
+                          });
+                        }
+                        return;
+                      },
+                    ),
+                    Text(
+                      'English  🇺🇸',
+                      style: textTheme.titleMedium!
+                          .copyWith(fontWeight: FontWeight.w700),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

@@ -1,7 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import '../constant/color_manger.dart';
+
 import '../../l10n/app_localizations.dart';
+import '../constant/color_manger.dart';
 
 class RichTextPrivacyPolicy extends StatefulWidget {
   const RichTextPrivacyPolicy({super.key, this.onChanged, this.value});
@@ -20,8 +21,8 @@ class _RichTextPrivacyPolicyState extends State<RichTextPrivacyPolicy> {
       children: [
         //! checkBox
         SizedBox(
-          height: 15,
-          width: 15,
+          height: 20,
+          width: 20,
           child: Checkbox(
             activeColor: ColorManger.kPrimaryColor,
             value: widget.value,

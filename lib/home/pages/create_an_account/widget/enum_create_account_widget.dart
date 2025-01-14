@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
+
 import '../../../../core/constant/color_manger.dart';
 import '../../../../l10n/app_localizations.dart';
 
 enum IsSelected { client, femaleDriver }
 
-class CreateAccountEnumWidget extends StatefulWidget {
-  const CreateAccountEnumWidget({super.key});
+class EnumsCreateAccountWidget extends StatefulWidget {
+  const EnumsCreateAccountWidget({super.key});
 
   @override
-  State<CreateAccountEnumWidget> createState() =>
-      _CreateAccountEnumWidgetState();
+  State<EnumsCreateAccountWidget> createState() =>
+      _EnumsCreateAccountWidgetState();
 }
 
-class _CreateAccountEnumWidgetState extends State<CreateAccountEnumWidget> {
+class _EnumsCreateAccountWidgetState extends State<EnumsCreateAccountWidget> {
   IsSelected isSelected = IsSelected.client;
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,7 @@ class _CreateAccountEnumWidgetState extends State<CreateAccountEnumWidget> {
               });
             },
             child: Container(
-              margin: const EdgeInsets.only(right: 5),
+              margin: const EdgeInsetsDirectional.only(end: 5),
               height: 48,
               decoration: BoxDecoration(
                 border: Border.all(
@@ -60,7 +61,7 @@ class _CreateAccountEnumWidgetState extends State<CreateAccountEnumWidget> {
               });
             },
             child: Container(
-              margin: const EdgeInsets.only(left: 5),
+              margin: const EdgeInsetsDirectional.only(start: 5),
               height: 48,
               decoration: BoxDecoration(
                 border: Border.all(

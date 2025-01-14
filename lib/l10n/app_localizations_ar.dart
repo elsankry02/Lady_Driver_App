@@ -52,7 +52,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get name => 'الاسم';
 
   @override
-  String get phoneNumber => 'Phone Number';
+  String get phoneNumber => 'رقم الهاتف';
 
   @override
   String get ladyDriverYourComfortComesFirst => '.ليديدرايفر: راحتكِ أولاً';

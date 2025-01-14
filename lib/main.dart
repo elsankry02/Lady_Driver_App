@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'core/cached/cached_helper.dart';
 import 'core/constant/string_manager.dart';
 import 'core/models/enums_local_language.dart';
@@ -29,7 +30,6 @@ class LadyDriver extends StatelessWidget {
               routerConfig: router.config(),
               localizationsDelegates: AppLocalizations.localizationsDelegates,
               supportedLocales: AppLocalizations.supportedLocales,
-              localeResolutionCallback: localCallBack,
               theme: ThemeData(
                 fontFamily: kTajawal,
               ),
@@ -40,7 +40,6 @@ class LadyDriver extends StatelessWidget {
             routerConfig: router.config(),
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             supportedLocales: AppLocalizations.supportedLocales,
-            localeResolutionCallback: localCallBack,
             theme: ThemeData(
               fontFamily: kTajawal,
             ),
@@ -49,17 +48,5 @@ class LadyDriver extends StatelessWidget {
         },
       ),
     );
-  }
-
-  Locale localCallBack(Locale? local, Iterable<Locale> supportedLocales) {
-    if (local == null) {
-      return supportedLocales.last;
-    }
-    for (var supportedLocale in supportedLocales) {
-      if (local.languageCode == supportedLocale.languageCode) {
-        return supportedLocale;
-      }
-    }
-    return supportedLocales.last;
   }
 }

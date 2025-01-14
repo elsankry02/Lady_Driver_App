@@ -15,7 +15,7 @@
  "alreadyHaveAnAccount" : "لديك حساب بالفعل؟ ",
  "createAnAccountInLadyDriver":"إنشاء حساب في ليدي درايفر",
  "name" : "الاسم",
- "phone number" : "رقم الهاتف",
+ "phoneNumber" : "رقم الهاتف",
  "ladyDriverYourComfortComesFirst" : ".ليديدرايفر: راحتكِ أولاً",
  "skip" : "تخطي",
  "next" : "التالي",
