@@ -32,20 +32,18 @@ class _ChangeLanguagePageState extends State<ChangeLanguagePage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Align(
-                    alignment: Alignment.centerRight,
-                    child: Text(
-                      ' 🇪🇬 العربيه',
-                    ),
+                  const Text(
+                    'العربية 🇪🇬',
                   ),
                   Switch(
                     activeColor: Colors.black,
                     activeTrackColor: ColorManger.kBorderColor,
                     inactiveThumbColor: Colors.white,
                     inactiveTrackColor: Colors.blue,
-                    value: CachedHelper.getBool(key: 'isSelected')!,
-                    onChanged: (value) {
-                      CachedHelper.setBool(key: 'isSelected', value: value);
+                    value: CachedHelper.getBool(key: 'isSelected') ?? false,
+                    onChanged: (value) async {
+                      await CachedHelper.setBool(
+                          key: 'isSelected', value: value);
                       if (value == true) {
                         setState(() {
                           context.read<AppLanguageCubit>().appLangFunc(
@@ -57,7 +55,7 @@ class _ChangeLanguagePageState extends State<ChangeLanguagePage> {
                               EnumChangeLocalLanguage.arabicLanguage);
                         });
                       }
-                      context.router.maybePop();
+                      return;
                     },
                   ),
                   const Text(
