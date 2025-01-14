@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:lady_driver/core/cached/cached_helper.dart';
-import 'package:lady_driver/core/models/enums_local_language.dart';
+import '../../../../core/cached/cached_helper.dart';
+import '../../../../core/models/enums_local_language.dart';
 import 'package:meta/meta.dart';
 
 part 'app_language_state.dart';

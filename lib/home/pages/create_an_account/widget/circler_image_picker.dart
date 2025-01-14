@@ -3,9 +3,9 @@ import 'dart:io';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:lady_driver/core/components/custom_botton.dart';
-import 'package:lady_driver/core/constant/color_manger.dart';
-import 'package:lady_driver/core/constant/image_manger.dart';
+import '../../../../core/components/custom_botton.dart';
+import '../../../../core/constant/color_manger.dart';
+import '../../../../core/constant/image_manger.dart';
 
 class CirclerImagePicker extends StatefulWidget {
   const CirclerImagePicker({super.key});

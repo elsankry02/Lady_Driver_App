@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lady_driver/core/constant/color_manger.dart';
-import 'package:lady_driver/core/models/onboarding_model.dart';
+import '../../../../core/constant/color_manger.dart';
+import '../../../../core/models/onboarding_model.dart';
 
 class Dot extends StatelessWidget {
   const Dot({super.key, required this.currentindex});

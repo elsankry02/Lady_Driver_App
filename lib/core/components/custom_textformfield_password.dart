@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:lady_driver/core/constant/color_manger.dart';
-import 'package:lady_driver/core/constant/svg_manger.dart';
+import '../constant/color_manger.dart';
+import '../constant/svg_manger.dart';
 
 class CustomTextFormFiledPassword extends StatefulWidget {
   const CustomTextFormFiledPassword({

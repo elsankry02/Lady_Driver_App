@@ -1,12 +1,12 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:lady_driver/core/cached/cached_helper.dart';
-import 'package:lady_driver/core/components/custom_botton.dart';
-import 'package:lady_driver/core/constant/color_manger.dart';
-import 'package:lady_driver/core/models/onboarding_model.dart';
-import 'package:lady_driver/core/router/router.dart';
-import 'package:lady_driver/home/pages/on_boarding/widget/dot.dart';
-import 'package:lady_driver/l10n/app_localizations.dart';
+import '../../../core/cached/cached_helper.dart';
+import '../../../core/components/custom_botton.dart';
+import '../../../core/constant/color_manger.dart';
+import '../../../core/models/onboarding_model.dart';
+import '../../../core/router/router.dart';
+import 'widget/dot.dart';
+import '../../../l10n/app_localizations.dart';
 
 @RoutePage()
 class OnboardingPage extends StatefulWidget {

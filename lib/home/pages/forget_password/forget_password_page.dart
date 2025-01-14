@@ -1,11 +1,11 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:lady_driver/core/components/custom_botton.dart';
-import 'package:lady_driver/core/components/custom_textformfield.dart';
-import 'package:lady_driver/core/constant/color_manger.dart';
-import 'package:lady_driver/core/constant/image_manger.dart';
-import 'package:lady_driver/core/constant/svg_manger.dart';
-import 'package:lady_driver/core/router/router.dart';
+import '../../../core/components/custom_botton.dart';
+import '../../../core/components/custom_textformfield.dart';
+import '../../../core/constant/color_manger.dart';
+import '../../../core/constant/image_manger.dart';
+import '../../../core/constant/svg_manger.dart';
+import '../../../core/router/router.dart';
 
 @RoutePage()
 class ForgetPasswordPage extends StatefulWidget {

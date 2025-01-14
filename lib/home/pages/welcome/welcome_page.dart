@@ -1,10 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:lady_driver/core/components/custom_botton.dart';
-import 'package:lady_driver/core/constant/color_manger.dart';
-import 'package:lady_driver/core/constant/image_manger.dart';
-import 'package:lady_driver/core/router/router.dart';
-import 'package:lady_driver/l10n/app_localizations.dart';
+import '../../../core/components/custom_botton.dart';
+import '../../../core/constant/color_manger.dart';
+import '../../../core/constant/image_manger.dart';
+import '../../../core/router/router.dart';
+import '../../../l10n/app_localizations.dart';
 
 @RoutePage()
 class WelcomePage extends StatelessWidget {

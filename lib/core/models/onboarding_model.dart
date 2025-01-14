@@ -1,4 +1,4 @@
-import 'package:lady_driver/core/constant/image_manger.dart';
+import '../constant/image_manger.dart';
 
 class OnboardingModel {
   final String image;

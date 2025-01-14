@@ -1,13 +1,13 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:lady_driver/home/pages/change_language/change_language_page.dart';
-import 'package:lady_driver/home/pages/create_an_account/create_an_account_page.dart';
-import 'package:lady_driver/home/pages/forget_password/forget_password_page.dart';
-import 'package:lady_driver/home/pages/login/login_page.dart';
-import 'package:lady_driver/home/pages/modify_password/modify_password_page.dart';
-import 'package:lady_driver/home/pages/on_boarding/onboarding_page.dart';
-import 'package:lady_driver/home/pages/splash/splash_page.dart';
-import 'package:lady_driver/home/pages/verification_code/verification_code_page.dart';
-import 'package:lady_driver/home/pages/welcome/welcome_page.dart';
+import '../../home/pages/change_language/change_language_page.dart';
+import '../../home/pages/create_an_account/create_an_account_page.dart';
+import '../../home/pages/forget_password/forget_password_page.dart';
+import '../../home/pages/login/login_page.dart';
+import '../../home/pages/modify_password/modify_password_page.dart';
+import '../../home/pages/on_boarding/onboarding_page.dart';
+import '../../home/pages/splash/splash_page.dart';
+import '../../home/pages/verification_code/verification_code_page.dart';
+import '../../home/pages/welcome/welcome_page.dart';
 
 part 'router.gr.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:lady_driver/core/constant/color_manger.dart';
+import '../constant/color_manger.dart';
 
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField(

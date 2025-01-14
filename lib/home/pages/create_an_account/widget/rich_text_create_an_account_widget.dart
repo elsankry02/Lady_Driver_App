@@ -1,9 +1,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:lady_driver/core/constant/color_manger.dart';
-import 'package:lady_driver/core/router/router.dart';
-import 'package:lady_driver/l10n/app_localizations.dart';
+import '../../../../core/constant/color_manger.dart';
+import '../../../../core/router/router.dart';
+import '../../../../l10n/app_localizations.dart';
 
 class RichTextCreateAnAccountWidget extends StatelessWidget {
   const RichTextCreateAnAccountWidget({super.key, required this.textTheme});

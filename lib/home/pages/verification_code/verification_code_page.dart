@@ -1,8 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:lady_driver/core/constant/color_manger.dart';
-import 'package:lady_driver/core/router/router.dart';
-import 'package:lady_driver/home/pages/verification_code/widget/text_rich_receive_the_code.dart';
+import '../../../core/constant/color_manger.dart';
+import '../../../core/router/router.dart';
+import 'widget/text_rich_receive_the_code.dart';
 import 'package:pinput/pinput.dart';
 
 @RoutePage()

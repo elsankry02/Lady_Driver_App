@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:lady_driver/core/constant/color_manger.dart';
-import 'package:lady_driver/l10n/app_localizations.dart';
+import '../constant/color_manger.dart';
+import '../../l10n/app_localizations.dart';
 
 class RichTextPrivacyPolicy extends StatefulWidget {
   const RichTextPrivacyPolicy({super.key, this.onChanged, this.value});

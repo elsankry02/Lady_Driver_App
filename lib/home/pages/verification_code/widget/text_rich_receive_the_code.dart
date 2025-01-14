@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:lady_driver/core/constant/color_manger.dart';
+import '../../../../core/constant/color_manger.dart';
 
 class TextRichReceiveTheCode extends StatelessWidget {
   const TextRichReceiveTheCode({

@@ -1,15 +1,15 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:lady_driver/core/components/custom_botton.dart';
-import 'package:lady_driver/core/components/custom_textformfield.dart';
-import 'package:lady_driver/core/components/custom_textformfield_password.dart';
-import 'package:lady_driver/core/components/rich_text_privacy_policy.dart';
-import 'package:lady_driver/core/constant/color_manger.dart';
-import 'package:lady_driver/core/constant/svg_manger.dart';
-import 'package:lady_driver/home/pages/create_an_account/widget/circler_image_picker.dart';
-import 'package:lady_driver/home/pages/create_an_account/widget/create_account_enum_widget.dart';
-import 'package:lady_driver/home/pages/create_an_account/widget/rich_text_create_an_account_widget.dart';
-import 'package:lady_driver/l10n/app_localizations.dart';
+import '../../../core/components/custom_botton.dart';
+import '../../../core/components/custom_textformfield.dart';
+import '../../../core/components/custom_textformfield_password.dart';
+import '../../../core/components/rich_text_privacy_policy.dart';
+import '../../../core/constant/color_manger.dart';
+import '../../../core/constant/svg_manger.dart';
+import 'widget/circler_image_picker.dart';
+import 'widget/create_account_enum_widget.dart';
+import 'widget/rich_text_create_an_account_widget.dart';
+import '../../../l10n/app_localizations.dart';
 
 @RoutePage()
 class CreateAnAccountPage extends StatefulWidget {

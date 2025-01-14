@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:lady_driver/core/cached/cached_helper.dart';
-import 'package:lady_driver/core/constant/string_manager.dart';
-import 'package:lady_driver/core/models/enums_local_language.dart';
-import 'package:lady_driver/core/router/router.dart';
-import 'package:lady_driver/home/data/manger/app_language/app_language_cubit.dart';
-import 'package:lady_driver/l10n/app_localizations.dart';
+import 'core/cached/cached_helper.dart';
+import 'core/constant/string_manager.dart';
+import 'core/models/enums_local_language.dart';
+import 'core/router/router.dart';
+import 'home/data/manger/app_language/app_language_cubit.dart';
+import 'l10n/app_localizations.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
