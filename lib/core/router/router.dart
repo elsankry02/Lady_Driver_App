@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:lady_driver/home/pages/change_language/change_language_page.dart';
 import 'package:lady_driver/home/pages/create_an_account/create_an_account_page.dart';
 import 'package:lady_driver/home/pages/forget_password/forget_password_page.dart';
 import 'package:lady_driver/home/pages/login/login_page.dart';
@@ -24,5 +25,6 @@ class AppRouter extends RootStackRouter {
         AutoRoute(page: OnboardingRoute.page),
         AutoRoute(page: VerificationCodeRoute.page),
         AutoRoute(page: WelcomeRoute.page),
+        AutoRoute(page: ChangeLanguageRoute.page),
       ];
 }

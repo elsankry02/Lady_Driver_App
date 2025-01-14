@@ -77,4 +77,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get registerAs => 'Register as';
+
+  @override
+  String get changeLanguage => 'Change Language';
 }

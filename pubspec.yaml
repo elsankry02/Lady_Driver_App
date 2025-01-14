@@ -32,12 +32,12 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
+  flutter_bloc: ^9.0.0
   flutter_localizations:
     sdk: flutter
-  intl: any
-  flutter_bloc: ^8.1.6
   flutter_svg: ^2.0.16
   image_picker: ^1.1.2
+  intl: any
   pinput: ^5.0.0
   shared_preferences: ^2.3.5
 

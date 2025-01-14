@@ -77,4 +77,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get registerAs => 'تسجيل الدخول ک';
+
+  @override
+  String get changeLanguage => 'تغيير اللغه';
 }

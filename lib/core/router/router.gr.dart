@@ -10,6 +10,25 @@
 part of 'router.dart';
 
 /// generated route for
+/// [ChangeLanguagePage]
+class ChangeLanguageRoute extends PageRouteInfo<void> {
+  const ChangeLanguageRoute({List<PageRouteInfo>? children})
+      : super(
+          ChangeLanguageRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ChangeLanguageRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const ChangeLanguagePage();
+    },
+  );
+}
+
+/// generated route for
 /// [CreateAnAccountPage]
 class CreateAnAccountRoute extends PageRouteInfo<void> {
   const CreateAnAccountRoute({List<PageRouteInfo>? children})

@@ -238,6 +238,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Register as'**
   String get registerAs;
+
+  /// No description provided for @changeLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Change Language'**
+  String get changeLanguage;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

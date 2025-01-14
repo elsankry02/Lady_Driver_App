@@ -16,55 +16,64 @@ class WelcomePage extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(
-              height: 150,
-            ),
-            //! Image
-            Center(
-              child: Image.asset(
-                width: 285,
-                height: 285,
-                ImageManger.kOndoarding3,
+        child: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              //! Button Change Language
+              IconButton(
+                  onPressed: () {
+                    context.router.push(const ChangeLanguageRoute());
+                  },
+                  icon: const Icon(
+                    Icons.language,
+                    color: ColorManger.kPrimaryColor,
+                  )),
+              const SizedBox(height: 100),
+              //! Image
+              Center(
+                child: Image.asset(
+                  width: 285,
+                  height: 285,
+                  ImageManger.kOndoarding3,
+                ),
               ),
-            ),
-            const SizedBox(
-              height: 121,
-            ),
-            Text(
-              textAlign: TextAlign.end,
-              AppLocalizations.of(context)!.heyYou,
-              style: textTheme.headlineLarge!
-                  .copyWith(fontWeight: FontWeight.w700),
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            //! تسجيل الدخول
-            GestureDetector(
-              onTap: () => context.router.replace(const LoginRoute()),
-              child: CustomBotton(
-                borderColor: ColorManger.kPrimaryColor,
-                textThemeColor: ColorManger.kWhite,
-                text: AppLocalizations.of(context)!.logIN,
-                color: ColorManger.kPrimaryColor,
+              const SizedBox(
+                height: 121,
               ),
-            ),
-            const SizedBox(
-              height: 24,
-            ),
-            //!  انشاء حساب
-            GestureDetector(
-              onTap: () => context.router.push(const CreateAnAccountRoute()),
-              child: CustomBotton(
-                text: AppLocalizations.of(context)!.createAccount,
-                textThemeColor: ColorManger.kPrimaryColor,
-                borderColor: ColorManger.kPrimaryColor,
+              Text(
+                textAlign: TextAlign.end,
+                AppLocalizations.of(context)!.heyYou,
+                style: textTheme.headlineLarge!
+                    .copyWith(fontWeight: FontWeight.w700),
               ),
-            )
-          ],
+              const SizedBox(
+                height: 16,
+              ),
+              //! تسجيل الدخول
+              GestureDetector(
+                onTap: () => context.router.replace(const LoginRoute()),
+                child: CustomBotton(
+                  borderColor: ColorManger.kPrimaryColor,
+                  textThemeColor: ColorManger.kWhite,
+                  text: AppLocalizations.of(context)!.logIN,
+                  color: ColorManger.kPrimaryColor,
+                ),
+              ),
+              const SizedBox(
+                height: 24,
+              ),
+              //!  انشاء حساب
+              GestureDetector(
+                onTap: () => context.router.push(const CreateAnAccountRoute()),
+                child: CustomBotton(
+                  text: AppLocalizations.of(context)!.createAccount,
+                  textThemeColor: ColorManger.kPrimaryColor,
+                  borderColor: ColorManger.kPrimaryColor,
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
