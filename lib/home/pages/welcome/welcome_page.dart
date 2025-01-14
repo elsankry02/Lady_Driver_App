@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+
 import '../../../core/components/custom_botton.dart';
 import '../../../core/constant/color_manger.dart';
 import '../../../core/constant/image_manger.dart';
@@ -22,14 +23,15 @@ class WelcomePage extends StatelessWidget {
             children: [
               //! Button Change Language
               IconButton(
-                  onPressed: () {
-                    context.router.push(const ChangeLanguageRoute());
-                  },
-                  icon: const Icon(
-                    Icons.language,
-                    color: ColorManger.kPrimaryColor,
-                  )),
-              const SizedBox(height: 100),
+                onPressed: () {
+                  context.router.push(const ChangeLanguageRoute());
+                },
+                icon: const Icon(
+                  Icons.language,
+                  color: ColorManger.kPrimaryColor,
+                ),
+              ),
+              const SizedBox(height: 50),
               //! Image
               Center(
                 child: Image.asset(
@@ -38,9 +40,7 @@ class WelcomePage extends StatelessWidget {
                   ImageManger.kOndoarding3,
                 ),
               ),
-              const SizedBox(
-                height: 121,
-              ),
+              const SizedBox(height: 150),
               Text(
                 textAlign: TextAlign.end,
                 AppLocalizations.of(context)!.heyYou,

@@ -1,15 +1,16 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+
 import '../../../core/components/custom_botton.dart';
 import '../../../core/components/custom_textformfield.dart';
 import '../../../core/components/custom_textformfield_password.dart';
 import '../../../core/components/rich_text_privacy_policy.dart';
 import '../../../core/constant/color_manger.dart';
 import '../../../core/constant/svg_manger.dart';
+import '../../../l10n/app_localizations.dart';
 import 'widget/circler_image_picker.dart';
 import 'widget/enum_create_account_widget.dart';
 import 'widget/rich_text_create_an_account_widget.dart';
-import '../../../l10n/app_localizations.dart';
 
 @RoutePage()
 class CreateAnAccountPage extends StatefulWidget {

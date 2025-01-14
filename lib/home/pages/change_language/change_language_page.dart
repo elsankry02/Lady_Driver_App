@@ -51,11 +51,13 @@ class _ChangeLanguagePageState extends State<ChangeLanguagePage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    //! العربيه
                     Text(
                       'العربية  🇪🇬',
                       style: textTheme.titleMedium!
                           .copyWith(fontWeight: FontWeight.w700),
                     ),
+                    //! Switch
                     Switch(
                       thumbIcon: thumbIcon,
                       activeColor: Colors.white,
@@ -80,6 +82,7 @@ class _ChangeLanguagePageState extends State<ChangeLanguagePage> {
                         return;
                       },
                     ),
+                    //! english
                     Text(
                       'English  🇺🇸',
                       style: textTheme.titleMedium!
