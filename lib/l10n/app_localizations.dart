@@ -274,6 +274,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Verification Code'**
   String get verificationcode;
+
+  /// No description provided for @didNotReceiveTheCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Didn\'t receive the code? '**
+  String get didNotReceiveTheCode;
+
+  /// No description provided for @resendCode.
+  ///
+  /// In en, this message translates to:
+  /// **'Resend code'**
+  String get resendCode;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

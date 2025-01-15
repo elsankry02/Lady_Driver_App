@@ -95,4 +95,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get verificationcode => 'Verification Code';
+
+  @override
+  String get didNotReceiveTheCode => 'Didn\'t receive the code? ';
+
+  @override
+  String get resendCode => 'Resend code';
 }

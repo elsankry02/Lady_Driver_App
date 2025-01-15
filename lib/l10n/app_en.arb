@@ -29,8 +29,9 @@
 "enterYourEmail" : "Enter your Email",
 "sendCode":"Send Code",
 "enterTheCodeThatWasSentToYourEmailAddress": "Enter the code sent to your email address",
-"verificationcode" : "Verification Code"
-
+"verificationcode" : "Verification Code",
+"didNotReceiveTheCode":"Didn't receive the code? ",
+"resendCode":"Resend code"
                                             
 
 }

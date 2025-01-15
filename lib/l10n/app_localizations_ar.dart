@@ -95,4 +95,10 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get verificationcode => 'رمز التحقق';
+
+  @override
+  String get didNotReceiveTheCode => 'لم تستلم الرمز؟ ';
+
+  @override
+  String get resendCode => 'اعاده ارسال الرمز';
 }

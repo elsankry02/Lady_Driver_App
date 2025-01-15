@@ -1,5 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:lady_driver/l10n/app_localizations.dart';
+
 import '../../../../core/constant/color_manger.dart';
 
 class TextRichReceiveTheCode extends StatelessWidget {
@@ -17,11 +19,11 @@ class TextRichReceiveTheCode extends StatelessWidget {
       text: TextSpan(
         style: textTheme.titleSmall!.copyWith(fontWeight: FontWeight.w400),
         children: [
-          const TextSpan(
-            text: 'لم تستلم الرمز؟ ',
+          TextSpan(
+            text: AppLocalizations.of(context)!.didNotReceiveTheCode,
           ),
           TextSpan(
-            text: 'اعاده ارسال الرمز',
+            text: AppLocalizations.of(context)!.resendCode,
             style: textTheme.titleSmall!
                 .copyWith(color: ColorManger.kPrimaryColor),
             recognizer: TapGestureRecognizer()..onTap = () {},

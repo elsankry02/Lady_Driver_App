@@ -29,6 +29,8 @@
  "enterYourEmail" : "ادخل بريدك الالكتروني",
  "sendCode" : "إرسال الرمز",
  "enterTheCodeThatWasSentToYourEmailAddress": "ادخل الرمز الذي تم إرساله إلي عنولن البريد \nالالكترونى",
- "verificationcode" : "رمز التحقق"
+ "verificationcode" : "رمز التحقق",
+ "didNotReceiveTheCode": "لم تستلم الرمز؟ ",
+ "resendCode":"اعاده ارسال الرمز"
 
     }
