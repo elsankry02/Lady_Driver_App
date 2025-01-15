@@ -14,6 +14,8 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
+    double mediaQueryHeight = MediaQuery.of(context).size.height;
+    double mediaQueryWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -31,25 +33,24 @@ class WelcomePage extends StatelessWidget {
                   color: ColorManger.kPrimaryColor,
                 ),
               ),
-              const SizedBox(height: 50),
+              SizedBox(height: mediaQueryHeight * 0.055),
               //! Image
               Center(
                 child: Image.asset(
-                  width: 285,
-                  height: 285,
+                  height: mediaQueryHeight * 0.285,
+                  width: mediaQueryWidth,
                   ImageManger.kOndoarding3,
                 ),
               ),
-              const SizedBox(height: 150),
+              SizedBox(height: mediaQueryHeight * 0.175),
               Text(
                 textAlign: TextAlign.end,
                 AppLocalizations.of(context)!.heyYou,
                 style: textTheme.headlineLarge!
                     .copyWith(fontWeight: FontWeight.w700),
               ),
-              const SizedBox(
-                height: 16,
-              ),
+              SizedBox(height: mediaQueryHeight * 0.020),
+
               //! تسجيل الدخول
               GestureDetector(
                 onTap: () => context.router.replace(const LoginRoute()),
@@ -60,9 +61,8 @@ class WelcomePage extends StatelessWidget {
                   color: ColorManger.kPrimaryColor,
                 ),
               ),
-              const SizedBox(
-                height: 24,
-              ),
+              SizedBox(height: mediaQueryHeight * 0.028),
+
               //!  انشاء حساب
               GestureDetector(
                 onTap: () => context.router.push(const CreateAnAccountRoute()),

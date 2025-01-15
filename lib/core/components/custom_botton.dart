@@ -17,9 +17,11 @@ class CustomBotton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
+    double mediaQueryHeight = MediaQuery.of(context).size.height;
+    double mediaQueryWidth = MediaQuery.of(context).size.width;
     return Container(
-      height: 48,
-      width: double.infinity,
+      height: mediaQueryHeight * 0.055,
+      width: mediaQueryWidth,
       decoration: BoxDecoration(
         border: Border.all(
           width: 1.5,
