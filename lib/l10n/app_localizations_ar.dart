@@ -80,4 +80,13 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get changeLanguage => 'تغيير اللغه';
+
+  @override
+  String get forgotPassword => 'هل نسيت كلمه المرور';
+
+  @override
+  String get enterYourEmail => 'ادخل بريدك الالكتروني';
+
+  @override
+  String get sendCode => 'إرسال الرمز';
 }

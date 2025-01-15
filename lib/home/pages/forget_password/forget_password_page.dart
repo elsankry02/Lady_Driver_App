@@ -1,5 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:lady_driver/l10n/app_localizations.dart';
+
 import '../../../core/components/custom_botton.dart';
 import '../../../core/components/custom_textformfield.dart';
 import '../../../core/constant/color_manger.dart';
@@ -33,7 +35,7 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
         centerTitle: true,
         //! نسيت كلمة المرور
         title: Text(
-          'نسيت كلمة المرور',
+          AppLocalizations.of(context)!.forgotPassword,
           style: textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.w500),
         ),
       ),
@@ -51,7 +53,7 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
             const SizedBox(height: 20),
             //! ادخل بريدك الالكتروني
             Text(
-              'ادخل بريدك الالكتروني',
+              AppLocalizations.of(context)!.enterYourEmail,
               textAlign: TextAlign.end,
               style:
                   textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w700),
@@ -68,7 +70,7 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
               },
               controller: emailController,
               suffixIcon: SvgManger.kMail,
-              hintText: 'البريد الالكترونى',
+              hintText: AppLocalizations.of(context)!.email,
             ),
             const SizedBox(height: 30),
             //! إرسال الرمز
@@ -76,8 +78,8 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
               onTap: () {
                 formkey.currentState!.validate();
               },
-              child: const CustomBotton(
-                  text: 'إرسال الرمز',
+              child: CustomBotton(
+                  text: AppLocalizations.of(context)!.sendCode,
                   color: ColorManger.kPrimaryColor,
                   textThemeColor: ColorManger.kWhite,
                   borderColor: ColorManger.kPrimaryColor),

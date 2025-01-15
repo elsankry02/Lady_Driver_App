@@ -80,4 +80,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get changeLanguage => 'Change Language';
+
+  @override
+  String get forgotPassword => 'Forgot Password';
+
+  @override
+  String get enterYourEmail => 'Enter your Email';
+
+  @override
+  String get sendCode => 'Send Code';
 }

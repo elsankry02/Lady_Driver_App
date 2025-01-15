@@ -24,8 +24,10 @@
 "client":"Client",
 "femaleDriver":"Female Driver",
 "registerAs" : "Register as",
-"changeLanguage" : "Change Language"
-
+"changeLanguage" : "Change Language",
+"forgotPassword" : "Forgot Password",
+"enterYourEmail" : "Enter your Email",
+"sendCode":"Send Code"
 
 
 

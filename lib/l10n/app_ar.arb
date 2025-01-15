@@ -24,8 +24,10 @@
  "client":"عميل",
  "femaleDriver":"سائقة",
  "registerAs" : "تسجيل الدخول ک",
- "changeLanguage" : "تغيير اللغه"
-
+ "changeLanguage" : "تغيير اللغه",
+ "forgotPassword" : "هل نسيت كلمه المرور",
+ "enterYourEmail" : "ادخل بريدك الالكتروني",
+  "sendCode" : "إرسال الرمز"
 
 
     }
