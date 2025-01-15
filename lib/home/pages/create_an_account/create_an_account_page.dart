@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:lady_driver/core/components/custom_icon_change_language.dart';
 
 import '../../../core/components/custom_botton.dart';
 import '../../../core/components/custom_textformfield.dart';
@@ -43,18 +44,25 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
     final textTheme = Theme.of(context).textTheme;
     const sizedbox = SizedBox(height: 20);
     return Scaffold(
+      appBar: AppBar(
+        forceMaterialTransparency: true,
+        automaticallyImplyLeading: false,
+        title:
+            //! إنشاء حساب في ليدي درايفر
+            Text(
+          AppLocalizations.of(context)!.createAnAccountInLadyDriver,
+          style: textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w700),
+        ),
+        actions: const [
+          //! Custom Icon Change Language
+          CustomIconChangeLanguagePage(),
+        ],
+      ),
       body: Form(
         key: keyform,
         child: ListView(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           children: [
-            const SizedBox(height: 65),
-            //! إنشاء حساب في ليدي درايفر
-            Text(
-              AppLocalizations.of(context)!.createAnAccountInLadyDriver,
-              style:
-                  textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w700),
-            ),
             const SizedBox(height: 32),
             //! الصورة
             const CirclerImagePicker(),

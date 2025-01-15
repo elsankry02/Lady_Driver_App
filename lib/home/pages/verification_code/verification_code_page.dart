@@ -1,9 +1,12 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:lady_driver/core/components/custom_icon_change_language.dart';
+import 'package:lady_driver/l10n/app_localizations.dart';
+import 'package:pinput/pinput.dart';
+
 import '../../../core/constant/color_manger.dart';
 import '../../../core/router/router.dart';
 import 'widget/text_rich_receive_the_code.dart';
-import 'package:pinput/pinput.dart';
 
 @RoutePage()
 class VerificationCodePage extends StatefulWidget {
@@ -18,15 +21,19 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
-    const sizedBox48 = SizedBox(height: 48);
+    const sizedBox = SizedBox(height: 48);
     return Scaffold(
-      //! AppBar
       appBar: AppBar(
         centerTitle: true,
+        //! AppBar Name
         title: Text(
-          'رمز التحقق',
+          AppLocalizations.of(context)!.verificationcode,
           style: textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.w500),
         ),
+        //! Custom Icon Change Language
+        actions: const [
+          CustomIconChangeLanguagePage(),
+        ],
       ),
       body: Form(
         child: ListView(
@@ -38,7 +45,8 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
             //! رساله الادخال
             Text(
                 textAlign: TextAlign.center,
-                'ادخل الرمز الذي تم إرساله إلي عنولن البريد \nالالكترونى',
+                AppLocalizations.of(context)!
+                    .enterTheCodeThatWasSentToYourEmailAddress,
                 style: textTheme.titleMedium!
                     .copyWith(fontWeight: FontWeight.w500)),
             const SizedBox(height: 7),
@@ -50,7 +58,7 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
                   fontWeight: FontWeight.w500,
                   color: ColorManger.kPrimaryColor),
             ),
-            sizedBox48,
+            sizedBox,
             //! PinPut
             Pinput(
               autofocus: true,
@@ -64,7 +72,7 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
               },
               controller: pinputController,
             ),
-            sizedBox48,
+            sizedBox,
             //! TextRichReceiveTheCode
             TextRichReceiveTheCode(textTheme: textTheme),
           ],

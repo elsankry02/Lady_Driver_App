@@ -13,7 +13,7 @@
 "termsOfUse" : "Terms\n Of Use",
 "dontHaveAnAccount" : "Don't have an account? ",
 "alreadyHaveAnAccount" : "Already have an account? ",
-"createAnAccountInLadyDriver":"Create an account in LadyDriver ",
+"createAnAccountInLadyDriver":"Create an account",
 "name" : "Name",
 "phoneNumber" : "Phone Number",
 "ladyDriverYourComfortComesFirst": "LadyDriver: Your comfort comes first",
@@ -27,8 +27,10 @@
 "changeLanguage" : "Change Language",
 "forgotPassword" : "Forgot Password",
 "enterYourEmail" : "Enter your Email",
-"sendCode":"Send Code"
+"sendCode":"Send Code",
+"enterTheCodeThatWasSentToYourEmailAddress": "Enter the code sent to your email address",
+"verificationcode" : "Verification Code"
 
-
+                                            
 
 }

@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:lady_driver/core/components/custom_icon_change_language.dart';
 
 import '../../../core/components/custom_botton.dart';
 import '../../../core/components/custom_textformfield.dart';
@@ -36,18 +37,24 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     return Scaffold(
+      appBar: AppBar(
+        forceMaterialTransparency: true,
+        automaticallyImplyLeading: false,
+        //! loginToLadyDriver
+        title: Text(
+          AppLocalizations.of(context)!.loginToLadyDriver,
+          style: textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w700),
+        ),
+        actions: const [
+          //! Custom Icon Change Language
+          CustomIconChangeLanguagePage(),
+        ],
+      ),
       body: Form(
         key: formkey,
         child: ListView(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           children: [
-            const SizedBox(height: 65),
-            //! loginToLadyDriver
-            Text(
-              AppLocalizations.of(context)!.loginToLadyDriver,
-              style:
-                  textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w700),
-            ),
             const SizedBox(height: 35),
 
             //! البريد الالكترونى

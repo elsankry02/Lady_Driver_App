@@ -23,17 +23,7 @@ class WelcomePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              //! Button Change Language
-              IconButton(
-                onPressed: () {
-                  context.router.push(const ChangeLanguageRoute());
-                },
-                icon: const Icon(
-                  Icons.language,
-                  color: ColorManger.kPrimaryColor,
-                ),
-              ),
-              SizedBox(height: mediaQueryHeight * 0.055),
+              SizedBox(height: mediaQueryHeight * 0.150),
               //! Image
               Center(
                 child: Image.asset(
@@ -53,7 +43,7 @@ class WelcomePage extends StatelessWidget {
 
               //! تسجيل الدخول
               GestureDetector(
-                onTap: () => context.router.replace(const LoginRoute()),
+                onTap: () => context.router.push(const LoginRoute()),
                 child: CustomBotton(
                   borderColor: ColorManger.kPrimaryColor,
                   textThemeColor: ColorManger.kWhite,

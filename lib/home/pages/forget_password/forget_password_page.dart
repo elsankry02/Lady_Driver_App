@@ -38,6 +38,18 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
           AppLocalizations.of(context)!.forgotPassword,
           style: textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.w500),
         ),
+        actions: [
+          //! IconButton
+          IconButton(
+            onPressed: () {
+              context.router.push(const ChangeLanguageRoute());
+            },
+            icon: const Icon(
+              Icons.language,
+              color: ColorManger.kPrimaryColor,
+            ),
+          ),
+        ],
       ),
       body: Form(
         key: formkey,
@@ -54,7 +66,6 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
             //! ادخل بريدك الالكتروني
             Text(
               AppLocalizations.of(context)!.enterYourEmail,
-              textAlign: TextAlign.end,
               style:
                   textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w700),
             ),

@@ -89,4 +89,10 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get sendCode => 'إرسال الرمز';
+
+  @override
+  String get enterTheCodeThatWasSentToYourEmailAddress => 'ادخل الرمز الذي تم إرساله إلي عنولن البريد \nالالكترونى';
+
+  @override
+  String get verificationcode => 'رمز التحقق';
 }

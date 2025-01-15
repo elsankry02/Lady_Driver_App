@@ -176,7 +176,7 @@ abstract class AppLocalizations {
   /// No description provided for @createAnAccountInLadyDriver.
   ///
   /// In en, this message translates to:
-  /// **'Create an account in LadyDriver '**
+  /// **'Create an account'**
   String get createAnAccountInLadyDriver;
 
   /// No description provided for @name.
@@ -262,6 +262,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Send Code'**
   String get sendCode;
+
+  /// No description provided for @enterTheCodeThatWasSentToYourEmailAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter the code sent to your email address'**
+  String get enterTheCodeThatWasSentToYourEmailAddress;
+
+  /// No description provided for @verificationcode.
+  ///
+  /// In en, this message translates to:
+  /// **'Verification Code'**
+  String get verificationcode;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -46,7 +46,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get alreadyHaveAnAccount => 'Already have an account? ';
 
   @override
-  String get createAnAccountInLadyDriver => 'Create an account in LadyDriver ';
+  String get createAnAccountInLadyDriver => 'Create an account';
 
   @override
   String get name => 'Name';
@@ -89,4 +89,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get sendCode => 'Send Code';
+
+  @override
+  String get enterTheCodeThatWasSentToYourEmailAddress => 'Enter the code sent to your email address';
+
+  @override
+  String get verificationcode => 'Verification Code';
 }

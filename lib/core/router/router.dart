@@ -1,4 +1,6 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:lady_driver/core/components/custom_icon_change_language.dart';
+
 import '../../home/pages/change_language/change_language_page.dart';
 import '../../home/pages/create_an_account/create_an_account_page.dart';
 import '../../home/pages/forget_password/forget_password_page.dart';
@@ -26,5 +28,6 @@ class AppRouter extends RootStackRouter {
         AutoRoute(page: VerificationCodeRoute.page),
         AutoRoute(page: WelcomeRoute.page),
         AutoRoute(page: ChangeLanguageRoute.page),
+        AutoRoute(page: CustomIconChangeLanguageRoute.page)
       ];
 }

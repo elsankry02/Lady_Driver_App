@@ -48,6 +48,25 @@ class CreateAnAccountRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [CustomIconChangeLanguagePage]
+class CustomIconChangeLanguageRoute extends PageRouteInfo<void> {
+  const CustomIconChangeLanguageRoute({List<PageRouteInfo>? children})
+      : super(
+          CustomIconChangeLanguageRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CustomIconChangeLanguageRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const CustomIconChangeLanguagePage();
+    },
+  );
+}
+
+/// generated route for
 /// [ForgetPasswordPage]
 class ForgetPasswordRoute extends PageRouteInfo<void> {
   const ForgetPasswordRoute({List<PageRouteInfo>? children})

@@ -27,7 +27,8 @@
  "changeLanguage" : "تغيير اللغه",
  "forgotPassword" : "هل نسيت كلمه المرور",
  "enterYourEmail" : "ادخل بريدك الالكتروني",
-  "sendCode" : "إرسال الرمز"
-
+ "sendCode" : "إرسال الرمز",
+ "enterTheCodeThatWasSentToYourEmailAddress": "ادخل الرمز الذي تم إرساله إلي عنولن البريد \nالالكترونى",
+ "verificationcode" : "رمز التحقق"
 
     }
