@@ -286,6 +286,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Resend code'**
   String get resendCode;
+
+  /// No description provided for @modifyPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Modify Password'**
+  String get modifyPassword;
+
+  /// No description provided for @enterTheNewPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter the new password'**
+  String get enterTheNewPassword;
+
+  /// No description provided for @save.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get save;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

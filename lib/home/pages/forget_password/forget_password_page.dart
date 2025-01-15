@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:lady_driver/l10n/app_localizations.dart';
+import '../../../core/components/custom_icon_change_language.dart';
+import '../../../l10n/app_localizations.dart';
 
 import '../../../core/components/custom_botton.dart';
 import '../../../core/components/custom_textformfield.dart';
@@ -38,17 +39,9 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
           AppLocalizations.of(context)!.forgotPassword,
           style: textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.w500),
         ),
-        actions: [
-          //! IconButton
-          IconButton(
-            onPressed: () {
-              context.router.push(const ChangeLanguageRoute());
-            },
-            icon: const Icon(
-              Icons.language,
-              color: ColorManger.kPrimaryColor,
-            ),
-          ),
+        actions: const [
+          //! Custom Icon Change Language
+          CustomIconChangeLanguagePage(),
         ],
       ),
       body: Form(

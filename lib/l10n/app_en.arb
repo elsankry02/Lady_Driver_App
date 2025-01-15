@@ -31,7 +31,8 @@
 "enterTheCodeThatWasSentToYourEmailAddress": "Enter the code sent to your email address",
 "verificationcode" : "Verification Code",
 "didNotReceiveTheCode":"Didn't receive the code? ",
-"resendCode":"Resend code"
-                                            
-
+"resendCode":"Resend code",
+"modifyPassword" : "Modify Password",
+"enterTheNewPassword" : "Enter the new password",
+"save" :"Save"
 }

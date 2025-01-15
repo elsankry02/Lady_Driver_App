@@ -101,4 +101,13 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get resendCode => 'اعاده ارسال الرمز';
+
+  @override
+  String get modifyPassword => 'نسيت كلمة المرور';
+
+  @override
+  String get enterTheNewPassword => 'ادخل كلمة المرور الجديدة';
+
+  @override
+  String get save => 'حفظ';
 }

@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:lady_driver/core/components/custom_icon_change_language.dart';
+import '../../../core/components/custom_icon_change_language.dart';
 
 import '../../../core/components/custom_botton.dart';
 import '../../../core/components/custom_textformfield.dart';

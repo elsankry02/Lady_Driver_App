@@ -101,4 +101,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get resendCode => 'Resend code';
+
+  @override
+  String get modifyPassword => 'Modify Password';
+
+  @override
+  String get enterTheNewPassword => 'Enter the new password';
+
+  @override
+  String get save => 'Save';
 }

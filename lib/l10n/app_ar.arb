@@ -31,6 +31,9 @@
  "enterTheCodeThatWasSentToYourEmailAddress": "ادخل الرمز الذي تم إرساله إلي عنولن البريد \nالالكترونى",
  "verificationcode" : "رمز التحقق",
  "didNotReceiveTheCode": "لم تستلم الرمز؟ ",
- "resendCode":"اعاده ارسال الرمز"
+ "resendCode":"اعاده ارسال الرمز",
+ "modifyPassword" : "نسيت كلمة المرور",
+ "enterTheNewPassword" : "ادخل كلمة المرور الجديدة",
+ "save" :"حفظ"
 
     }

@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:lady_driver/core/constant/color_manger.dart';
+import '../../../core/constant/color_manger.dart';
 
 import '../../../core/cached/cached_helper.dart';
 import '../../../core/models/enums_local_language.dart';

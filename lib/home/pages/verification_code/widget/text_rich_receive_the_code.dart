@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:lady_driver/l10n/app_localizations.dart';
+import '../../../../l10n/app_localizations.dart';
 
 import '../../../../core/constant/color_manger.dart';
 

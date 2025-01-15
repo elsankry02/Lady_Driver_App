@@ -1,5 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import '../../../core/components/custom_icon_change_language.dart';
+import '../../../l10n/app_localizations.dart';
+
 import '../../../core/components/custom_botton.dart';
 import '../../../core/components/custom_textformfield_password.dart';
 import '../../../core/constant/color_manger.dart';
@@ -30,10 +33,15 @@ class _ModifyPasswordPageState extends State<ModifyPasswordPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+        //! نسيت كلمة المرور
         title: Text(
-          ' نسيت كلمة المرور',
+          AppLocalizations.of(context)!.modifyPassword,
           style: textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.w500),
         ),
+        actions: const [
+          //! Custom Icon Change Language
+          CustomIconChangeLanguagePage(),
+        ],
       ),
       body: Form(
         key: formkey,
@@ -42,13 +50,13 @@ class _ModifyPasswordPageState extends State<ModifyPasswordPage> {
           children: [
             const SizedBox(height: 30),
             Text(
-              'ادخل كلمة المرور الجديدة ',
+              AppLocalizations.of(context)!.enterTheNewPassword,
               style: textTheme.bodyLarge!.copyWith(fontWeight: FontWeight.w500),
             ),
             const SizedBox(height: 8),
             //!  كلمه المرور
             CustomTextFormFiledPassword(
-              hintText: 'كلمة المرور',
+              hintText: AppLocalizations.of(context)!.password,
               suffixIcon: SvgManger.kLock,
               controller: passWordController,
               validator: (value) {
@@ -62,7 +70,7 @@ class _ModifyPasswordPageState extends State<ModifyPasswordPage> {
             const SizedBox(height: 30),
             //! تاكيد كلمه المرور
             CustomTextFormFiledPassword(
-              hintText: 'تأكيد كلمة المرور',
+              hintText: AppLocalizations.of(context)!.confirmPassword,
               suffixIcon: SvgManger.kLock,
               controller: confirmPassWordController,
               validator: (value) {
@@ -79,8 +87,8 @@ class _ModifyPasswordPageState extends State<ModifyPasswordPage> {
               onTap: () {
                 formkey.currentState!.validate();
               },
-              child: const CustomBotton(
-                  text: 'حفظ',
+              child: CustomBotton(
+                  text: AppLocalizations.of(context)!.save,
                   color: ColorManger.kPrimaryColor,
                   textThemeColor: ColorManger.kWhite,
                   borderColor: ColorManger.kPrimaryColor),
