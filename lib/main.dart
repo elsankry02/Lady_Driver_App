@@ -28,22 +28,18 @@ class LadyDriver extends StatelessWidget {
             return MaterialApp.router(
               locale: Locale(state.isChange),
               routerConfig: router.config(),
-              localizationsDelegates: AppLocalizations.localizationsDelegates,
-              supportedLocales: AppLocalizations.supportedLocales,
-              theme: ThemeData(
-                fontFamily: kTajawal,
-              ),
               debugShowCheckedModeBanner: false,
+              theme: ThemeData(fontFamily: kTajawal),
+              supportedLocales: AppLocalizations.supportedLocales,
+              localizationsDelegates: AppLocalizations.localizationsDelegates,
             );
           }
           return MaterialApp.router(
             routerConfig: router.config(),
-            localizationsDelegates: AppLocalizations.localizationsDelegates,
-            supportedLocales: AppLocalizations.supportedLocales,
-            theme: ThemeData(
-              fontFamily: kTajawal,
-            ),
             debugShowCheckedModeBanner: false,
+            theme: ThemeData(fontFamily: kTajawal),
+            supportedLocales: AppLocalizations.supportedLocales,
+            localizationsDelegates: AppLocalizations.localizationsDelegates,
           );
         },
       ),
