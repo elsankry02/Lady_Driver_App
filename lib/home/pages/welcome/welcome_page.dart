@@ -18,7 +18,7 @@ class WelcomePage extends StatelessWidget {
     double mediaQueryWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
+        padding: const EdgeInsetsDirectional.symmetric(horizontal: 16),
         child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

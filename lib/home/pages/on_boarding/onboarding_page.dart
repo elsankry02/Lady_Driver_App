@@ -29,11 +29,13 @@ class _OnboardingPageState extends State<OnboardingPage> {
 
   @override
   Widget build(BuildContext context) {
+    double mediaQueryHeight = MediaQuery.of(context).size.height;
+    double mediaQueryWidth = MediaQuery.of(context).size.width;
     final textTheme = Theme.of(context).textTheme;
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsetsDirectional.symmetric(horizontal: 16),
           child: Column(
             children: [
               Expanded(
@@ -50,12 +52,11 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   itemCount: listOnBoarding.length,
                   itemBuilder: (context, index) => Column(
                     children: [
-                      const SizedBox(height: 13),
+                      SizedBox(height: mediaQueryHeight * 0.013),
                       //! Skip
                       GestureDetector(
                         onTap: () {
                           CachedHelper.setBool(key: 'SavedData', value: true);
-
                           context.router.replace(const WelcomeRoute());
                         },
                         child: SizedBox(
@@ -68,14 +69,15 @@ class _OnboardingPageState extends State<OnboardingPage> {
                           ),
                         ),
                       ),
-                      const SizedBox(height: 74),
+                      SizedBox(height: mediaQueryHeight * 0.074),
+
                       //! image
                       Image.asset(
-                        height: 285,
-                        width: 285,
+                        height: mediaQueryHeight * 0.285,
+                        width: mediaQueryWidth,
                         listOnBoarding[index].image,
                       ),
-                      const SizedBox(height: 89),
+                      SizedBox(height: mediaQueryHeight * 0.090),
                       //! text
                       Text(
                         listOnBoarding[index].text,
@@ -83,7 +85,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                           fontWeight: FontWeight.w700,
                         ),
                       ),
-                      const SizedBox(height: 24),
+                      SizedBox(height: mediaQueryHeight * 0.024),
                       //! labalText
                       Text(
                         textAlign: TextAlign.center,
@@ -92,7 +94,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      const SizedBox(height: 24),
+                      SizedBox(height: mediaQueryHeight * 0.024),
                     ],
                   ),
                 ),
@@ -101,16 +103,15 @@ class _OnboardingPageState extends State<OnboardingPage> {
               Dot(
                 currentindex: currentindex,
               ),
-              const SizedBox(height: 90),
+              SizedBox(height: mediaQueryHeight * 0.090),
+
               //! CustomBottonNavigator
               GestureDetector(
                 onTap: () {
                   CachedHelper.setBool(key: 'SavedData', value: true);
                   if (currentindex == listOnBoarding.length - 1) {
                     context.router.replaceAll(
-                      [
-                        const WelcomeRoute(),
-                      ],
+                      [const WelcomeRoute()],
                     );
                   }
                   _controller.animateToPage(
@@ -126,7 +127,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   text: AppLocalizations.of(context)!.next,
                 ),
               ),
-              const SizedBox(height: 64),
+              SizedBox(height: mediaQueryHeight * 0.064),
             ],
           ),
         ),

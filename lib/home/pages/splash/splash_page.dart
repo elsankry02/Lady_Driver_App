@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
 import '../../../core/cached/cached_helper.dart';
 import '../../../core/constant/color_manger.dart';
 import '../../../core/constant/string_manager.dart';
@@ -46,6 +47,7 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
+    double mediaQueryHeight = MediaQuery.of(context).size.height;
     final textTheme = Theme.of(context).textTheme;
     return Scaffold(
       body: Center(
@@ -54,7 +56,7 @@ class _SplashPageState extends State<SplashPage> {
           children: [
             //! image
             SvgPicture.asset(SvgManger.kLogo),
-            const SizedBox(height: 16),
+            SizedBox(height: mediaQueryHeight * 0.016),
             //! text
             Text(
               'LadyDriver',
@@ -64,7 +66,7 @@ class _SplashPageState extends State<SplashPage> {
                 color: ColorManger.kPrimaryColor,
               ),
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: mediaQueryHeight * 0.016),
             //! lableText
             Text(
               'Your Comfort Zone',

@@ -16,49 +16,55 @@ class _RichTextPrivacyPolicyState extends State<RichTextPrivacyPolicy> {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
+    double mediaQueryWidth = MediaQuery.of(context).size.width;
+    double mediaQueryHeight = MediaQuery.of(context).size.height;
 
-    return Row(
-      children: [
-        //! checkBox
-        SizedBox(
-          height: 20,
-          width: 20,
-          child: Checkbox(
-            activeColor: ColorManger.kPrimaryColor,
-            value: widget.value,
-            onChanged: widget.onChanged,
+    return Expanded(
+      child: Row(
+        children: [
+          //! checkBox
+          Container(
+            margin: EdgeInsetsDirectional.symmetric(
+                horizontal: mediaQueryWidth * 0.020),
+            height: mediaQueryHeight * 0.025,
+            width: mediaQueryWidth * 0.025,
+            child: Checkbox(
+              activeColor: ColorManger.kPrimaryColor,
+              value: widget.value,
+              onChanged: widget.onChanged,
+            ),
           ),
-        ),
-        const SizedBox(width: 10),
-        RichText(
-          text: TextSpan(
-            children: [
-              TextSpan(
-                text: AppLocalizations.of(context)!.whenYouLogInYouAgreeTo,
-                style: textTheme.labelMedium!
-                    .copyWith(fontWeight: FontWeight.w300),
-              ),
-              //! Click
-              TextSpan(
-                text: AppLocalizations.of(context)!.privacyPolicy,
-                style: textTheme.labelMedium!
-                    .copyWith(color: ColorManger.kPrimaryColor),
-                recognizer: TapGestureRecognizer()..onTap = () {},
-              ),
-              TextSpan(
-                  text: AppLocalizations.of(context)!.and,
+          SizedBox(width: mediaQueryWidth * 0.020),
+          RichText(
+            text: TextSpan(
+              children: [
+                TextSpan(
+                  text: AppLocalizations.of(context)!.whenYouLogInYouAgreeTo,
                   style: textTheme.labelMedium!
-                      .copyWith(fontWeight: FontWeight.w300)),
-              TextSpan(
-                text: AppLocalizations.of(context)!.termsOfUse,
-                style: textTheme.labelMedium!
-                    .copyWith(color: ColorManger.kPrimaryColor),
-                recognizer: TapGestureRecognizer()..onTap = () {},
-              ),
-            ],
+                      .copyWith(fontWeight: FontWeight.w300),
+                ),
+                //! Click
+                TextSpan(
+                  text: AppLocalizations.of(context)!.privacyPolicy,
+                  style: textTheme.labelMedium!
+                      .copyWith(color: ColorManger.kPrimaryColor),
+                  recognizer: TapGestureRecognizer()..onTap = () {},
+                ),
+                TextSpan(
+                    text: AppLocalizations.of(context)!.and,
+                    style: textTheme.labelMedium!
+                        .copyWith(fontWeight: FontWeight.w300)),
+                TextSpan(
+                  text: AppLocalizations.of(context)!.termsOfUse,
+                  style: textTheme.labelMedium!
+                      .copyWith(color: ColorManger.kPrimaryColor),
+                  recognizer: TapGestureRecognizer()..onTap = () {},
+                ),
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

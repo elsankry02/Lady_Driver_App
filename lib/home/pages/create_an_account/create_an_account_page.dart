@@ -1,8 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import '../../../core/components/custom_icon_change_language.dart';
 
 import '../../../core/components/custom_botton.dart';
+import '../../../core/components/custom_icon_change_language.dart';
 import '../../../core/components/custom_textformfield.dart';
 import '../../../core/components/custom_textformfield_password.dart';
 import '../../../core/components/rich_text_privacy_policy.dart';
@@ -42,11 +42,9 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
-    const sizedbox = SizedBox(height: 20);
+    double mediaQueryHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-        forceMaterialTransparency: true,
-        automaticallyImplyLeading: false,
         title:
             //! إنشاء حساب في ليدي درايفر
             Text(
@@ -57,16 +55,19 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
           //! Custom Icon Change Language
           CustomIconChangeLanguagePage(),
         ],
+        forceMaterialTransparency: true,
+        automaticallyImplyLeading: false,
       ),
       body: Form(
         key: keyform,
         child: ListView(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsetsDirectional.symmetric(horizontal: 16),
           children: [
-            const SizedBox(height: 32),
+            SizedBox(height: mediaQueryHeight * 0.032),
             //! الصورة
             const CirclerImagePicker(),
-            sizedbox,
+            SizedBox(height: mediaQueryHeight * 0.020),
+
             //! الاسم
             CustomTextFormField(
               validator: (value) {
@@ -80,7 +81,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
               suffixIcon: SvgManger.kUser,
               controller: userController,
             ),
-            sizedbox,
+            SizedBox(height: mediaQueryHeight * 0.020),
             //! البريد الالكترونى
             CustomTextFormField(
               validator: (value) {
@@ -94,7 +95,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
               suffixIcon: SvgManger.kMail,
               controller: emailController,
             ),
-            sizedbox,
+            SizedBox(height: mediaQueryHeight * 0.020),
             //! رقم الهاتف
             CustomTextFormField(
               validator: (value) {
@@ -109,15 +110,16 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
               keyboardType: TextInputType.phone,
               controller: phoneController,
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: mediaQueryHeight * 0.010),
+
             //! تسجيل الدخول ک
             Text(
               AppLocalizations.of(context)!.registerAs,
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: mediaQueryHeight * 0.010),
             //! Create Account Enum Widget
             const EnumsCreateAccountWidget(),
-            sizedbox,
+            SizedBox(height: mediaQueryHeight * 0.020),
             //! كلمة المرور
             CustomTextFormFiledPassword(
               validator: (value) {
@@ -131,7 +133,8 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
               suffixIcon: SvgManger.kLock,
               controller: passwordController,
             ),
-            sizedbox, //! تاكيد كلمه المرور
+            SizedBox(height: mediaQueryHeight * 0.020),
+            //! تاكيد كلمه المرور
             CustomTextFormFiledPassword(
               validator: (value) {
                 if (value!.length < 6) {
@@ -144,7 +147,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
               suffixIcon: SvgManger.kLock,
               controller: passwordController,
             ),
-            sizedbox,
+            SizedBox(height: mediaQueryHeight * 0.020),
             //! كود الدعوة
             CustomTextFormField(
               validator: (value) {
@@ -158,7 +161,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
               suffixIcon: SvgManger.kShare2,
               controller: inviteCodeController,
             ),
-            sizedbox,
+            SizedBox(height: mediaQueryHeight * 0.020),
             //! CheckBox & سياسه الخصوصيه
             RichTextPrivacyPolicy(
               value: isSelected,
@@ -168,7 +171,8 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                 });
               },
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: mediaQueryHeight * 0.016),
+
             //! إنشاء الحساب
             GestureDetector(
               onTap: isSelected
@@ -186,10 +190,10 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                       ? ColorManger.kPrimaryColor
                       : ColorManger.kBorderColor),
             ),
-            const SizedBox(height: 30),
+            SizedBox(height: mediaQueryHeight * 0.030),
             //! Rich Text
             RichTextCreateAnAccountWidget(textTheme: textTheme),
-            sizedbox,
+            SizedBox(height: mediaQueryHeight * 0.020),
           ],
         ),
       ),

@@ -1,9 +1,9 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../core/constant/color_manger.dart';
 
 import '../../../core/cached/cached_helper.dart';
+import '../../../core/constant/color_manger.dart';
 import '../../../core/models/enums_local_language.dart';
 import '../../../l10n/app_localizations.dart';
 import '../../data/manger/app_language/app_language_cubit.dart';
@@ -43,7 +43,7 @@ class _ChangeLanguagePageState extends State<ChangeLanguagePage> {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15),
+          padding: const EdgeInsetsDirectional.symmetric(horizontal: 15),
           child: Column(
             children: [
               Directionality(

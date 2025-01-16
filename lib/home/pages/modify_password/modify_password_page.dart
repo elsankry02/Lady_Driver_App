@@ -1,12 +1,12 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import '../../../core/components/custom_icon_change_language.dart';
-import '../../../l10n/app_localizations.dart';
 
 import '../../../core/components/custom_botton.dart';
+import '../../../core/components/custom_icon_change_language.dart';
 import '../../../core/components/custom_textformfield_password.dart';
 import '../../../core/constant/color_manger.dart';
 import '../../../core/constant/svg_manger.dart';
+import '../../../l10n/app_localizations.dart';
 
 @RoutePage()
 class ModifyPasswordPage extends StatefulWidget {
@@ -30,8 +30,10 @@ class _ModifyPasswordPageState extends State<ModifyPasswordPage> {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
+    double mediaQueryHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
+        forceMaterialTransparency: true,
         centerTitle: true,
         //! نسيت كلمة المرور
         title: Text(
@@ -46,14 +48,14 @@ class _ModifyPasswordPageState extends State<ModifyPasswordPage> {
       body: Form(
         key: formkey,
         child: ListView(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsetsDirectional.symmetric(horizontal: 16),
           children: [
-            const SizedBox(height: 30),
+            SizedBox(height: mediaQueryHeight * 0.030),
             Text(
               AppLocalizations.of(context)!.enterTheNewPassword,
               style: textTheme.bodyLarge!.copyWith(fontWeight: FontWeight.w500),
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: mediaQueryHeight * 0.008),
             //!  كلمه المرور
             CustomTextFormFiledPassword(
               hintText: AppLocalizations.of(context)!.password,
@@ -67,7 +69,8 @@ class _ModifyPasswordPageState extends State<ModifyPasswordPage> {
                 }
               },
             ),
-            const SizedBox(height: 30),
+            SizedBox(height: mediaQueryHeight * 0.030),
+
             //! تاكيد كلمه المرور
             CustomTextFormFiledPassword(
               hintText: AppLocalizations.of(context)!.confirmPassword,
@@ -81,7 +84,7 @@ class _ModifyPasswordPageState extends State<ModifyPasswordPage> {
                 }
               },
             ),
-            const SizedBox(height: 32),
+            SizedBox(height: mediaQueryHeight * 0.030),
             //! CustomBotton (حفظ)
             GestureDetector(
               onTap: () {

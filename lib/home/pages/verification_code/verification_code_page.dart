@@ -1,11 +1,11 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import '../../../core/components/custom_icon_change_language.dart';
-import '../../../l10n/app_localizations.dart';
 import 'package:pinput/pinput.dart';
 
+import '../../../core/components/custom_icon_change_language.dart';
 import '../../../core/constant/color_manger.dart';
 import '../../../core/router/router.dart';
+import '../../../l10n/app_localizations.dart';
 import 'widget/text_rich_receive_the_code.dart';
 
 @RoutePage()
@@ -21,10 +21,11 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
-    const sizedBox = SizedBox(height: 48);
+    double mediaQueryHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+        forceMaterialTransparency: true,
         //! AppBar Name
         title: Text(
           AppLocalizations.of(context)!.verificationcode,
@@ -37,11 +38,9 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
       ),
       body: Form(
         child: ListView(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsetsDirectional.symmetric(horizontal: 20),
           children: [
-            const SizedBox(
-              height: 24,
-            ),
+            SizedBox(height: mediaQueryHeight * 0.024),
             //! رساله الادخال
             Text(
                 textAlign: TextAlign.center,
@@ -49,7 +48,7 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
                     .enterTheCodeThatWasSentToYourEmailAddress,
                 style: textTheme.titleMedium!
                     .copyWith(fontWeight: FontWeight.w500)),
-            const SizedBox(height: 7),
+            SizedBox(height: mediaQueryHeight * 0.007),
             //! البريد الالكتروني
             Text(
               textAlign: TextAlign.center,
@@ -58,7 +57,7 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
                   fontWeight: FontWeight.w500,
                   color: ColorManger.kPrimaryColor),
             ),
-            sizedBox,
+            SizedBox(height: mediaQueryHeight * 0.048),
             //! PinPut
             Pinput(
               autofocus: true,
@@ -72,7 +71,7 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
               },
               controller: pinputController,
             ),
-            sizedBox,
+            SizedBox(height: mediaQueryHeight * 0.048),
             //! TextRichReceiveTheCode
             TextRichReceiveTheCode(textTheme: textTheme),
           ],

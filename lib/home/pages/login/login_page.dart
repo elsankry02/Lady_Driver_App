@@ -1,8 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import '../../../core/components/custom_icon_change_language.dart';
 
 import '../../../core/components/custom_botton.dart';
+import '../../../core/components/custom_icon_change_language.dart';
 import '../../../core/components/custom_textformfield.dart';
 import '../../../core/components/custom_textformfield_password.dart';
 import '../../../core/components/rich_text_privacy_policy.dart';
@@ -35,11 +35,11 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    double mediaQueryHeight = MediaQuery.of(context).size.height;
+
     final textTheme = Theme.of(context).textTheme;
     return Scaffold(
       appBar: AppBar(
-        forceMaterialTransparency: true,
-        automaticallyImplyLeading: false,
         //! loginToLadyDriver
         title: Text(
           AppLocalizations.of(context)!.loginToLadyDriver,
@@ -49,13 +49,15 @@ class _LoginPageState extends State<LoginPage> {
           //! Custom Icon Change Language
           CustomIconChangeLanguagePage(),
         ],
+        forceMaterialTransparency: true,
+        automaticallyImplyLeading: false,
       ),
       body: Form(
         key: formkey,
         child: ListView(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsetsDirectional.symmetric(horizontal: 16),
           children: [
-            const SizedBox(height: 35),
+            SizedBox(height: mediaQueryHeight * 0.035),
 
             //! البريد الالكترونى
             CustomTextFormField(
@@ -70,7 +72,7 @@ class _LoginPageState extends State<LoginPage> {
               suffixIcon: SvgManger.kMail,
               hintText: AppLocalizations.of(context)!.email,
             ),
-            const SizedBox(height: 27),
+            SizedBox(height: mediaQueryHeight * 0.027),
             //! كلمة المرور
             CustomTextFormFiledPassword(
               validator: (value) {
@@ -84,7 +86,7 @@ class _LoginPageState extends State<LoginPage> {
               suffixIcon: SvgManger.kLock,
               hintText: AppLocalizations.of(context)!.password,
             ),
-            const SizedBox(height: 27),
+            SizedBox(height: mediaQueryHeight * 0.027),
             //! هل نسيت كلمة المرور؟
             GestureDetector(
               onTap: () => context.router.push(const ForgetPasswordRoute()),
@@ -98,7 +100,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-            const SizedBox(height: 25),
+            SizedBox(height: mediaQueryHeight * 0.025),
             //!   CheckBox & سياسه الخصوصيه
             RichTextPrivacyPolicy(
               value: isSelected,
@@ -108,7 +110,7 @@ class _LoginPageState extends State<LoginPage> {
                 });
               },
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: mediaQueryHeight * 0.016),
             //! تسجيل الدخول
             GestureDetector(
               onTap: isSelected
@@ -126,7 +128,7 @@ class _LoginPageState extends State<LoginPage> {
                       ? ColorManger.kPrimaryColor
                       : ColorManger.kBorderColor),
             ),
-            const SizedBox(height: 40),
+            SizedBox(height: mediaQueryHeight * 0.045),
             //!RichTextLoginWidget
             RichTextLoginWidget(textTheme: textTheme),
           ],

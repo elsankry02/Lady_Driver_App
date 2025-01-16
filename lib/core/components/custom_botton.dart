@@ -20,7 +20,7 @@ class CustomBotton extends StatelessWidget {
     double mediaQueryHeight = MediaQuery.of(context).size.height;
     double mediaQueryWidth = MediaQuery.of(context).size.width;
     return Container(
-      height: mediaQueryHeight * 0.055,
+      height: mediaQueryHeight * 0.060,
       width: mediaQueryWidth,
       decoration: BoxDecoration(
         border: Border.all(

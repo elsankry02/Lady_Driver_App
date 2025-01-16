@@ -1,14 +1,14 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import '../../../core/components/custom_icon_change_language.dart';
-import '../../../l10n/app_localizations.dart';
 
 import '../../../core/components/custom_botton.dart';
+import '../../../core/components/custom_icon_change_language.dart';
 import '../../../core/components/custom_textformfield.dart';
 import '../../../core/constant/color_manger.dart';
 import '../../../core/constant/image_manger.dart';
 import '../../../core/constant/svg_manger.dart';
 import '../../../core/router/router.dart';
+import '../../../l10n/app_localizations.dart';
 
 @RoutePage()
 class ForgetPasswordPage extends StatefulWidget {
@@ -30,11 +30,12 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
+    double mediaQueryHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
         //! نسيت كلمة المرور
+        centerTitle: true,
         title: Text(
           AppLocalizations.of(context)!.forgotPassword,
           style: textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.w500),
@@ -43,26 +44,29 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
           //! Custom Icon Change Language
           CustomIconChangeLanguagePage(),
         ],
+        forceMaterialTransparency: true,
       ),
       body: Form(
         key: formkey,
         child: ListView(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
+          padding: const EdgeInsetsDirectional.symmetric(horizontal: 16),
           children: [
-            const SizedBox(height: 20),
+            SizedBox(height: mediaQueryHeight * 0.020),
             Image.asset(
               width: 254,
               height: 254,
               ImageManger.kForgetpassword,
             ),
-            const SizedBox(height: 20),
+            SizedBox(height: mediaQueryHeight * 0.020),
+
             //! ادخل بريدك الالكتروني
             Text(
               AppLocalizations.of(context)!.enterYourEmail,
               style:
                   textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w700),
             ),
-            const SizedBox(height: 30),
+            SizedBox(height: mediaQueryHeight * 0.030),
+
             CustomTextFormField(
               validator: (value) {
                 if (value!.length < 5) {
@@ -76,7 +80,8 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
               suffixIcon: SvgManger.kMail,
               hintText: AppLocalizations.of(context)!.email,
             ),
-            const SizedBox(height: 30),
+            SizedBox(height: mediaQueryHeight * 0.030),
+
             //! إرسال الرمز
             GestureDetector(
               onTap: () {
