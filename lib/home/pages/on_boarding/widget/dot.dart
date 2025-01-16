@@ -14,7 +14,7 @@ class Dot extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         ...List.generate(
-          listOnBoarding.length,
+          listOnBoarding(context).length,
           (index) => Container(
             margin: const EdgeInsetsDirectional.only(start: 5),
             height: mediaQueryHeight * 0.010,

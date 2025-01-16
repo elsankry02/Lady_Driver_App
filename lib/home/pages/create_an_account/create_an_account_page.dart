@@ -43,12 +43,13 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     double mediaQueryHeight = MediaQuery.of(context).size.height;
+    final appLocalizations = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
         title:
             //! إنشاء حساب في ليدي درايفر
             Text(
-          AppLocalizations.of(context)!.createAnAccountInLadyDriver,
+          appLocalizations.createAnAccountInLadyDriver,
           style: textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w700),
         ),
         actions: const [
@@ -77,7 +78,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                   return 'this field cannot be empty';
                 }
               },
-              hintText: AppLocalizations.of(context)!.name,
+              hintText: appLocalizations.name,
               suffixIcon: SvgManger.kUser,
               controller: userController,
             ),
@@ -91,7 +92,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                   return 'this field cannot be empty';
                 }
               },
-              hintText: AppLocalizations.of(context)!.email,
+              hintText: appLocalizations.email,
               suffixIcon: SvgManger.kMail,
               controller: emailController,
             ),
@@ -105,7 +106,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                   return 'this field cannot be empty';
                 }
               },
-              hintText: AppLocalizations.of(context)!.phoneNumber,
+              hintText: appLocalizations.phoneNumber,
               suffixIcon: SvgManger.kPhone,
               keyboardType: TextInputType.phone,
               controller: phoneController,
@@ -114,7 +115,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
 
             //! تسجيل الدخول ک
             Text(
-              AppLocalizations.of(context)!.registerAs,
+              appLocalizations.registerAs,
             ),
             SizedBox(height: mediaQueryHeight * 0.010),
             //! Create Account Enum Widget
@@ -129,7 +130,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                   return 'valid';
                 }
               },
-              hintText: AppLocalizations.of(context)!.password,
+              hintText: appLocalizations.password,
               suffixIcon: SvgManger.kLock,
               controller: passwordController,
             ),
@@ -143,7 +144,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                   return 'valid';
                 }
               },
-              hintText: AppLocalizations.of(context)!.confirmPassword,
+              hintText: appLocalizations.confirmPassword,
               suffixIcon: SvgManger.kLock,
               controller: passwordController,
             ),
@@ -157,7 +158,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                   return 'this field cannot be empty';
                 }
               },
-              hintText: AppLocalizations.of(context)!.invitationCode,
+              hintText: appLocalizations.invitationCode,
               suffixIcon: SvgManger.kShare2,
               controller: inviteCodeController,
             ),
@@ -181,7 +182,7 @@ class _CreateAnAccountPageState extends State<CreateAnAccountPage> {
                     }
                   : null,
               child: CustomBotton(
-                  text: AppLocalizations.of(context)!.createAccount,
+                  text: appLocalizations.createAccount,
                   color: isSelected
                       ? ColorManger.kPrimaryColor
                       : ColorManger.kBorderColor,

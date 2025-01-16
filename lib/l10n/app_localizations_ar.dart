@@ -110,4 +110,16 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get save => 'حفظ';
+
+  @override
+  String get ladyDriverYourComfortComesFirstonboardind => '.ليديدرايفر: راحتكِ أولاً';
+
+  @override
+  String get determineYourDestinationAndChooseTheCarThatSuitsYou => 'حددي وجهتكِ واختاري السيارة المناسبة لكِ';
+
+  @override
+  String get enjoyAUniqueDeliveryServiceDesignedEspeciallyForYou => '.استمتعي بخدمة توصيل فريدة من نوعها مصممة خصيصًا \n لكِ';
+
+  @override
+  String get discoverANewWorldOfLuxury => 'اكتشفي عالم جديد من الرفاهية';
 }

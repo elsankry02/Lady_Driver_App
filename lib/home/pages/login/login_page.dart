@@ -37,11 +37,13 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     double mediaQueryHeight = MediaQuery.of(context).size.height;
     final textTheme = Theme.of(context).textTheme;
+    final appLocalizations = AppLocalizations.of(context)!;
+
     return Scaffold(
       appBar: AppBar(
         //! loginToLadyDriver
         title: Text(
-          AppLocalizations.of(context)!.loginToLadyDriver,
+          appLocalizations.loginToLadyDriver,
           style: textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w700),
         ),
         actions: const [
@@ -69,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
               },
               controller: emailController,
               suffixIcon: SvgManger.kMail,
-              hintText: AppLocalizations.of(context)!.email,
+              hintText: appLocalizations.email,
             ),
             SizedBox(height: mediaQueryHeight * 0.027),
             //! كلمة المرور
@@ -83,7 +85,7 @@ class _LoginPageState extends State<LoginPage> {
               },
               controller: passWordController,
               suffixIcon: SvgManger.kLock,
-              hintText: AppLocalizations.of(context)!.password,
+              hintText: appLocalizations.password,
             ),
             SizedBox(height: mediaQueryHeight * 0.027),
             //! هل نسيت كلمة المرور؟
@@ -91,7 +93,7 @@ class _LoginPageState extends State<LoginPage> {
               onTap: () => context.router.push(const ForgetPasswordRoute()),
               child: Text(
                 textAlign: TextAlign.end,
-                AppLocalizations.of(context)!.forgotYourPassword,
+                appLocalizations.forgotYourPassword,
                 style: textTheme.titleSmall!.copyWith(
                   fontWeight: FontWeight.w400,
                   decoration: TextDecoration.underline,
@@ -118,7 +120,7 @@ class _LoginPageState extends State<LoginPage> {
                     }
                   : null,
               child: CustomBotton(
-                  text: AppLocalizations.of(context)!.logIN,
+                  text: appLocalizations.logIN,
                   color: isSelected
                       ? ColorManger.kPrimaryColor
                       : ColorManger.kBorderColor,

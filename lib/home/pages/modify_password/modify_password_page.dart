@@ -29,6 +29,8 @@ class _ModifyPasswordPageState extends State<ModifyPasswordPage> {
 
   @override
   Widget build(BuildContext context) {
+    final appLocalizations = AppLocalizations.of(context)!;
+
     final textTheme = Theme.of(context).textTheme;
     double mediaQueryHeight = MediaQuery.of(context).size.height;
     return Scaffold(
@@ -37,7 +39,7 @@ class _ModifyPasswordPageState extends State<ModifyPasswordPage> {
         centerTitle: true,
         //! نسيت كلمة المرور
         title: Text(
-          AppLocalizations.of(context)!.modifyPassword,
+          appLocalizations.modifyPassword,
           style: textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.w500),
         ),
         actions: const [
@@ -52,13 +54,13 @@ class _ModifyPasswordPageState extends State<ModifyPasswordPage> {
           children: [
             SizedBox(height: mediaQueryHeight * 0.030),
             Text(
-              AppLocalizations.of(context)!.enterTheNewPassword,
+              appLocalizations.enterTheNewPassword,
               style: textTheme.bodyLarge!.copyWith(fontWeight: FontWeight.w500),
             ),
             SizedBox(height: mediaQueryHeight * 0.008),
             //!  كلمه المرور
             CustomTextFormFiledPassword(
-              hintText: AppLocalizations.of(context)!.password,
+              hintText: appLocalizations.password,
               suffixIcon: SvgManger.kLock,
               controller: passWordController,
               validator: (value) {
@@ -73,7 +75,7 @@ class _ModifyPasswordPageState extends State<ModifyPasswordPage> {
 
             //! تاكيد كلمه المرور
             CustomTextFormFiledPassword(
-              hintText: AppLocalizations.of(context)!.confirmPassword,
+              hintText: appLocalizations.confirmPassword,
               suffixIcon: SvgManger.kLock,
               controller: confirmPassWordController,
               validator: (value) {
@@ -91,7 +93,7 @@ class _ModifyPasswordPageState extends State<ModifyPasswordPage> {
                 formkey.currentState!.validate();
               },
               child: CustomBotton(
-                  text: AppLocalizations.of(context)!.save,
+                  text: appLocalizations.save,
                   color: ColorManger.kPrimaryColor,
                   textThemeColor: ColorManger.kWhite,
                   borderColor: ColorManger.kPrimaryColor),

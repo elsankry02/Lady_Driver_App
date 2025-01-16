@@ -34,6 +34,9 @@
  "resendCode":"اعاده ارسال الرمز",
  "modifyPassword" : "نسيت كلمة المرور",
  "enterTheNewPassword" : "ادخل كلمة المرور الجديدة",
- "save" :"حفظ"
-
-    }
+ "save" :"حفظ",
+"ladyDriverYourComfortComesFirstonboardind" : ".ليديدرايفر: راحتكِ أولاً",
+"determineYourDestinationAndChooseTheCarThatSuitsYou": "حددي وجهتكِ واختاري السيارة المناسبة لكِ",
+"enjoyAUniqueDeliveryServiceDesignedEspeciallyForYou" : ".استمتعي بخدمة توصيل فريدة من نوعها مصممة خصيصًا \n لكِ",
+"discoverANewWorldOfLuxury":"اكتشفي عالم جديد من الرفاهية"
+}

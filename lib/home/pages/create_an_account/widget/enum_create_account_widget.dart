@@ -18,6 +18,7 @@ class _EnumsCreateAccountWidgetState extends State<EnumsCreateAccountWidget> {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
+    final appLocalizations = AppLocalizations.of(context)!;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -42,7 +43,7 @@ class _EnumsCreateAccountWidgetState extends State<EnumsCreateAccountWidget> {
               child: Center(
                 //! سائقة
                 child: Text(
-                  AppLocalizations.of(context)!.femaleDriver,
+                  appLocalizations.femaleDriver,
                   style: textTheme.titleSmall!.copyWith(
                       fontWeight: FontWeight.w400,
                       color: isSelected == IsSelected.femaleDriver
@@ -74,7 +75,7 @@ class _EnumsCreateAccountWidgetState extends State<EnumsCreateAccountWidget> {
               child: Center(
                 //! عميل
                 child: Text(
-                  AppLocalizations.of(context)!.client,
+                  appLocalizations.client,
                   style: textTheme.titleSmall!.copyWith(
                       color: isSelected == IsSelected.client
                           ? ColorManger.kPrimaryColor

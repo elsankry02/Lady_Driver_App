@@ -16,6 +16,7 @@ class WelcomePage extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
     double mediaQueryHeight = MediaQuery.of(context).size.height;
     double mediaQueryWidth = MediaQuery.of(context).size.width;
+    final appLocalizations = AppLocalizations.of(context)!;
     return Scaffold(
       body: Padding(
         padding: const EdgeInsetsDirectional.symmetric(horizontal: 16),
@@ -35,7 +36,7 @@ class WelcomePage extends StatelessWidget {
               SizedBox(height: mediaQueryHeight * 0.175),
               Text(
                 textAlign: TextAlign.end,
-                AppLocalizations.of(context)!.heyYou,
+                appLocalizations.heyYou,
                 style: textTheme.headlineLarge!
                     .copyWith(fontWeight: FontWeight.w700),
               ),
@@ -47,7 +48,7 @@ class WelcomePage extends StatelessWidget {
                 child: CustomBotton(
                   borderColor: ColorManger.kPrimaryColor,
                   textThemeColor: ColorManger.kWhite,
-                  text: AppLocalizations.of(context)!.logIN,
+                  text: appLocalizations.logIN,
                   color: ColorManger.kPrimaryColor,
                 ),
               ),
@@ -57,7 +58,7 @@ class WelcomePage extends StatelessWidget {
               GestureDetector(
                 onTap: () => context.router.push(const CreateAnAccountRoute()),
                 child: CustomBotton(
-                  text: AppLocalizations.of(context)!.createAccount,
+                  text: appLocalizations.createAccount,
                   textThemeColor: ColorManger.kPrimaryColor,
                   borderColor: ColorManger.kPrimaryColor,
                 ),

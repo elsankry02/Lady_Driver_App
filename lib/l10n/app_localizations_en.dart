@@ -110,4 +110,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get save => 'Save';
+
+  @override
+  String get ladyDriverYourComfortComesFirstonboardind => 'LadyDriver: Your comfort comes first';
+
+  @override
+  String get determineYourDestinationAndChooseTheCarThatSuitsYou => 'Determine your destination and choose the car that suits you';
+
+  @override
+  String get enjoyAUniqueDeliveryServiceDesignedEspeciallyForYou => 'Enjoy a unique delivery service designed especially for you';
+
+  @override
+  String get discoverANewWorldOfLuxury => 'Discover a new world of luxury';
 }

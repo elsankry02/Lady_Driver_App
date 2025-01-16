@@ -32,11 +32,12 @@ class _ChangeLanguagePageState extends State<ChangeLanguagePage> {
   );
   @override
   Widget build(BuildContext context) {
+  final appLocalizations = AppLocalizations.of(context)!;
     final textTheme = Theme.of(context).textTheme;
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          AppLocalizations.of(context)!.changeLanguage,
+          appLocalizations.changeLanguage,
           style: textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w700),
         ),
         centerTitle: true,

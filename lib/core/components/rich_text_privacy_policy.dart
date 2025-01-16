@@ -18,7 +18,7 @@ class _RichTextPrivacyPolicyState extends State<RichTextPrivacyPolicy> {
     final textTheme = Theme.of(context).textTheme;
     double mediaQueryWidth = MediaQuery.of(context).size.width;
     double mediaQueryHeight = MediaQuery.of(context).size.height;
-
+    final appLocalizations = AppLocalizations.of(context)!;
     return Row(
       children: [
         //! checkBox
@@ -38,23 +38,23 @@ class _RichTextPrivacyPolicyState extends State<RichTextPrivacyPolicy> {
           text: TextSpan(
             children: [
               TextSpan(
-                text: AppLocalizations.of(context)!.whenYouLogInYouAgreeTo,
+                text: appLocalizations.whenYouLogInYouAgreeTo,
                 style: textTheme.labelMedium!
                     .copyWith(fontWeight: FontWeight.w300),
               ),
               //! Click
               TextSpan(
-                text: AppLocalizations.of(context)!.privacyPolicy,
+                text: appLocalizations.privacyPolicy,
                 style: textTheme.labelMedium!
                     .copyWith(color: ColorManger.kPrimaryColor),
                 recognizer: TapGestureRecognizer()..onTap = () {},
               ),
               TextSpan(
-                  text: AppLocalizations.of(context)!.and,
+                  text: appLocalizations.and,
                   style: textTheme.labelMedium!
                       .copyWith(fontWeight: FontWeight.w300)),
               TextSpan(
-                text: AppLocalizations.of(context)!.termsOfUse,
+                text: appLocalizations.termsOfUse,
                 style: textTheme.labelMedium!
                     .copyWith(color: ColorManger.kPrimaryColor),
                 recognizer: TapGestureRecognizer()..onTap = () {},

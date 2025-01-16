@@ -1,3 +1,6 @@
+import 'package:flutter/material.dart';
+import 'package:lady_driver/l10n/app_localizations.dart';
+
 import '../constant/image_manger.dart';
 
 class OnboardingModel {
@@ -8,15 +11,18 @@ class OnboardingModel {
   OnboardingModel(this.image, this.text, this.lableText);
 }
 
-List<OnboardingModel> listOnBoarding = [
-  OnboardingModel(
-    ImageManger.kOndoarding1,
-    ".ليديدرايفر: راحتكِ أولاً",
-    'حددي وجهتكِ واختاري السيارة المناسبة لكِ',
-  ),
-  OnboardingModel(
-    ImageManger.kOndoarding2,
-    'اكتشفي عالم جديد من الرفاهية',
-    '.استمتعي بخدمة توصيل فريدة من نوعها مصممة خصيصًا \n لكِ',
-  ),
-];
+List<OnboardingModel> listOnBoarding(BuildContext context) {
+  final appLocalizations = AppLocalizations.of(context)!;
+  return [
+    OnboardingModel(
+      ImageManger.kOndoarding1,
+      appLocalizations.ladyDriverYourComfortComesFirstonboardind,
+      appLocalizations.determineYourDestinationAndChooseTheCarThatSuitsYou,
+    ),
+    OnboardingModel(
+      ImageManger.kOndoarding2,
+      appLocalizations.discoverANewWorldOfLuxury,
+      appLocalizations.enjoyAUniqueDeliveryServiceDesignedEspeciallyForYou,
+    ),
+  ];
+}

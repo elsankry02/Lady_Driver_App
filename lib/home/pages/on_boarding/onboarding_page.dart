@@ -29,8 +29,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
 
   @override
   Widget build(BuildContext context) {
+    //! variabol
     double mediaQueryHeight = MediaQuery.of(context).size.height;
     double mediaQueryWidth = MediaQuery.of(context).size.width;
+    final appLocalizations = AppLocalizations.of(context)!;
     final textTheme = Theme.of(context).textTheme;
     return Scaffold(
       body: SafeArea(
@@ -49,54 +51,60 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       },
                     );
                   },
-                  itemCount: listOnBoarding.length,
-                  itemBuilder: (context, index) => Column(
-                    children: [
-                      SizedBox(height: mediaQueryHeight * 0.013),
-                      //! Skip
-                      GestureDetector(
-                        onTap: () {
-                          CachedHelper.setBool(key: 'SavedData', value: true);
-                          context.router.replace(const WelcomeRoute());
-                        },
-                        child: SizedBox(
-                          width: double.infinity,
-                          child: Text(
-                            AppLocalizations.of(context)!.skip,
-                            style: textTheme.titleMedium!.copyWith(
-                              fontWeight: FontWeight.w500,
+                  itemCount: listOnBoarding(context).length,
+                  itemBuilder: (context, index) {
+                    //! variabol
+                    final item = listOnBoarding(context)[index];
+                    final appLocalizations = AppLocalizations.of(context)!;
+                    return Column(
+                      children: [
+                        SizedBox(height: mediaQueryHeight * 0.013),
+                        //! Skip
+                        GestureDetector(
+                          onTap: () {
+                            CachedHelper.setBool(key: 'SavedData', value: true);
+                            context.router.replace(const WelcomeRoute());
+                          },
+                          child: SizedBox(
+                            width: double.infinity,
+                            child: Text(
+                              appLocalizations.skip,
+                              style: textTheme.titleMedium!.copyWith(
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      SizedBox(height: mediaQueryHeight * 0.074),
+                        SizedBox(height: mediaQueryHeight * 0.074),
 
-                      //! image
-                      Image.asset(
-                        height: mediaQueryHeight * 0.285,
-                        width: mediaQueryWidth,
-                        listOnBoarding[index].image,
-                      ),
-                      SizedBox(height: mediaQueryHeight * 0.090),
-                      //! text
-                      Text(
-                        listOnBoarding[index].text,
-                        style: textTheme.headlineSmall!.copyWith(
-                          fontWeight: FontWeight.w700,
+                        //! image
+                        Image.asset(
+                          height: mediaQueryHeight * 0.285,
+                          width: mediaQueryWidth,
+                          item.image,
                         ),
-                      ),
-                      SizedBox(height: mediaQueryHeight * 0.024),
-                      //! labalText
-                      Text(
-                        textAlign: TextAlign.center,
-                        listOnBoarding[index].lableText,
-                        style: textTheme.titleSmall!.copyWith(
-                          fontWeight: FontWeight.w500,
+                        SizedBox(height: mediaQueryHeight * 0.090),
+                        //! text
+                        Text(
+                          item.text,
+                          textAlign: TextAlign.center,
+                          style: textTheme.headlineSmall!.copyWith(
+                            fontWeight: FontWeight.w700,
+                          ),
                         ),
-                      ),
-                      SizedBox(height: mediaQueryHeight * 0.024),
-                    ],
-                  ),
+                        SizedBox(height: mediaQueryHeight * 0.024),
+                        //! labalText
+                        Text(
+                          textAlign: TextAlign.center,
+                          item.lableText,
+                          style: textTheme.titleSmall!.copyWith(
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        SizedBox(height: mediaQueryHeight * 0.024),
+                      ],
+                    );
+                  },
                 ),
               ),
               //! Dot
@@ -109,7 +117,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
               GestureDetector(
                 onTap: () {
                   CachedHelper.setBool(key: 'SavedData', value: true);
-                  if (currentindex == listOnBoarding.length - 1) {
+                  if (currentindex == listOnBoarding(context).length - 1) {
                     context.router.replaceAll(
                       [const WelcomeRoute()],
                     );
@@ -124,7 +132,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   borderColor: ColorManger.kPrimaryColor,
                   textThemeColor: ColorManger.kWhite,
                   color: ColorManger.kPrimaryColor,
-                  text: AppLocalizations.of(context)!.next,
+                  text: appLocalizations.next,
                 ),
               ),
               SizedBox(height: mediaQueryHeight * 0.064),

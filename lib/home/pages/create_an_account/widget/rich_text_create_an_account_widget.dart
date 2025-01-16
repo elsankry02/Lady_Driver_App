@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+
 import '../../../../core/constant/color_manger.dart';
 import '../../../../core/router/router.dart';
 import '../../../../l10n/app_localizations.dart';
@@ -10,6 +11,7 @@ class RichTextCreateAnAccountWidget extends StatelessWidget {
   final TextTheme textTheme;
   @override
   Widget build(BuildContext context) {
+    final appLocalizations = AppLocalizations.of(context)!;
     return RichText(
       textAlign: TextAlign.center,
       text: TextSpan(
@@ -17,12 +19,12 @@ class RichTextCreateAnAccountWidget extends StatelessWidget {
         children: [
           //! لديك حساب بالفعل ؟
           TextSpan(
-            text: AppLocalizations.of(context)!.alreadyHaveAnAccount,
+            text: appLocalizations.alreadyHaveAnAccount,
             style: textTheme.titleSmall!.copyWith(fontWeight: FontWeight.w400),
           ),
           //! تسجيل الدخول
           TextSpan(
-            text: AppLocalizations.of(context)!.logIN,
+            text: appLocalizations.logIN,
             style: textTheme.titleSmall!.copyWith(
                 fontWeight: FontWeight.w400, color: ColorManger.kPrimaryColor),
             recognizer: TapGestureRecognizer()

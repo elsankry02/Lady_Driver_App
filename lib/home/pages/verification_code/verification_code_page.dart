@@ -22,13 +22,14 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     double mediaQueryHeight = MediaQuery.of(context).size.height;
+    final appLocalizations = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
         forceMaterialTransparency: true,
         //! AppBar Name
         title: Text(
-          AppLocalizations.of(context)!.verificationcode,
+          appLocalizations.verificationcode,
           style: textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.w500),
         ),
         //! Custom Icon Change Language
@@ -44,8 +45,7 @@ class _VerificationCodePageState extends State<VerificationCodePage> {
             //! رساله الادخال
             Text(
                 textAlign: TextAlign.center,
-                AppLocalizations.of(context)!
-                    .enterTheCodeThatWasSentToYourEmailAddress,
+                appLocalizations.enterTheCodeThatWasSentToYourEmailAddress,
                 style: textTheme.titleMedium!
                     .copyWith(fontWeight: FontWeight.w500)),
             SizedBox(height: mediaQueryHeight * 0.007),

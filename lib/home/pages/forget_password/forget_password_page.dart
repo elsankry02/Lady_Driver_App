@@ -29,6 +29,8 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
 
   @override
   Widget build(BuildContext context) {
+    final appLocalizations = AppLocalizations.of(context)!;
+
     final textTheme = Theme.of(context).textTheme;
     double mediaQueryHeight = MediaQuery.of(context).size.height;
 
@@ -37,7 +39,7 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
         //! نسيت كلمة المرور
         centerTitle: true,
         title: Text(
-          AppLocalizations.of(context)!.forgotPassword,
+          appLocalizations.forgotPassword,
           style: textTheme.headlineSmall!.copyWith(fontWeight: FontWeight.w500),
         ),
         actions: const [
@@ -61,7 +63,7 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
 
             //! ادخل بريدك الالكتروني
             Text(
-              AppLocalizations.of(context)!.enterYourEmail,
+              appLocalizations.enterYourEmail,
               style:
                   textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w700),
             ),
@@ -78,7 +80,7 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
               },
               controller: emailController,
               suffixIcon: SvgManger.kMail,
-              hintText: AppLocalizations.of(context)!.email,
+              hintText: appLocalizations.email,
             ),
             SizedBox(height: mediaQueryHeight * 0.030),
 
@@ -88,7 +90,7 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
                 formkey.currentState!.validate();
               },
               child: CustomBotton(
-                  text: AppLocalizations.of(context)!.sendCode,
+                  text: appLocalizations.sendCode,
                   color: ColorManger.kPrimaryColor,
                   textThemeColor: ColorManger.kWhite,
                   borderColor: ColorManger.kPrimaryColor),

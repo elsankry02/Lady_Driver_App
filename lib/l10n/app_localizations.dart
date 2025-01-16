@@ -304,6 +304,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Save'**
   String get save;
+
+  /// No description provided for @ladyDriverYourComfortComesFirstonboardind.
+  ///
+  /// In en, this message translates to:
+  /// **'LadyDriver: Your comfort comes first'**
+  String get ladyDriverYourComfortComesFirstonboardind;
+
+  /// No description provided for @determineYourDestinationAndChooseTheCarThatSuitsYou.
+  ///
+  /// In en, this message translates to:
+  /// **'Determine your destination and choose the car that suits you'**
+  String get determineYourDestinationAndChooseTheCarThatSuitsYou;
+
+  /// No description provided for @enjoyAUniqueDeliveryServiceDesignedEspeciallyForYou.
+  ///
+  /// In en, this message translates to:
+  /// **'Enjoy a unique delivery service designed especially for you'**
+  String get enjoyAUniqueDeliveryServiceDesignedEspeciallyForYou;
+
+  /// No description provided for @discoverANewWorldOfLuxury.
+  ///
+  /// In en, this message translates to:
+  /// **'Discover a new world of luxury'**
+  String get discoverANewWorldOfLuxury;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
