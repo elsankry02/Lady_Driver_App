@@ -36,7 +36,6 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     double mediaQueryHeight = MediaQuery.of(context).size.height;
-
     final textTheme = Theme.of(context).textTheme;
     return Scaffold(
       appBar: AppBar(
