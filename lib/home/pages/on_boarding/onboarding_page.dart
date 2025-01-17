@@ -69,9 +69,8 @@ class _OnboardingPageState extends State<OnboardingPage> {
                             width: double.infinity,
                             child: Text(
                               appLocalizations.skip,
-                              style: textTheme.titleMedium!.copyWith(
-                                fontWeight: FontWeight.w500,
-                              ),
+                              style: textTheme.titleMedium!
+                                  .copyWith(fontWeight: FontWeight.w500),
                             ),
                           ),
                         ),
@@ -88,18 +87,16 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         Text(
                           item.text,
                           textAlign: TextAlign.center,
-                          style: textTheme.headlineSmall!.copyWith(
-                            fontWeight: FontWeight.w700,
-                          ),
+                          style: textTheme.headlineSmall!
+                              .copyWith(fontWeight: FontWeight.w700),
                         ),
                         SizedBox(height: mediaQueryHeight * 0.024),
                         //! labalText
                         Text(
                           textAlign: TextAlign.center,
                           item.lableText,
-                          style: textTheme.titleSmall!.copyWith(
-                            fontWeight: FontWeight.w500,
-                          ),
+                          style: textTheme.titleSmall!
+                              .copyWith(fontWeight: FontWeight.w500),
                         ),
                         SizedBox(height: mediaQueryHeight * 0.024),
                       ],
