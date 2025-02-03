@@ -15,6 +15,9 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 //dart run build_runner build
-// L10n
-//!output-dir: lib/l10n
-//synthetic-package: false
+// L10n.yaml
+// arb-dir: lib/l10n
+// template-arb-file: app_en.arb
+// output-localization-file: app_localizations.dart
+// output-dir: lib/l10n
+// synthetic-package: false
