@@ -9,7 +9,7 @@ LadyDriver is a modern Flutter application designed to provide a luxurious, safe
 
 ## Features 🚀
 
--  Clean Architecture & State Management:
-  -  MVVM Architecture: For separation of concerns and scalable codebase.
-  -   Auto Route: Strong and type-safe navigation with clean routing structure.
-  -  Localization: Supports multiple languages to enhance accessibility.
+-  **Clean Architecture & State Management:**
+  -  **MVVM Architecture:** For separation of concerns and scalable codebase.
+  -   **Auto Route:** Strong and type-safe navigation with clean routing structure.
+  -  **Localization:** Supports multiple languages to enhance accessibility.
