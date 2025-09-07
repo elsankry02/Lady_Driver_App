@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../constant/color_manger.dart';
+
+import '../constant/app_colors.dart';
 
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField(
@@ -26,9 +27,9 @@ class CustomTextFormField extends StatelessWidget {
         hintText: hintText,
         hintStyle: textTheme.bodyMedium!.copyWith(fontWeight: FontWeight.w400),
         prefixIcon: UnconstrainedBox(child: SvgPicture.asset(suffixIcon)),
-        border: outlineInputBorder(ColorManger.kBorderColor),
-        enabledBorder: outlineInputBorder(ColorManger.kBorderColor),
-        focusedBorder: outlineInputBorder(ColorManger.kPrimaryColor),
+        border: outlineInputBorder(AppColors.kBorderColor),
+        enabledBorder: outlineInputBorder(AppColors.kBorderColor),
+        focusedBorder: outlineInputBorder(AppColors.kPrimaryColor),
       ),
     );
   }

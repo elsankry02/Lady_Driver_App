@@ -57,7 +57,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get phoneNumber => 'Phone Number';
 
   @override
-  String get ladyDriverYourComfortComesFirst => 'LadyDriver: Your comfort comes first';
+  String get ladyDriverYourComfortComesFirst =>
+      'LadyDriver: Your comfort comes first';
 
   @override
   String get skip => 'Skip';
@@ -93,7 +94,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get sendCode => 'Send Code';
 
   @override
-  String get enterTheCodeThatWasSentToYourEmailAddress => 'Enter the code sent to your email address';
+  String get enterTheCodeThatWasSentToYourEmailAddress =>
+      'Enter the code sent to your email address';
 
   @override
   String get verificationcode => 'Verification Code';
@@ -114,13 +116,16 @@ class AppLocalizationsEn extends AppLocalizations {
   String get save => 'Save';
 
   @override
-  String get ladyDriverYourComfortComesFirstonboardind => 'LadyDriver: Your comfort comes first';
+  String get ladyDriverYourComfortComesFirstonboardind =>
+      'LadyDriver: Your comfort comes first';
 
   @override
-  String get determineYourDestinationAndChooseTheCarThatSuitsYou => 'Determine your destination and choose the car that suits you';
+  String get determineYourDestinationAndChooseTheCarThatSuitsYou =>
+      'Determine your destination and choose the car that suits you';
 
   @override
-  String get enjoyAUniqueDeliveryServiceDesignedEspeciallyForYou => 'Enjoy a unique delivery service designed especially for you';
+  String get enjoyAUniqueDeliveryServiceDesignedEspeciallyForYou =>
+      'Enjoy a unique delivery service designed especially for you';
 
   @override
   String get discoverANewWorldOfLuxury => 'Discover a new world of luxury';

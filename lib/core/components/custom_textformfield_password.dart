@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import '../constant/color_manger.dart';
-import '../constant/svg_manger.dart';
+
+import '../constant/app_colors.dart';
+import '../constant/app_svgs.dart';
 
 class CustomTextFormFiledPassword extends StatefulWidget {
   const CustomTextFormFiledPassword({
@@ -48,15 +49,14 @@ class _CustomTextFormFiledPasswordState
           },
           //! EyeOff & Eye
           child: UnconstrainedBox(
-            child: SvgPicture.asset(
-                isSelcted ? SvgManger.kEyeoff : SvgManger.kEye),
+            child: SvgPicture.asset(isSelcted ? AppSvgs.kEyeoff : AppSvgs.kEye),
           ),
         ),
         hintText: widget.hintText,
         hintStyle: textTheme.titleSmall!.copyWith(fontWeight: FontWeight.w400),
-        border: outlineInputBorder(ColorManger.kBorderColor),
-        enabledBorder: outlineInputBorder(ColorManger.kBorderColor),
-        focusedBorder: outlineInputBorder(ColorManger.kPrimaryColor),
+        border: outlineInputBorder(AppColors.kBorderColor),
+        enabledBorder: outlineInputBorder(AppColors.kBorderColor),
+        focusedBorder: outlineInputBorder(AppColors.kPrimaryColor),
       ),
     );
   }

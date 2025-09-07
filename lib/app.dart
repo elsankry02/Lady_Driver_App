@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:lady_driver/core/constant/string_manager.dart';
-import 'package:lady_driver/core/models/enums_local_language.dart';
+import 'package:lady_driver/core/constant/endpoint.dart';
 import 'package:lady_driver/core/router/router.dart';
-import 'package:lady_driver/home/data/manger/app_language/app_language_cubit.dart';
+import 'package:lady_driver/features/data/cubits/app_language_cubit/app_language_cubit.dart';
+import 'package:lady_driver/features/data/models/enums_local_language.dart';
 import 'package:lady_driver/l10n/app_localizations.dart';
 
 class LadyDriver extends StatelessWidget {
@@ -12,8 +12,7 @@ class LadyDriver extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) =>
-          AppLanguageCubit()..appLangFunc(EnumChangeLocalLanguage.intialStat),
+      create: (context) => AppLanguageCubit()..appLangFunc(Localization.intial),
       child: BlocBuilder<AppLanguageCubit, AppLanguageState>(
         builder: (context, state) {
           if (state is AppLanguageChange) {

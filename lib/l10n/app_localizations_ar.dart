@@ -93,7 +93,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get sendCode => 'إرسال الرمز';
 
   @override
-  String get enterTheCodeThatWasSentToYourEmailAddress => 'ادخل الرمز الذي تم إرساله إلي عنولن البريد \nالالكترونى';
+  String get enterTheCodeThatWasSentToYourEmailAddress =>
+      'ادخل الرمز الذي تم إرساله إلي عنولن البريد \nالالكترونى';
 
   @override
   String get verificationcode => 'رمز التحقق';
@@ -114,13 +115,16 @@ class AppLocalizationsAr extends AppLocalizations {
   String get save => 'حفظ';
 
   @override
-  String get ladyDriverYourComfortComesFirstonboardind => '.ليديدرايفر: راحتكِ أولاً';
+  String get ladyDriverYourComfortComesFirstonboardind =>
+      '.ليديدرايفر: راحتكِ أولاً';
 
   @override
-  String get determineYourDestinationAndChooseTheCarThatSuitsYou => 'حددي وجهتكِ واختاري السيارة المناسبة لكِ';
+  String get determineYourDestinationAndChooseTheCarThatSuitsYou =>
+      'حددي وجهتكِ واختاري السيارة المناسبة لكِ';
 
   @override
-  String get enjoyAUniqueDeliveryServiceDesignedEspeciallyForYou => '.استمتعي بخدمة توصيل فريدة من نوعها مصممة خصيصًا \n لكِ';
+  String get enjoyAUniqueDeliveryServiceDesignedEspeciallyForYou =>
+      '.استمتعي بخدمة توصيل فريدة من نوعها مصممة خصيصًا \n لكِ';
 
   @override
   String get discoverANewWorldOfLuxury => 'اكتشفي عالم جديد من الرفاهية';

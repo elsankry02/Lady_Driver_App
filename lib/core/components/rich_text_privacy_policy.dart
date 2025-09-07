@@ -2,7 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import '../../l10n/app_localizations.dart';
-import '../constant/color_manger.dart';
+import '../constant/app_colors.dart';
 
 class RichTextPrivacyPolicy extends StatefulWidget {
   const RichTextPrivacyPolicy({super.key, this.onChanged, this.value});
@@ -28,7 +28,7 @@ class _RichTextPrivacyPolicyState extends State<RichTextPrivacyPolicy> {
           height: mediaQueryHeight * 0.025,
           width: mediaQueryWidth * 0.025,
           child: Checkbox(
-            activeColor: ColorManger.kPrimaryColor,
+            activeColor: AppColors.kPrimaryColor,
             value: widget.value,
             onChanged: widget.onChanged,
           ),
@@ -46,7 +46,7 @@ class _RichTextPrivacyPolicyState extends State<RichTextPrivacyPolicy> {
               TextSpan(
                 text: appLocalizations.privacyPolicy,
                 style: textTheme.labelMedium!
-                    .copyWith(color: ColorManger.kPrimaryColor),
+                    .copyWith(color: AppColors.kPrimaryColor),
                 recognizer: TapGestureRecognizer()..onTap = () {},
               ),
               TextSpan(
@@ -56,7 +56,7 @@ class _RichTextPrivacyPolicyState extends State<RichTextPrivacyPolicy> {
               TextSpan(
                 text: appLocalizations.termsOfUse,
                 style: textTheme.labelMedium!
-                    .copyWith(color: ColorManger.kPrimaryColor),
+                    .copyWith(color: AppColors.kPrimaryColor),
                 recognizer: TapGestureRecognizer()..onTap = () {},
               ),
             ],
